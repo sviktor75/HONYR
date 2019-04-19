@@ -42,11 +42,11 @@
             // 
             this.cimLbl.AutoSize = true;
             this.cimLbl.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cimLbl.Location = new System.Drawing.Point(242, 99);
+            this.cimLbl.Location = new System.Drawing.Point(175, 73);
             this.cimLbl.Name = "cimLbl";
-            this.cimLbl.Size = new System.Drawing.Size(418, 34);
+            this.cimLbl.Size = new System.Drawing.Size(553, 34);
             this.cimLbl.TabIndex = 0;
-            this.cimLbl.Text = "Hálózat Nyilvántartó Rendszer";
+            this.cimLbl.Text = "Hálózat Objektum Nyilvántartó Rendszer";
             this.cimLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
