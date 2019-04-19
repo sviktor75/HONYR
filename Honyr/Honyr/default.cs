@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Honyr
 {
-    public partial class LetrehozHelyseg : UserControl
+    public partial class defaultMainCtrl : UserControl
     {
-        public LetrehozHelyseg()
+        public defaultMainCtrl()
         {
             InitializeComponent();
+        }
+
+        private void defaultMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

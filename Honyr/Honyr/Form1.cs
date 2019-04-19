@@ -18,23 +18,22 @@ namespace Honyr
         public Form1()
         {
             InitializeComponent();
+            defaultMain1.BringToFront();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            // Click on the link below to continue learning how to build a desktop app using WinForms!
-            System.Diagnostics.Process.Start("http://aka.ms/dotnet-get-started-desktop");
-
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void locationToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanks!");
+            addLocation1.BringToFront();
         }
 
-        private void newItemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void portToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
