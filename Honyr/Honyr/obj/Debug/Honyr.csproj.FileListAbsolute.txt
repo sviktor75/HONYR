@@ -1,0 +1,11 @@
+D:\Projekt\2\Honyr\Honyr\bin\Debug\Honyr.exe.config
+D:\Projekt\2\Honyr\Honyr\bin\Debug\Honyr.exe
+D:\Projekt\2\Honyr\Honyr\bin\Debug\Honyr.pdb
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyReference.cache
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.Form1.resources
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.LetrehozHelyseg.resources
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.csproj.GenerateResource.cache
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.csproj.CoreCompileInputs.cache
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.exe
+D:\Projekt\2\Honyr\Honyr\obj\Debug\Honyr.pdb

@@ -1,0 +1,62 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>360</x><y>150</y><w>210</w><h>290</h></coordinates><panel_attributes>/IItem/
+--
+-Id: long
+-DeviceId: string
+-DeviceName: string
+-LocationId: long
+-PortListId: long
+-SymbolId: int
+-LocationNotes: string
+--
++AddItem()
++DelItem()
++ModItem()
++GetById()
++GetByName()
++AddPortProperty()
++DelPortProperty()
++ModPortProperty()
++GetPortPropertyList()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>540</y><w>140</w><h>190</h></coordinates><panel_attributes>&lt;ItemPassive&gt;
+
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>540</y><w>140</w><h>190</h></coordinates><panel_attributes>&lt;ItemActive&gt;
+--
+-DeviceIp: string
+-DeviceMac: string
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>430</y><w>60</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70;40;70;40;110</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>430</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;60;70;10;70;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>150</y><w>210</w><h>150</h></coordinates><panel_attributes>/IPortList/
+--
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-PortName: sting
+-PortPhysicalType: string
+-SymbolId: int
+-PhysicalLocation: string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>370</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;PortActive&gt;
+--
+-PortConfig: string
+-IpAddress: sting
+-MacAddress: string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>370</y><w>120</w><h>150</h></coordinates><panel_attributes>&lt;PortPassive&gt;
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>290</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;60;50;10;50;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>290</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50;90;50;90;80</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>170</y><w>120</w><h>100</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;70;50;70;50;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>290</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;Location&gt;
+--
+-Id: long
+-Name: sting
+-LocationType: string
+-ParentId: long
+-SymbolId: int
+-Description: string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>220</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;70;10;10;120;10</additional_attributes></element></diagram>

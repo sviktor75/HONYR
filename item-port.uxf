@@ -1,0 +1,51 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>210</x><y>60</y><w>210</w><h>290</h></coordinates><panel_attributes>/IItem/
+--
+-Id: long
+-DeviceId: string
+-DeviceName: string
+-LocationId: long
+-PortListId: long
+-SymbolId: int
+-LocationNotes: string
+--
++AddItem()
++DelItem()
++ModItem()
++GetById()
++GetByName()
++AddPortProperty()
++DelPortProperty()
++ModPortProperty()
++GetPortPropertyList()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>450</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;ItemPassive&gt;
+
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>450</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;ItemActive&gt;
+--
+-DeviceIp: string
+-DeviceMac: string
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>340</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;100;110</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>340</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>60</y><w>210</w><h>150</h></coordinates><panel_attributes>/IPortList/
+--
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-PortName: sting
+-PortPhysicalType: string
+-SymbolId: int
+-PhysicalLocation: string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>340</y><w>210</w><h>150</h></coordinates><panel_attributes>&lt;PortActive&gt;
+--
+-PortConfig: string
+-IpAddress: sting
+-MacAddress: string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>340</y><w>210</w><h>150</h></coordinates><panel_attributes>&lt;PortPassive&gt;
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>790</x><y>200</y><w>120</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>790</x><y>200</y><w>120</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>200</y><w>110</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;90;140</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>140</y><w>420</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+&lt;tartozik</panel_attributes><additional_attributes>10;20;400;20</additional_attributes></element></diagram>
