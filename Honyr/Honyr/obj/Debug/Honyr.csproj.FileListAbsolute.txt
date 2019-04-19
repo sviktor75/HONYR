@@ -18,6 +18,6 @@ C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.csp
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.CoreCompileInputs.cache
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.exe
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.pdb
-C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyReference.cache
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.addLocationCtrl.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.defaultMainCtrl.resources
+C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.mountWall.resources

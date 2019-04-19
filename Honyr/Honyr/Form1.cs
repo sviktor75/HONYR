@@ -29,11 +29,18 @@ namespace Honyr
         private void locationToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             addLocation1.BringToFront();
+            mountWall1.SendToBack();
         }
 
         private void portToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void faliCsatlakozóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addLocation1.SendToBack();
+            mountWall1.BringToFront();
         }
     }
 }

@@ -28,6 +28,7 @@ namespace Honyr
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@ namespace Honyr
             this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addLocation1 = new Honyr.addLocationCtrl();
             this.defaultMain1 = new Honyr.defaultMainCtrl();
+            this.mountWall1 = new Honyr.mountWall();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +111,7 @@ namespace Honyr
             this.faliCsatlakozóToolStripMenuItem.Name = "faliCsatlakozóToolStripMenuItem";
             this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.faliCsatlakozóToolStripMenuItem.Text = "Fali csatlakozó";
+            this.faliCsatlakozóToolStripMenuItem.Click += new System.EventHandler(this.faliCsatlakozóToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
@@ -159,14 +162,23 @@ namespace Honyr
             this.defaultMain1.Size = new System.Drawing.Size(903, 544);
             this.defaultMain1.TabIndex = 1;
             // 
+            // mountWall1
+            // 
+            this.mountWall1.Location = new System.Drawing.Point(0, 27);
+            this.mountWall1.Name = "mountWall1";
+            this.mountWall1.Size = new System.Drawing.Size(903, 544);
+            this.mountWall1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 570);
+            this.Controls.Add(this.mountWall1);
             this.Controls.Add(this.addLocation1);
             this.Controls.Add(this.defaultMain1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -195,6 +207,7 @@ namespace Honyr
         public System.Windows.Forms.ToolStripMenuItem faliCsatlakozóToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem eszközToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem faliCsatlakozóToolStripMenuItem1;
+        private mountWall mountWall1;
     }
 }
 
