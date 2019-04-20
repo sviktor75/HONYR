@@ -34,3 +34,114 @@ Szoftverfejlesztési és Alkalmazási Tanszék
 
 H-2400 Dunaújváros, Táncsics M. u. 1/a
 telefon: 25/551-676
+
+
+Kedves Viktor!
+
+ 
+
+Aktív eszközök:
+
+ 
+
+Router és Switch típusok
+
+ 
+
+Eszköz azonosítója: 21-C3550-48-KAC1
+
+Eszköz megnevezése KAC Switch 01
+
+Eszköz fizikai elhelyezkedése (Épület/Helység): Épületek / Helységek nyilvántartása táblára történő hivatkozás, pl 37/702
+
+Eszköz Layer 2 és Layer 3 címe(i): MAC cím ás IP cím
+
+ 
+
+1.       port
+
+Portjainak azonosítója: FastEthernet 0/1
+
+Portjainak megnevezése: KAC 01 számítógép
+
+Portjainak konfigurációja: Text mező (switchport mode access; switchport access vlan 1000)
+
+Portjainak fizikai típusa (pl: UTP, SFP, SFP+, QSFP, ….): UTP
+
+Rajzjele: Microsoft Visio szerinti Cisco rajzjel
+
+Fizikai elhelyezkedés leírása: Text mező (az eszköz ajtótól balra található rack szekrényben található)
+
+ 
+
+2.       port
+
+Portjainak azonosítója: FastEthernet 0/2
+
+Portjainak megnevezése: KAC 02 számítógép
+
+Portjainak konfigurációja: Text mező (switchport mode access; switchport access vlan 1000)
+
+Portjainak fizikai típusa (pl: UTP, SFP, SFP+, QSFP, ….): UTP
+
+Rajzjele: Microsoft Visio szerinti Cisco rajzjel
+
+ 
+
+Fizikai elhelyezkedés leírása: Text mező (az eszköz ajtótól balra található rack szekrényben található)
+
+ 
+
+ 
+
+Passzív eszköz:
+
+ 
+
+ 
+
+Eszköz azonosítója: R-E-01
+
+Eszköz megnevezése: Rektori hivatal UTP átadása
+
+Eszköz fizikai elhelyezkedése (Épület/Helység): Épületek / Helységek nyilvántartása táblára történő hivatkozás, pl F/132
+
+ 
+
+1 port
+
+ 
+
+Portjainak azonosítója (felirata): II/01
+
+Portainak fizikai típusa, közege (UTP, Optika MM/SM): UTP
+
+Rajzjele: Microsoft Visio szerinti Cisco rajzjel
+
+ 
+
+2 port
+
+ 
+
+Portjainak azonosítója (felirata): II/02
+
+Portainak fizikai típusa, közege (UTP, Optika MM/SM): UTP
+
+Rajzjele: Microsoft Visio szerinti Cisco rajzjel
+
+ 
+
+ 
+
+Fizikai elhelyezkedés leírása: Text mező
+
+ 
+
+Remélem tudtam segíteni
+
+ 
+
+Üdv:
+
+Verasztó Sándor

@@ -1,0 +1,64 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>&lt;pace for dia0..nrItemIm notes</help_text><element><id>UMLClass</id><coordinates><x>520</x><y>72</y><w>210</w><h>310</h></coordinates><panel_attributes>&lt;Item&gt;
+--
+-Id: long
+-Active: bool
+-DeviceId: string
+-DeviceName: string
+-IpAddress: sting
+-MacAddress: string
+-LocationId: long
+-SymbolId: int
+-LocationNotes: string
+--
++AddItem()
++DelItem()
++ModItem()
++GetById()
++GetByName()
++AddPortProperty()
++DelPortProperty()
++ModPortProperty()
++GetPortsByItem()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>132</y><w>150</w><h>170</h></coordinates><panel_attributes>&lt;Location&gt;
+--
+-Id: long
+-Name: sting
+-LocationType: string
+-ParentId: long
+-SymbolId: int
+-Description: string
+--
+-AddLocation()
+-ModLocation()
+-DelLocation()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>322</y><w>150</w><h>220</h></coordinates><panel_attributes>&lt;WallConnector&gt;
+--
+-Id: long
+-Name: sting
+-ConnectorType: string
+-ConnectorProperty: string
+-LocationId: long
+-SymbolId: int
+-LocationNotes: string
+--
+-AddConnector()
+-ModConnector()
+-DelConnector()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>152</y><w>60</w><h>290</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>40;10;10;10;10;260;40;260</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>502</y><w>220</w><h>150</h></coordinates><panel_attributes>&lt;Port&gt;
+--
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-PortName: sting
+-PortConfig: string
+-PortPhysicalType: string
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>146</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>376</y><w>50</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>
