@@ -10,20 +10,14 @@ using System.Windows.Forms;
 
 namespace Honyr
 {
-    public partial class addLocationCtrl : UserControl
+    public partial class ItemActiveCtrl : UserControl
     {
-
-        public addLocationCtrl()
+        public ItemActiveCtrl()
         {
             InitializeComponent();
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            SendToBack();
-        }
-
-        private void addLocationLbl_Click(object sender, EventArgs e)
+        private void addPortBtn_Click(object sender, EventArgs e)
         {
 
         }

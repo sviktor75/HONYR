@@ -42,5 +42,10 @@ namespace Honyr
             addLocation1.SendToBack();
             mountWall1.BringToFront();
         }
+
+        private void activeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            itemActiveCtrl1.BringToFront();
+        }
     }
 }

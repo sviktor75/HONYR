@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Honyr
 {
-    public partial class addLocationCtrl : UserControl
+    public partial class PassiveItemCtrl : UserControl
     {
-
-        public addLocationCtrl()
+        public PassiveItemCtrl()
         {
             InitializeComponent();
-        }
-
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            SendToBack();
-        }
-
-        private void addLocationLbl_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

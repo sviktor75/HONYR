@@ -62,11 +62,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemActiveCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemActiveCtrl.Designer.cs">
+      <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="mountWall.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="mountWall.Designer.cs">
       <DependentUpon>mountWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PassiveItemCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PassiveItemCtrl.Designer.cs">
+      <DependentUpon>PassiveItemCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +94,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItemActiveCtrl.resx">
+      <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mountWall.resx">
       <DependentUpon>mountWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassiveItemCtrl.resx">
+      <DependentUpon>PassiveItemCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
