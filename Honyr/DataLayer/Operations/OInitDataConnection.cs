@@ -10,10 +10,10 @@ namespace DataLayer.Operations
 {
     public class OInitDataConnection
     {
-        string connString = "Server=sql.celofan.eu;Database=leltar;port=3306;UID=ppeti;password=ppeti;";
-        MySqlConnection conn = new MySqlConnection(connString);
+        static string connString = "Server=sql.celofan.eu;Database=leltar;port=3306;UID=ppeti;password=ppeti;";
+        public MySqlConnection conn = new MySqlConnection(connString);
 
-        public void OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -23,7 +23,8 @@ namespace DataLayer.Operations
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message + connectionString);
+                MessageBox.Show(ex.Message + connString);
+                return false;
             }
         }
 
@@ -31,12 +32,12 @@ namespace DataLayer.Operations
         {
             try
             {
-                connection.Close();
+                conn.Close();
                 MessageBox.Show("successful detach");
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message + connectionString);
+                MessageBox.Show(ex.Message + connString);
             }
         }
     }
