@@ -25,10 +25,20 @@ namespace Honyr
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             // If click on cancel then clear the fields and send it back
-            this.Controls.ClearControls();
-
             SendToBack();
-            
+
+            itemActivePortIdTextBox.Clear();
+            itemActiveNameTextbox.Clear();
+            itemActiveLocationComboBox.ResetText();
+            itemActiveIpTextBox.Clear();
+            itemActiveMacTextBox.Clear();
+            itemActiveDescriptionRichTextBox.Clear();
+            itemActiveSymbolComboBox.ResetText();
+            itemActivePortsListBox.ResetText();
+            itemActivePortIdTextBox.Clear();
+            itemActivePortNameTextBox.Clear();
+            itemActivePortConfigRichTextBox.Clear();
+            itemActivePortTypeComboBox.ResetText();
         }
     }
 }

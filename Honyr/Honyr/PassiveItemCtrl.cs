@@ -22,8 +22,20 @@ namespace Honyr
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             // If click on cancel then clear the fields and send it back
-            this.Controls.ClearControls();
             SendToBack();
+
+            itemPassiveIdTxtbox.Clear();
+            itemPassiveNameTxtbox.Clear();
+            itemPassiveLocationComboBox.ResetText();
+            itemPassiveDescriptionRichTextBox.Clear();
+            itemPassiveSymbolComboBox.ResetText();
+
+            itemPassivePortsListbox.ResetText();
+            itemPassivePortIdTxtbox.Clear();
+            itemPassivePortTypeComboBox.ResetText();
+
+  
+
         }
 
         private void itemPassiveDeleteBtn_Click(object sender, EventArgs e)
