@@ -24,6 +24,7 @@ C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.mou
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.PassiveItemCtrl.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyReference.cache
+<<<<<<< HEAD
 d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.addLocationCtrl.resources
 d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.Form1.resources
 d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
@@ -33,3 +34,20 @@ d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
 d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.defaultMainCtrl.resources
 d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.GenerateResource.cache
 d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.CoreCompileInputs.cache
+=======
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\Honyr.exe.config
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\Honyr.exe
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\Honyr.pdb
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.addLocationCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Form1.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.mountWall.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.PassiveItemCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.defaultMainCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.GenerateResource.cache
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.exe
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.pdb
+>>>>>>> 5d6a0f26e02ed0598633da4bba309a41c67f33b6
