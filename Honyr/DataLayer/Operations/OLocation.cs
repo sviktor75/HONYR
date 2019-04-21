@@ -11,11 +11,11 @@ namespace DataLayer.Operations
     public class OLocation
     {
         OInitDataConnection db = new OInitDataConnection();
-        public void AddLocation(string name, string locationtype, long parentid, int symbolid, string description)
+        public void AddLocation(string name, string locationtype, string parentid, string symbolid, string description)
         {
 
-            db.OpenConnection();
-            string query = "INSERT INTO location (name, location, parentid, symbolid, description) VALUES("+name+", "+locationtype+", "+parentid+", "+symbolid+", "+description+");";
+            //db.OpenConnection();
+            string query = "INSERT INTO location (name, locationtype, parentid, symbolid, description) VALUES('"+name+"', '"+locationtype+"', '"+parentid+"', '"+symbolid+"', '"+description+"');";
 
             //open connection
             if (db.OpenConnection() == true)
@@ -24,6 +24,7 @@ namespace DataLayer.Operations
                 MySqlCommand cmd = new MySqlCommand(query, db.conn);
 
                 //Execute command
+                
                 cmd.ExecuteNonQuery();
 
                 //close connection

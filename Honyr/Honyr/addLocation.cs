@@ -38,8 +38,8 @@ namespace Honyr
             location.AddLocation(
                 locationNameTextbox.Text,
                 locationTypeComboBox.Text,
-                long.Parse(LocationParentComboBox.Text),
-                int.Parse(locationSymbolComboBox.Text),
+                LocationParentComboBox.Text,               
+                locationSymbolComboBox.Text,
                 locationDescriptionRichTextBox.Text
                 );
         }
