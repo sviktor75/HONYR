@@ -259,6 +259,7 @@
             this.cancelBtn.TabIndex = 62;
             this.cancelBtn.Text = "Mégse";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // button5
             // 

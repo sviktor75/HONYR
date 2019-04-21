@@ -16,5 +16,10 @@ namespace Honyr
         {
             InitializeComponent();
         }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            SendToBack();
+        }
     }
 }

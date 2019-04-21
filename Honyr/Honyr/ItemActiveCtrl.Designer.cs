@@ -98,6 +98,7 @@
             this.cancelBtn.TabIndex = 16;
             this.cancelBtn.Text = "Mégse";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // locationNameTextbox
             // 

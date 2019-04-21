@@ -55,7 +55,7 @@
             // 
             this.addMountWallMainLbl.AutoSize = true;
             this.addMountWallMainLbl.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMountWallMainLbl.Location = new System.Drawing.Point(346, 80);
+            this.addMountWallMainLbl.Location = new System.Drawing.Point(346, 23);
             this.addMountWallMainLbl.Name = "addMountWallMainLbl";
             this.addMountWallMainLbl.Size = new System.Drawing.Size(211, 34);
             this.addMountWallMainLbl.TabIndex = 18;
@@ -63,21 +63,21 @@
             // 
             // locationParentTextbox
             // 
-            this.locationParentTextbox.Location = new System.Drawing.Point(340, 238);
+            this.locationParentTextbox.Location = new System.Drawing.Point(340, 204);
             this.locationParentTextbox.Name = "locationParentTextbox";
             this.locationParentTextbox.Size = new System.Drawing.Size(470, 20);
             this.locationParentTextbox.TabIndex = 12;
             // 
             // locationNameTextbox
             // 
-            this.locationNameTextbox.Location = new System.Drawing.Point(340, 185);
+            this.locationNameTextbox.Location = new System.Drawing.Point(340, 151);
             this.locationNameTextbox.Name = "locationNameTextbox";
             this.locationNameTextbox.Size = new System.Drawing.Size(470, 20);
             this.locationNameTextbox.TabIndex = 14;
             // 
             // locationIdTextbox
             // 
-            this.locationIdTextbox.Location = new System.Drawing.Point(340, 160);
+            this.locationIdTextbox.Location = new System.Drawing.Point(340, 126);
             this.locationIdTextbox.Name = "locationIdTextbox";
             this.locationIdTextbox.Size = new System.Drawing.Size(470, 20);
             this.locationIdTextbox.TabIndex = 15;
@@ -86,7 +86,7 @@
             // 
             this.mountWallDescriptionLbl.AutoSize = true;
             this.mountWallDescriptionLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallDescriptionLbl.Location = new System.Drawing.Point(92, 316);
+            this.mountWallDescriptionLbl.Location = new System.Drawing.Point(92, 282);
             this.mountWallDescriptionLbl.Name = "mountWallDescriptionLbl";
             this.mountWallDescriptionLbl.Size = new System.Drawing.Size(186, 17);
             this.mountWallDescriptionLbl.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             this.mountWallSymbolLbl.AutoSize = true;
             this.mountWallSymbolLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallSymbolLbl.Location = new System.Drawing.Point(92, 290);
+            this.mountWallSymbolLbl.Location = new System.Drawing.Point(92, 256);
             this.mountWallSymbolLbl.Name = "mountWallSymbolLbl";
             this.mountWallSymbolLbl.Size = new System.Drawing.Size(58, 17);
             this.mountWallSymbolLbl.TabIndex = 5;
@@ -106,7 +106,7 @@
             // 
             this.mountWallKialakitasaLbl.AutoSize = true;
             this.mountWallKialakitasaLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallKialakitasaLbl.Location = new System.Drawing.Point(92, 238);
+            this.mountWallKialakitasaLbl.Location = new System.Drawing.Point(92, 204);
             this.mountWallKialakitasaLbl.Name = "mountWallKialakitasaLbl";
             this.mountWallKialakitasaLbl.Size = new System.Drawing.Size(83, 17);
             this.mountWallKialakitasaLbl.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             this.mountWallTypeLbl.AutoSize = true;
             this.mountWallTypeLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallTypeLbl.Location = new System.Drawing.Point(92, 211);
+            this.mountWallTypeLbl.Location = new System.Drawing.Point(92, 177);
             this.mountWallTypeLbl.Name = "mountWallTypeLbl";
             this.mountWallTypeLbl.Size = new System.Drawing.Size(45, 17);
             this.mountWallTypeLbl.TabIndex = 7;
@@ -126,7 +126,7 @@
             // 
             this.MountWallNameLbl.AutoSize = true;
             this.MountWallNameLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MountWallNameLbl.Location = new System.Drawing.Point(92, 183);
+            this.MountWallNameLbl.Location = new System.Drawing.Point(92, 149);
             this.MountWallNameLbl.Name = "MountWallNameLbl";
             this.MountWallNameLbl.Size = new System.Drawing.Size(175, 17);
             this.MountWallNameLbl.TabIndex = 8;
@@ -136,7 +136,7 @@
             // 
             this.MountWallIdLbl.AutoSize = true;
             this.MountWallIdLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MountWallIdLbl.Location = new System.Drawing.Point(92, 160);
+            this.MountWallIdLbl.Location = new System.Drawing.Point(92, 126);
             this.MountWallIdLbl.Name = "MountWallIdLbl";
             this.MountWallIdLbl.Size = new System.Drawing.Size(71, 17);
             this.MountWallIdLbl.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(340, 316);
+            this.richTextBox1.Location = new System.Drawing.Point(340, 282);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(470, 96);
             this.richTextBox1.TabIndex = 21;
@@ -153,7 +153,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(340, 290);
+            this.comboBox2.Location = new System.Drawing.Point(340, 256);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(169, 21);
             this.comboBox2.TabIndex = 20;
@@ -161,7 +161,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(340, 211);
+            this.comboBox1.Location = new System.Drawing.Point(340, 177);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(169, 21);
             this.comboBox1.TabIndex = 22;
@@ -169,7 +169,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(340, 263);
+            this.comboBox3.Location = new System.Drawing.Point(340, 229);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(169, 21);
             this.comboBox3.TabIndex = 25;
@@ -178,7 +178,7 @@
             // 
             this.locationParentLbl.AutoSize = true;
             this.locationParentLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationParentLbl.Location = new System.Drawing.Point(92, 263);
+            this.locationParentLbl.Location = new System.Drawing.Point(92, 229);
             this.locationParentLbl.Name = "locationParentLbl";
             this.locationParentLbl.Size = new System.Drawing.Size(242, 17);
             this.locationParentLbl.TabIndex = 23;
@@ -237,6 +237,7 @@
             this.cancelBtn.TabIndex = 31;
             this.cancelBtn.Text = "Mégse";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click_1);
             // 
             // mountWall
             // 

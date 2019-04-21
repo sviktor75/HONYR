@@ -32,19 +32,20 @@ namespace Honyr
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eszközToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helységToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faliCsatlakozóToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktívToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.passzívToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helységToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.faliCsatlakozóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addLocation1 = new Honyr.addLocationCtrl();
             this.defaultMain1 = new Honyr.defaultMainCtrl();
             this.mountWall1 = new Honyr.mountWall();
             this.itemActiveCtrl1 = new Honyr.ItemActiveCtrl();
-            this.aktívToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.passzívToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helységToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.faliCsatlakozóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.passiveItemCtrl1 = new Honyr.PassiveItemCtrl();
+            this.keresésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eszközToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faliCsatlakzóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helyésgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@ namespace Honyr
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemsToolStripMenuItem,
+            this.keresésToolStripMenuItem,
             this.portToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -64,8 +66,7 @@ namespace Honyr
             this.itemsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newItemToolStripMenuItem,
             this.helységToolStripMenuItem1,
-            this.faliCsatlakozóToolStripMenuItem,
-            this.searchToolStripMenuItem});
+            this.faliCsatlakozóToolStripMenuItem});
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
             this.itemsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.itemsToolStripMenuItem.Text = "Szerkeszt";
@@ -79,33 +80,33 @@ namespace Honyr
             this.newItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newItemToolStripMenuItem.Text = "Eszköz";
             // 
-            // searchToolStripMenuItem
+            // aktívToolStripMenuItem
             // 
-            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eszközToolStripMenuItem,
-            this.helységToolStripMenuItem,
-            this.faliCsatlakozóToolStripMenuItem1});
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.searchToolStripMenuItem.Text = "Keresés";
+            this.aktívToolStripMenuItem.Name = "aktívToolStripMenuItem";
+            this.aktívToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aktívToolStripMenuItem.Text = "Aktív";
+            this.aktívToolStripMenuItem.Click += new System.EventHandler(this.aktívToolStripMenuItem_Click);
             // 
-            // eszközToolStripMenuItem
+            // passzívToolStripMenuItem
             // 
-            this.eszközToolStripMenuItem.Name = "eszközToolStripMenuItem";
-            this.eszközToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eszközToolStripMenuItem.Text = "Eszköz";
+            this.passzívToolStripMenuItem.Name = "passzívToolStripMenuItem";
+            this.passzívToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.passzívToolStripMenuItem.Text = "Passzív";
+            this.passzívToolStripMenuItem.Click += new System.EventHandler(this.passzívToolStripMenuItem_Click);
             // 
-            // helységToolStripMenuItem
+            // helységToolStripMenuItem1
             // 
-            this.helységToolStripMenuItem.Name = "helységToolStripMenuItem";
-            this.helységToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.helységToolStripMenuItem.Text = "Helység";
+            this.helységToolStripMenuItem1.Name = "helységToolStripMenuItem1";
+            this.helységToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.helységToolStripMenuItem1.Text = "Helység";
+            this.helységToolStripMenuItem1.Click += new System.EventHandler(this.helységToolStripMenuItem1_Click);
             // 
-            // faliCsatlakozóToolStripMenuItem1
+            // faliCsatlakozóToolStripMenuItem
             // 
-            this.faliCsatlakozóToolStripMenuItem1.Name = "faliCsatlakozóToolStripMenuItem1";
-            this.faliCsatlakozóToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.faliCsatlakozóToolStripMenuItem1.Text = "Fali csatlakozó";
+            this.faliCsatlakozóToolStripMenuItem.Name = "faliCsatlakozóToolStripMenuItem";
+            this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.faliCsatlakozóToolStripMenuItem.Text = "Fali csatlakozó";
+            this.faliCsatlakozóToolStripMenuItem.Click += new System.EventHandler(this.faliCsatlakozóToolStripMenuItem_Click_1);
             // 
             // portToolStripMenuItem
             // 
@@ -142,35 +143,47 @@ namespace Honyr
             this.itemActiveCtrl1.Size = new System.Drawing.Size(903, 544);
             this.itemActiveCtrl1.TabIndex = 4;
             // 
-            // aktívToolStripMenuItem
+            // passiveItemCtrl1
             // 
-            this.aktívToolStripMenuItem.Name = "aktívToolStripMenuItem";
-            this.aktívToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aktívToolStripMenuItem.Text = "Aktív";
+            this.passiveItemCtrl1.Location = new System.Drawing.Point(0, 27);
+            this.passiveItemCtrl1.Name = "passiveItemCtrl1";
+            this.passiveItemCtrl1.Size = new System.Drawing.Size(903, 544);
+            this.passiveItemCtrl1.TabIndex = 5;
             // 
-            // passzívToolStripMenuItem
+            // keresésToolStripMenuItem
             // 
-            this.passzívToolStripMenuItem.Name = "passzívToolStripMenuItem";
-            this.passzívToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.passzívToolStripMenuItem.Text = "Passzív";
+            this.keresésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eszközToolStripMenuItem,
+            this.faliCsatlakzóToolStripMenuItem,
+            this.helyésgToolStripMenuItem});
+            this.keresésToolStripMenuItem.Name = "keresésToolStripMenuItem";
+            this.keresésToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.keresésToolStripMenuItem.Text = "Keresés";
             // 
-            // helységToolStripMenuItem1
+            // eszközToolStripMenuItem
             // 
-            this.helységToolStripMenuItem1.Name = "helységToolStripMenuItem1";
-            this.helységToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.helységToolStripMenuItem1.Text = "Helység";
+            this.eszközToolStripMenuItem.Name = "eszközToolStripMenuItem";
+            this.eszközToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eszközToolStripMenuItem.Text = "Eszköz";
             // 
-            // faliCsatlakozóToolStripMenuItem
+            // faliCsatlakzóToolStripMenuItem
             // 
-            this.faliCsatlakozóToolStripMenuItem.Name = "faliCsatlakozóToolStripMenuItem";
-            this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.faliCsatlakozóToolStripMenuItem.Text = "Fali csatlakozó";
+            this.faliCsatlakzóToolStripMenuItem.Name = "faliCsatlakzóToolStripMenuItem";
+            this.faliCsatlakzóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.faliCsatlakzóToolStripMenuItem.Text = "Fali csatlakzó";
+            // 
+            // helyésgToolStripMenuItem
+            // 
+            this.helyésgToolStripMenuItem.Name = "helyésgToolStripMenuItem";
+            this.helyésgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helyésgToolStripMenuItem.Text = "Helyésg";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 570);
+            this.Controls.Add(this.passiveItemCtrl1);
             this.Controls.Add(this.itemActiveCtrl1);
             this.Controls.Add(this.mountWall1);
             this.Controls.Add(this.addLocation1);
@@ -194,19 +207,20 @@ namespace Honyr
         private System.Windows.Forms.ToolStripMenuItem itemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem portToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
-        public System.Windows.Forms.ToolStripMenuItem helységToolStripMenuItem;
         public defaultMainCtrl defaultMain1;
         public addLocationCtrl addLocation1;
         public System.Windows.Forms.ToolStripMenuItem newItemToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem eszközToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem faliCsatlakozóToolStripMenuItem1;
         private mountWall mountWall1;
         private ItemActiveCtrl itemActiveCtrl1;
         private System.Windows.Forms.ToolStripMenuItem aktívToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem passzívToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helységToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem faliCsatlakozóToolStripMenuItem;
+        private PassiveItemCtrl passiveItemCtrl1;
+        private System.Windows.Forms.ToolStripMenuItem keresésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eszközToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faliCsatlakzóToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helyésgToolStripMenuItem;
     }
 }
 

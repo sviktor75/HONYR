@@ -53,7 +53,7 @@
             // 
             this.locationIdLbl.AutoSize = true;
             this.locationIdLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationIdLbl.Location = new System.Drawing.Point(93, 174);
+            this.locationIdLbl.Location = new System.Drawing.Point(93, 146);
             this.locationIdLbl.Name = "locationIdLbl";
             this.locationIdLbl.Size = new System.Drawing.Size(71, 17);
             this.locationIdLbl.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             this.locationNameLbl.AutoSize = true;
             this.locationNameLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationNameLbl.Location = new System.Drawing.Point(93, 200);
+            this.locationNameLbl.Location = new System.Drawing.Point(93, 172);
             this.locationNameLbl.Name = "locationNameLbl";
             this.locationNameLbl.Size = new System.Drawing.Size(128, 17);
             this.locationNameLbl.TabIndex = 0;
@@ -73,7 +73,7 @@
             // 
             this.locationTypeLbl.AutoSize = true;
             this.locationTypeLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTypeLbl.Location = new System.Drawing.Point(93, 226);
+            this.locationTypeLbl.Location = new System.Drawing.Point(93, 198);
             this.locationTypeLbl.Name = "locationTypeLbl";
             this.locationTypeLbl.Size = new System.Drawing.Size(45, 17);
             this.locationTypeLbl.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             this.locationParentLbl.AutoSize = true;
             this.locationParentLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationParentLbl.Location = new System.Drawing.Point(92, 253);
+            this.locationParentLbl.Location = new System.Drawing.Point(92, 225);
             this.locationParentLbl.Name = "locationParentLbl";
             this.locationParentLbl.Size = new System.Drawing.Size(242, 17);
             this.locationParentLbl.TabIndex = 0;
@@ -93,7 +93,7 @@
             // 
             this.locationSymbolLbl.AutoSize = true;
             this.locationSymbolLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationSymbolLbl.Location = new System.Drawing.Point(93, 280);
+            this.locationSymbolLbl.Location = new System.Drawing.Point(93, 252);
             this.locationSymbolLbl.Name = "locationSymbolLbl";
             this.locationSymbolLbl.Size = new System.Drawing.Size(58, 17);
             this.locationSymbolLbl.TabIndex = 0;
@@ -103,7 +103,7 @@
             // 
             this.locationDescriptionLbl.AutoSize = true;
             this.locationDescriptionLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationDescriptionLbl.Location = new System.Drawing.Point(92, 307);
+            this.locationDescriptionLbl.Location = new System.Drawing.Point(92, 279);
             this.locationDescriptionLbl.Name = "locationDescriptionLbl";
             this.locationDescriptionLbl.Size = new System.Drawing.Size(186, 17);
             this.locationDescriptionLbl.TabIndex = 0;
@@ -111,14 +111,14 @@
             // 
             // locationIdTextbox
             // 
-            this.locationIdTextbox.Location = new System.Drawing.Point(340, 174);
+            this.locationIdTextbox.Location = new System.Drawing.Point(340, 146);
             this.locationIdTextbox.Name = "locationIdTextbox";
             this.locationIdTextbox.Size = new System.Drawing.Size(470, 20);
             this.locationIdTextbox.TabIndex = 1;
             // 
             // locationNameTextbox
             // 
-            this.locationNameTextbox.Location = new System.Drawing.Point(340, 200);
+            this.locationNameTextbox.Location = new System.Drawing.Point(340, 172);
             this.locationNameTextbox.Name = "locationNameTextbox";
             this.locationNameTextbox.Size = new System.Drawing.Size(470, 20);
             this.locationNameTextbox.TabIndex = 1;
@@ -127,17 +127,16 @@
             // 
             this.addLocationLbl.AutoSize = true;
             this.addLocationLbl.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addLocationLbl.Location = new System.Drawing.Point(399, 71);
+            this.addLocationLbl.Location = new System.Drawing.Point(399, 35);
             this.addLocationLbl.Name = "addLocationLbl";
             this.addLocationLbl.Size = new System.Drawing.Size(105, 34);
             this.addLocationLbl.TabIndex = 3;
             this.addLocationLbl.Text = "Helyég";
-            this.addLocationLbl.Click += new System.EventHandler(this.addLocationLbl_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(340, 280);
+            this.comboBox1.Location = new System.Drawing.Point(340, 252);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(169, 21);
             this.comboBox1.TabIndex = 4;
@@ -145,14 +144,14 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(340, 253);
+            this.comboBox2.Location = new System.Drawing.Point(340, 225);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(169, 21);
             this.comboBox2.TabIndex = 5;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(340, 307);
+            this.richTextBox1.Location = new System.Drawing.Point(340, 279);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(470, 96);
             this.richTextBox1.TabIndex = 6;
@@ -161,7 +160,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(340, 226);
+            this.comboBox3.Location = new System.Drawing.Point(340, 198);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(169, 21);
             this.comboBox3.TabIndex = 5;
@@ -219,6 +218,7 @@
             this.cancelBtn.TabIndex = 22;
             this.cancelBtn.Text = "Mégse";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click_1);
             // 
             // addLocationCtrl
             // 

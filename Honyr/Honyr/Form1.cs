@@ -26,26 +26,47 @@ namespace Honyr
             
         }
 
-        private void locationToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            addLocation1.BringToFront();
-            mountWall1.SendToBack();
-        }
-
         private void portToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void faliCsatlakozóToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void passzívToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            passiveItemCtrl1.BringToFront();
+
+            mountWall1.SendToBack();
             addLocation1.SendToBack();
-            mountWall1.BringToFront();
+            itemActiveCtrl1.SendToBack();
         }
 
-        private void activeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aktívToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             itemActiveCtrl1.BringToFront();
+
+            mountWall1.SendToBack();
+            addLocation1.SendToBack();
+            passiveItemCtrl1.SendToBack();
+
+        }
+
+        private void helységToolStripMenuItem1_Click(object sender, EventArgs e) 
+        {
+            addLocation1.BringToFront();
+
+            mountWall1.SendToBack();
+            passiveItemCtrl1.SendToBack();
+            itemActiveCtrl1.SendToBack();
+        }
+
+        private void faliCsatlakozóToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            mountWall1.BringToFront();
+
+            addLocation1.SendToBack();
+            passiveItemCtrl1.SendToBack();
+            itemActiveCtrl1.SendToBack();
         }
     }
 }
