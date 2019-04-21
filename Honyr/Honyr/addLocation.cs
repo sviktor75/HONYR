@@ -20,15 +20,10 @@ namespace Honyr
 
         private void cancelBtn_Click_1(object sender, EventArgs e)
         {
-            SendToBack();
+              // If clicked on cancel then clear all the boxes
+            this.Controls.ClearControls();
 
-            // If click on cancel then clear the boxes
-            locationIdTextbox.Clear();
-            locationNameTextbox.Clear();
-            locationDescriptionRichTextBox.Clear();
-            locationTypeComboBox.ResetText();
-            locationSymbolComboBox.ResetText();
-            LocationParentComboBox.ResetText();
+            SendToBack();
         }
     }
 }
