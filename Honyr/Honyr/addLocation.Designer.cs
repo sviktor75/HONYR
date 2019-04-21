@@ -195,6 +195,7 @@
             this.locationSaveBtn.TabIndex = 19;
             this.locationSaveBtn.Text = "Mentés";
             this.locationSaveBtn.UseVisualStyleBackColor = true;
+            this.locationSaveBtn.Click += new System.EventHandler(this.locationSaveBtn_Click);
             // 
             // locationDeleteBtn
             // 

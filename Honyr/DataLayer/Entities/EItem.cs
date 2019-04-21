@@ -8,7 +8,7 @@ namespace DataLayer.Entities
 {
     class EItem  
     {
-        public long Id { get; }
+        public long Id { get; } // mert auto increment az adatbázis felől
         public bool Active { get; set; }
         public string DeviceId { get; set; }
         public string DeviceName { get; set; }

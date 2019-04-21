@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataLayer.Operations;
 
 namespace Honyr
 {
@@ -29,6 +30,18 @@ namespace Honyr
             locationTypeComboBox.ResetText();
             locationSymbolComboBox.ResetText();
             LocationParentComboBox.ResetText();
+        }
+
+        private void locationSaveBtn_Click(object sender, EventArgs e)
+        {
+            OLocation location = new OLocation();
+            location.AddLocation(
+                locationNameTextbox.Text,
+                locationTypeComboBox.Text,
+                long.Parse(LocationParentComboBox.Text),
+                int.Parse(locationSymbolComboBox.Text),
+                locationDescriptionRichTextBox.Text
+                );
         }
     }
 }

@@ -8,6 +8,11 @@ namespace DataLayer.Entities
 {
     class ELocation
     {
-        //ki kell tölteni az osztálydiagramból
+        public long Id { get; } // mert auto increment az adatbázis felől
+        public string Name { get; set; }
+        public string LocationType { get; set; }
+        public long ParentId { get; set; }
+        public int SymbolId { get; set; }
+        public string Description { get; set; }
     }
 }

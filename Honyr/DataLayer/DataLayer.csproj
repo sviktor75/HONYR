@@ -31,8 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +52,7 @@
     <Compile Include="Entities\EPort.cs" />
     <Compile Include="Entities\ESymbol.cs" />
     <Compile Include="Entities\EWallConnector.cs" />
+    <Compile Include="Operations\OInitDataConnection.cs" />
     <Compile Include="Operations\OItem.cs" />
     <Compile Include="Operations\OLocation.cs" />
     <Compile Include="Operations\OPort.cs" />

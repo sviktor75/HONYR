@@ -8,6 +8,6 @@ namespace DataLayer.Entities
 {
     class ESymbol
     {
-        //ki kell tölteni az osztálydiagramból
+        //ki kell tölteni az osztálydiagram alapján
     }
 }

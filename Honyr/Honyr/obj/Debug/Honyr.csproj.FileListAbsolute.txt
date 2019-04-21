@@ -24,3 +24,12 @@ C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.mou
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.PassiveItemCtrl.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyReference.cache
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.addLocationCtrl.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.Form1.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.mountWall.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.PassiveItemCtrl.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.defaultMainCtrl.resources
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.GenerateResource.cache
+d:\Projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.CoreCompileInputs.cache

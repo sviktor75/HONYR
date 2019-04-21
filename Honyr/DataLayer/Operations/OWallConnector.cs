@@ -8,6 +8,6 @@ namespace DataLayer.Operations
 {
     class OWallConnector
     {
-        //ki kell tölteni az osztálydiagramból
+        //ki kell tölteni az osztálydiagram alapján
     }
 }
