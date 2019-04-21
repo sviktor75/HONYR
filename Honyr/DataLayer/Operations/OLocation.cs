@@ -4,31 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
+using DataLayer.Entities;
 
 namespace DataLayer.Operations
 {
     public class OLocation
     {
-        OInitDataConnection db = new OInitDataConnection();
-        public void AddLocation(string name, string locationtype, string parentid, string symbolid, string description)
+        OInitDataConnection conn = new OInitDataConnection();
+
+        public int AddLocation(ELocation location)
         {
+            string query = "INSERT INTO location (name, locationtype, parentid, symbolid, description)"+" VALUES" + " ('"+location.Name+"', '"+location.LocationType+"', '"+location.ParentId+"', '"+location.SymbolId+"', '"+location.Description+"');";
 
-            //db.OpenConnection();
-            string query = "INSERT INTO location (name, locationtype, parentid, symbolid, description) VALUES('"+name+"', '"+locationtype+"', '"+parentid+"', '"+symbolid+"', '"+description+"');";
-
-            //open connection
-            if (db.OpenConnection() == true)
+            if (conn.OpenConnection()) //ha sikerül csatlakozni az adatbázishoz
             {
                 //create command and assign the query and connection from the constructor
-                MySqlCommand cmd = new MySqlCommand(query, db.conn);
 
-                //Execute command
-                
-                cmd.ExecuteNonQuery();
-
-                //close connection
-                db.CloseConnection();
+                MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+                int effectedRows = cmd.ExecuteNonQuery(); // sql query végrehajtása
+                return effectedRows;
             }
         }
 

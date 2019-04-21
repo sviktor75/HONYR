@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Entities
 {
-    class ELocation
+    public class ELocation
     {
         public long Id { get; } // mert auto increment az adatbázis felől
         public string Name { get; set; }
