@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.addMountWallMainLbl = new System.Windows.Forms.Label();
-            this.locationParentTextbox = new System.Windows.Forms.TextBox();
-            this.locationNameTextbox = new System.Windows.Forms.TextBox();
-            this.locationIdTextbox = new System.Windows.Forms.TextBox();
+            this.wallMountFormationTextbox = new System.Windows.Forms.TextBox();
+            this.wallMountNameTextbox = new System.Windows.Forms.TextBox();
+            this.wallMountIdTextbox = new System.Windows.Forms.TextBox();
             this.mountWallDescriptionLbl = new System.Windows.Forms.Label();
             this.mountWallSymbolLbl = new System.Windows.Forms.Label();
             this.mountWallKialakitasaLbl = new System.Windows.Forms.Label();
             this.mountWallTypeLbl = new System.Windows.Forms.Label();
             this.MountWallNameLbl = new System.Windows.Forms.Label();
             this.MountWallIdLbl = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.wallMountDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.wallMountSymbolComboBox = new System.Windows.Forms.ComboBox();
+            this.wallMountTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.wallMountLoctaionComboBox = new System.Windows.Forms.ComboBox();
             this.locationParentLbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,26 +61,26 @@
             this.addMountWallMainLbl.TabIndex = 18;
             this.addMountWallMainLbl.Text = "Fali csatlakozó";
             // 
-            // locationParentTextbox
+            // wallMountFormationTextbox
             // 
-            this.locationParentTextbox.Location = new System.Drawing.Point(340, 204);
-            this.locationParentTextbox.Name = "locationParentTextbox";
-            this.locationParentTextbox.Size = new System.Drawing.Size(470, 20);
-            this.locationParentTextbox.TabIndex = 12;
+            this.wallMountFormationTextbox.Location = new System.Drawing.Point(340, 204);
+            this.wallMountFormationTextbox.Name = "wallMountFormationTextbox";
+            this.wallMountFormationTextbox.Size = new System.Drawing.Size(470, 20);
+            this.wallMountFormationTextbox.TabIndex = 12;
             // 
-            // locationNameTextbox
+            // wallMountNameTextbox
             // 
-            this.locationNameTextbox.Location = new System.Drawing.Point(340, 151);
-            this.locationNameTextbox.Name = "locationNameTextbox";
-            this.locationNameTextbox.Size = new System.Drawing.Size(470, 20);
-            this.locationNameTextbox.TabIndex = 14;
+            this.wallMountNameTextbox.Location = new System.Drawing.Point(340, 151);
+            this.wallMountNameTextbox.Name = "wallMountNameTextbox";
+            this.wallMountNameTextbox.Size = new System.Drawing.Size(470, 20);
+            this.wallMountNameTextbox.TabIndex = 14;
             // 
-            // locationIdTextbox
+            // wallMountIdTextbox
             // 
-            this.locationIdTextbox.Location = new System.Drawing.Point(340, 126);
-            this.locationIdTextbox.Name = "locationIdTextbox";
-            this.locationIdTextbox.Size = new System.Drawing.Size(470, 20);
-            this.locationIdTextbox.TabIndex = 15;
+            this.wallMountIdTextbox.Location = new System.Drawing.Point(340, 126);
+            this.wallMountIdTextbox.Name = "wallMountIdTextbox";
+            this.wallMountIdTextbox.Size = new System.Drawing.Size(470, 20);
+            this.wallMountIdTextbox.TabIndex = 15;
             // 
             // mountWallDescriptionLbl
             // 
@@ -142,37 +142,37 @@
             this.MountWallIdLbl.TabIndex = 9;
             this.MountWallIdLbl.Text = "Azonosító:";
             // 
-            // richTextBox1
+            // wallMountDescriptionRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(340, 282);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(470, 96);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
+            this.wallMountDescriptionRichTextBox.Location = new System.Drawing.Point(340, 282);
+            this.wallMountDescriptionRichTextBox.Name = "wallMountDescriptionRichTextBox";
+            this.wallMountDescriptionRichTextBox.Size = new System.Drawing.Size(470, 96);
+            this.wallMountDescriptionRichTextBox.TabIndex = 21;
+            this.wallMountDescriptionRichTextBox.Text = "";
             // 
-            // comboBox2
+            // wallMountSymbolComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(340, 256);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 21);
-            this.comboBox2.TabIndex = 20;
+            this.wallMountSymbolComboBox.FormattingEnabled = true;
+            this.wallMountSymbolComboBox.Location = new System.Drawing.Point(340, 256);
+            this.wallMountSymbolComboBox.Name = "wallMountSymbolComboBox";
+            this.wallMountSymbolComboBox.Size = new System.Drawing.Size(169, 21);
+            this.wallMountSymbolComboBox.TabIndex = 20;
             // 
-            // comboBox1
+            // wallMountTypeComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(340, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 21);
-            this.comboBox1.TabIndex = 22;
+            this.wallMountTypeComboBox.FormattingEnabled = true;
+            this.wallMountTypeComboBox.Location = new System.Drawing.Point(340, 177);
+            this.wallMountTypeComboBox.Name = "wallMountTypeComboBox";
+            this.wallMountTypeComboBox.Size = new System.Drawing.Size(169, 21);
+            this.wallMountTypeComboBox.TabIndex = 22;
             // 
-            // comboBox3
+            // wallMountLoctaionComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(340, 229);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 21);
-            this.comboBox3.TabIndex = 25;
+            this.wallMountLoctaionComboBox.FormattingEnabled = true;
+            this.wallMountLoctaionComboBox.Location = new System.Drawing.Point(340, 229);
+            this.wallMountLoctaionComboBox.Name = "wallMountLoctaionComboBox";
+            this.wallMountLoctaionComboBox.Size = new System.Drawing.Size(169, 21);
+            this.wallMountLoctaionComboBox.TabIndex = 25;
             // 
             // locationParentLbl
             // 
@@ -249,15 +249,15 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.wallMountLoctaionComboBox);
             this.Controls.Add(this.locationParentLbl);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.wallMountTypeComboBox);
+            this.Controls.Add(this.wallMountDescriptionRichTextBox);
+            this.Controls.Add(this.wallMountSymbolComboBox);
             this.Controls.Add(this.addMountWallMainLbl);
-            this.Controls.Add(this.locationParentTextbox);
-            this.Controls.Add(this.locationNameTextbox);
-            this.Controls.Add(this.locationIdTextbox);
+            this.Controls.Add(this.wallMountFormationTextbox);
+            this.Controls.Add(this.wallMountNameTextbox);
+            this.Controls.Add(this.wallMountIdTextbox);
             this.Controls.Add(this.mountWallDescriptionLbl);
             this.Controls.Add(this.mountWallSymbolLbl);
             this.Controls.Add(this.mountWallKialakitasaLbl);
@@ -274,19 +274,19 @@
         #endregion
 
         private System.Windows.Forms.Label addMountWallMainLbl;
-        private System.Windows.Forms.TextBox locationParentTextbox;
-        private System.Windows.Forms.TextBox locationNameTextbox;
-        private System.Windows.Forms.TextBox locationIdTextbox;
+        private System.Windows.Forms.TextBox wallMountFormationTextbox;
+        private System.Windows.Forms.TextBox wallMountNameTextbox;
+        private System.Windows.Forms.TextBox wallMountIdTextbox;
         private System.Windows.Forms.Label mountWallDescriptionLbl;
         private System.Windows.Forms.Label mountWallSymbolLbl;
         private System.Windows.Forms.Label mountWallKialakitasaLbl;
         private System.Windows.Forms.Label mountWallTypeLbl;
         private System.Windows.Forms.Label MountWallNameLbl;
         private System.Windows.Forms.Label MountWallIdLbl;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.RichTextBox wallMountDescriptionRichTextBox;
+        private System.Windows.Forms.ComboBox wallMountSymbolComboBox;
+        private System.Windows.Forms.ComboBox wallMountTypeComboBox;
+        private System.Windows.Forms.ComboBox wallMountLoctaionComboBox;
         private System.Windows.Forms.Label locationParentLbl;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

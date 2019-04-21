@@ -23,3 +23,4 @@ C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.def
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.mountWall.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
 C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.PassiveItemCtrl.resources
+C:\Users\tothalexlaszlo\PycharmProjects\8q\HONYR\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyReference.cache

@@ -20,6 +20,14 @@ namespace Honyr
         private void cancelBtn_Click_1(object sender, EventArgs e)
         {
             SendToBack();
+
+            wallMountIdTextbox.Clear();
+            wallMountNameTextbox.Clear();
+            wallMountTypeComboBox.ResetText();
+            wallMountFormationTextbox.Clear();
+            wallMountLoctaionComboBox.ResetText();
+            wallMountSymbolComboBox.ResetText();
+            wallMountDescriptionRichTextBox.Clear();
         }
     }
 }

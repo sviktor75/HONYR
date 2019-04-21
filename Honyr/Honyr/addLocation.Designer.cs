@@ -37,15 +37,15 @@
             this.locationIdTextbox = new System.Windows.Forms.TextBox();
             this.locationNameTextbox = new System.Windows.Forms.TextBox();
             this.addLocationLbl = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.locationSymbolComboBox = new System.Windows.Forms.ComboBox();
+            this.LocationParentComboBox = new System.Windows.Forms.ComboBox();
+            this.locationDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.locationTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.locationAddBtn = new System.Windows.Forms.Button();
+            this.locationSearchBtn = new System.Windows.Forms.Button();
+            this.locationSaveBtn = new System.Windows.Forms.Button();
+            this.locationDeleteBtn = new System.Windows.Forms.Button();
+            this.locationModidyBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -133,82 +133,86 @@
             this.addLocationLbl.TabIndex = 3;
             this.addLocationLbl.Text = "Helyég";
             // 
-            // comboBox1
+            // locationSymbolComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(340, 252);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 21);
-            this.comboBox1.TabIndex = 4;
+            this.locationSymbolComboBox.FormattingEnabled = true;
+            this.locationSymbolComboBox.Location = new System.Drawing.Point(340, 252);
+            this.locationSymbolComboBox.Name = "locationSymbolComboBox";
+            this.locationSymbolComboBox.Size = new System.Drawing.Size(169, 21);
+            this.locationSymbolComboBox.TabIndex = 4;
             // 
-            // comboBox2
+            // LocationParentComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(340, 225);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 21);
-            this.comboBox2.TabIndex = 5;
+            this.LocationParentComboBox.FormattingEnabled = true;
+            this.LocationParentComboBox.Location = new System.Drawing.Point(340, 225);
+            this.LocationParentComboBox.Name = "LocationParentComboBox";
+            this.LocationParentComboBox.Size = new System.Drawing.Size(169, 21);
+            this.LocationParentComboBox.TabIndex = 5;
             // 
-            // richTextBox1
+            // locationDescriptionRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(340, 279);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(470, 96);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.locationDescriptionRichTextBox.Location = new System.Drawing.Point(340, 279);
+            this.locationDescriptionRichTextBox.Name = "locationDescriptionRichTextBox";
+            this.locationDescriptionRichTextBox.Size = new System.Drawing.Size(470, 96);
+            this.locationDescriptionRichTextBox.TabIndex = 6;
+            this.locationDescriptionRichTextBox.Text = "";
             // 
-            // comboBox3
+            // locationTypeComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(340, 198);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 21);
-            this.comboBox3.TabIndex = 5;
+            this.locationTypeComboBox.FormattingEnabled = true;
+            this.locationTypeComboBox.Items.AddRange(new object[] {
+            "épület",
+            "folyosó",
+            "iroda"});
+            this.locationTypeComboBox.Location = new System.Drawing.Point(340, 198);
+            this.locationTypeComboBox.Name = "locationTypeComboBox";
+            this.locationTypeComboBox.Size = new System.Drawing.Size(169, 21);
+            this.locationTypeComboBox.TabIndex = 5;
             // 
-            // button1
+            // locationAddBtn
             // 
-            this.button1.Location = new System.Drawing.Point(135, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 27);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Új";
-            this.button1.UseVisualStyleBackColor = true;
+            this.locationAddBtn.Location = new System.Drawing.Point(135, 446);
+            this.locationAddBtn.Name = "locationAddBtn";
+            this.locationAddBtn.Size = new System.Drawing.Size(97, 27);
+            this.locationAddBtn.TabIndex = 17;
+            this.locationAddBtn.Text = "Új";
+            this.locationAddBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // locationSearchBtn
             // 
-            this.button2.Location = new System.Drawing.Point(349, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 27);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Keresés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.locationSearchBtn.Location = new System.Drawing.Point(349, 446);
+            this.locationSearchBtn.Name = "locationSearchBtn";
+            this.locationSearchBtn.Size = new System.Drawing.Size(97, 27);
+            this.locationSearchBtn.TabIndex = 18;
+            this.locationSearchBtn.Text = "Keresés";
+            this.locationSearchBtn.UseVisualStyleBackColor = true;
             // 
-            // saveBtn
+            // locationSaveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(242, 446);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(97, 27);
-            this.saveBtn.TabIndex = 19;
-            this.saveBtn.Text = "Mentés";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.locationSaveBtn.Location = new System.Drawing.Point(242, 446);
+            this.locationSaveBtn.Name = "locationSaveBtn";
+            this.locationSaveBtn.Size = new System.Drawing.Size(97, 27);
+            this.locationSaveBtn.TabIndex = 19;
+            this.locationSaveBtn.Text = "Mentés";
+            this.locationSaveBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // locationDeleteBtn
             // 
-            this.button4.Location = new System.Drawing.Point(563, 446);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 27);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Töröl";
-            this.button4.UseVisualStyleBackColor = true;
+            this.locationDeleteBtn.Location = new System.Drawing.Point(563, 446);
+            this.locationDeleteBtn.Name = "locationDeleteBtn";
+            this.locationDeleteBtn.Size = new System.Drawing.Size(97, 27);
+            this.locationDeleteBtn.TabIndex = 20;
+            this.locationDeleteBtn.Text = "Töröl";
+            this.locationDeleteBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // locationModidyBtn
             // 
-            this.button3.Location = new System.Drawing.Point(456, 446);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 27);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Módosít";
-            this.button3.UseVisualStyleBackColor = true;
+            this.locationModidyBtn.Location = new System.Drawing.Point(456, 446);
+            this.locationModidyBtn.Name = "locationModidyBtn";
+            this.locationModidyBtn.Size = new System.Drawing.Size(97, 27);
+            this.locationModidyBtn.TabIndex = 21;
+            this.locationModidyBtn.Text = "Módosít";
+            this.locationModidyBtn.UseVisualStyleBackColor = true;
             // 
             // cancelBtn
             // 
@@ -224,16 +228,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.locationAddBtn);
+            this.Controls.Add(this.locationSearchBtn);
+            this.Controls.Add(this.locationSaveBtn);
+            this.Controls.Add(this.locationDeleteBtn);
+            this.Controls.Add(this.locationModidyBtn);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.locationDescriptionRichTextBox);
+            this.Controls.Add(this.locationTypeComboBox);
+            this.Controls.Add(this.LocationParentComboBox);
+            this.Controls.Add(this.locationSymbolComboBox);
             this.Controls.Add(this.addLocationLbl);
             this.Controls.Add(this.locationNameTextbox);
             this.Controls.Add(this.locationIdTextbox);
@@ -261,15 +265,15 @@
         private System.Windows.Forms.TextBox locationIdTextbox;
         private System.Windows.Forms.TextBox locationNameTextbox;
         private System.Windows.Forms.Label addLocationLbl;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox locationSymbolComboBox;
+        private System.Windows.Forms.ComboBox LocationParentComboBox;
+        private System.Windows.Forms.RichTextBox locationDescriptionRichTextBox;
+        private System.Windows.Forms.ComboBox locationTypeComboBox;
+        private System.Windows.Forms.Button locationAddBtn;
+        private System.Windows.Forms.Button locationSearchBtn;
+        private System.Windows.Forms.Button locationSaveBtn;
+        private System.Windows.Forms.Button locationDeleteBtn;
+        private System.Windows.Forms.Button locationModidyBtn;
         private System.Windows.Forms.Button cancelBtn;
     }
 }

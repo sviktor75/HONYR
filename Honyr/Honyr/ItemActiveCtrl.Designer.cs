@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.itemActiveLocationComboBox = new System.Windows.Forms.ComboBox();
             this.ItemActiveLbl = new System.Windows.Forms.Label();
-            this.saveBtn = new System.Windows.Forms.Button();
+            this.itemActiveSaveBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.locationNameTextbox = new System.Windows.Forms.TextBox();
-            this.locationIdTextbox = new System.Windows.Forms.TextBox();
+            this.itemActiveNameTextbox = new System.Windows.Forms.TextBox();
+            this.itemActiveLocationIdTextbox = new System.Windows.Forms.TextBox();
             this.locationDescriptionLbl = new System.Windows.Forms.Label();
             this.locationParentLbl = new System.Windows.Forms.Label();
             this.locationNameLbl = new System.Windows.Forms.Label();
             this.locationIdLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.itemActiveIpTextBox = new System.Windows.Forms.TextBox();
+            this.itemActiveMacTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.addPortBtn = new System.Windows.Forms.Button();
+            this.itemActivePortsListBox = new System.Windows.Forms.ListBox();
+            this.itemActiveDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.itemActiveaddPortBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.itemActiveSymbolComboBox = new System.Windows.Forms.ComboBox();
+            this.itemActivePortIdTextBox = new System.Windows.Forms.TextBox();
+            this.itemActivePortNameTextBox = new System.Windows.Forms.TextBox();
+            this.itemActivePortConfigRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.itemActivePortTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.itemActiveAddBtn = new System.Windows.Forms.Button();
+            this.itemActiveSearchBtm = new System.Windows.Forms.Button();
+            this.itemActiveModifyBtn = new System.Windows.Forms.Button();
+            this.itemActiveDeleteBtn = new System.Windows.Forms.Button();
+            this.itemActiveDeletePortBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // itemActiveLocationComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(189, 154);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 21);
-            this.comboBox2.TabIndex = 20;
+            this.itemActiveLocationComboBox.FormattingEnabled = true;
+            this.itemActiveLocationComboBox.Location = new System.Drawing.Point(189, 154);
+            this.itemActiveLocationComboBox.Name = "itemActiveLocationComboBox";
+            this.itemActiveLocationComboBox.Size = new System.Drawing.Size(169, 21);
+            this.itemActiveLocationComboBox.TabIndex = 20;
             // 
             // ItemActiveLbl
             // 
@@ -81,14 +81,14 @@
             this.ItemActiveLbl.TabIndex = 17;
             this.ItemActiveLbl.Text = "Aktív eszköz";
             // 
-            // saveBtn
+            // itemActiveSaveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(242, 488);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(97, 27);
-            this.saveBtn.TabIndex = 15;
-            this.saveBtn.Text = "Mentés";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.itemActiveSaveBtn.Location = new System.Drawing.Point(242, 488);
+            this.itemActiveSaveBtn.Name = "itemActiveSaveBtn";
+            this.itemActiveSaveBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemActiveSaveBtn.TabIndex = 15;
+            this.itemActiveSaveBtn.Text = "Mentés";
+            this.itemActiveSaveBtn.UseVisualStyleBackColor = true;
             // 
             // cancelBtn
             // 
@@ -100,19 +100,19 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // locationNameTextbox
+            // itemActiveNameTextbox
             // 
-            this.locationNameTextbox.Location = new System.Drawing.Point(189, 127);
-            this.locationNameTextbox.Name = "locationNameTextbox";
-            this.locationNameTextbox.Size = new System.Drawing.Size(220, 20);
-            this.locationNameTextbox.TabIndex = 13;
+            this.itemActiveNameTextbox.Location = new System.Drawing.Point(189, 127);
+            this.itemActiveNameTextbox.Name = "itemActiveNameTextbox";
+            this.itemActiveNameTextbox.Size = new System.Drawing.Size(220, 20);
+            this.itemActiveNameTextbox.TabIndex = 13;
             // 
-            // locationIdTextbox
+            // itemActiveLocationIdTextbox
             // 
-            this.locationIdTextbox.Location = new System.Drawing.Point(189, 100);
-            this.locationIdTextbox.Name = "locationIdTextbox";
-            this.locationIdTextbox.Size = new System.Drawing.Size(220, 20);
-            this.locationIdTextbox.TabIndex = 14;
+            this.itemActiveLocationIdTextbox.Location = new System.Drawing.Point(189, 100);
+            this.itemActiveLocationIdTextbox.Name = "itemActiveLocationIdTextbox";
+            this.itemActiveLocationIdTextbox.Size = new System.Drawing.Size(220, 20);
+            this.itemActiveLocationIdTextbox.TabIndex = 14;
             // 
             // locationDescriptionLbl
             // 
@@ -160,23 +160,23 @@
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 186);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "IP cím";
+            this.label1.Text = "IP cím:";
             // 
-            // textBox1
+            // itemActiveIpTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(189, 183);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 14;
+            this.itemActiveIpTextBox.Location = new System.Drawing.Point(189, 183);
+            this.itemActiveIpTextBox.Name = "itemActiveIpTextBox";
+            this.itemActiveIpTextBox.Size = new System.Drawing.Size(220, 20);
+            this.itemActiveIpTextBox.TabIndex = 14;
             // 
-            // textBox2
+            // itemActiveMacTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(189, 213);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 20);
-            this.textBox2.TabIndex = 23;
+            this.itemActiveMacTextBox.Location = new System.Drawing.Point(189, 213);
+            this.itemActiveMacTextBox.Name = "itemActiveMacTextBox";
+            this.itemActiveMacTextBox.Size = new System.Drawing.Size(220, 20);
+            this.itemActiveMacTextBox.TabIndex = 23;
             // 
             // label2
             // 
@@ -184,9 +184,9 @@
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 22;
-            this.label2.Text = "MAC cím";
+            this.label2.Text = "MAC cím:";
             // 
             // label3
             // 
@@ -198,31 +198,31 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Portok";
             // 
-            // listBox1
+            // itemActivePortsListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(539, 100);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(54, 355);
-            this.listBox1.TabIndex = 24;
+            this.itemActivePortsListBox.FormattingEnabled = true;
+            this.itemActivePortsListBox.Location = new System.Drawing.Point(539, 100);
+            this.itemActivePortsListBox.Name = "itemActivePortsListBox";
+            this.itemActivePortsListBox.Size = new System.Drawing.Size(54, 355);
+            this.itemActivePortsListBox.TabIndex = 24;
             // 
-            // richTextBox1
+            // itemActiveDescriptionRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(189, 250);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(328, 96);
-            this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = "";
+            this.itemActiveDescriptionRichTextBox.Location = new System.Drawing.Point(189, 250);
+            this.itemActiveDescriptionRichTextBox.Name = "itemActiveDescriptionRichTextBox";
+            this.itemActiveDescriptionRichTextBox.Size = new System.Drawing.Size(328, 96);
+            this.itemActiveDescriptionRichTextBox.TabIndex = 25;
+            this.itemActiveDescriptionRichTextBox.Text = "";
             // 
-            // addPortBtn
+            // itemActiveaddPortBtn
             // 
-            this.addPortBtn.Location = new System.Drawing.Point(657, 355);
-            this.addPortBtn.Name = "addPortBtn";
-            this.addPortBtn.Size = new System.Drawing.Size(96, 27);
-            this.addPortBtn.TabIndex = 15;
-            this.addPortBtn.Text = "Port hozzáadása";
-            this.addPortBtn.UseVisualStyleBackColor = true;
-            this.addPortBtn.Click += new System.EventHandler(this.addPortBtn_Click);
+            this.itemActiveaddPortBtn.Location = new System.Drawing.Point(657, 355);
+            this.itemActiveaddPortBtn.Name = "itemActiveaddPortBtn";
+            this.itemActiveaddPortBtn.Size = new System.Drawing.Size(96, 27);
+            this.itemActiveaddPortBtn.TabIndex = 15;
+            this.itemActiveaddPortBtn.Text = "Port hozzáadása";
+            this.itemActiveaddPortBtn.UseVisualStyleBackColor = true;
+            this.itemActiveaddPortBtn.Click += new System.EventHandler(this.addPortBtn_Click);
             // 
             // label4
             // 
@@ -230,9 +230,9 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(615, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Azonosító";
+            this.label4.Text = "Azonosító:";
             // 
             // label5
             // 
@@ -240,9 +240,9 @@
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(614, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 17);
+            this.label5.Size = new System.Drawing.Size(80, 17);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Megnevezés";
+            this.label5.Text = "Megnevezés:";
             // 
             // label6
             // 
@@ -250,9 +250,9 @@
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(614, 154);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 17);
+            this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Konfiguráció";
+            this.label6.Text = "Konfiguráció:";
             // 
             // label7
             // 
@@ -260,9 +260,9 @@
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(614, 304);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 17);
+            this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Típus";
+            this.label7.Text = "Típus:";
             // 
             // label8
             // 
@@ -270,120 +270,120 @@
             this.label8.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(20, 365);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 17);
+            this.label8.Size = new System.Drawing.Size(55, 17);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Rajzjel";
+            this.label8.Text = "Rajzjel:";
             // 
-            // comboBox1
+            // itemActiveSymbolComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(189, 361);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 21);
-            this.comboBox1.TabIndex = 26;
+            this.itemActiveSymbolComboBox.FormattingEnabled = true;
+            this.itemActiveSymbolComboBox.Location = new System.Drawing.Point(189, 361);
+            this.itemActiveSymbolComboBox.Name = "itemActiveSymbolComboBox";
+            this.itemActiveSymbolComboBox.Size = new System.Drawing.Size(169, 21);
+            this.itemActiveSymbolComboBox.TabIndex = 26;
             // 
-            // textBox3
+            // itemActivePortIdTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(711, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 14;
+            this.itemActivePortIdTextBox.Location = new System.Drawing.Point(711, 97);
+            this.itemActivePortIdTextBox.Name = "itemActivePortIdTextBox";
+            this.itemActivePortIdTextBox.Size = new System.Drawing.Size(169, 20);
+            this.itemActivePortIdTextBox.TabIndex = 14;
             // 
-            // textBox4
+            // itemActivePortNameTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(711, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 20);
-            this.textBox4.TabIndex = 13;
+            this.itemActivePortNameTextBox.Location = new System.Drawing.Point(711, 124);
+            this.itemActivePortNameTextBox.Name = "itemActivePortNameTextBox";
+            this.itemActivePortNameTextBox.Size = new System.Drawing.Size(169, 20);
+            this.itemActivePortNameTextBox.TabIndex = 13;
             // 
-            // richTextBox2
+            // itemActivePortConfigRichTextBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(712, 153);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(168, 145);
-            this.richTextBox2.TabIndex = 27;
-            this.richTextBox2.Text = "";
+            this.itemActivePortConfigRichTextBox.Location = new System.Drawing.Point(712, 153);
+            this.itemActivePortConfigRichTextBox.Name = "itemActivePortConfigRichTextBox";
+            this.itemActivePortConfigRichTextBox.Size = new System.Drawing.Size(168, 145);
+            this.itemActivePortConfigRichTextBox.TabIndex = 27;
+            this.itemActivePortConfigRichTextBox.Text = "";
             // 
-            // comboBox3
+            // itemActivePortTypeComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(711, 304);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 21);
-            this.comboBox3.TabIndex = 28;
+            this.itemActivePortTypeComboBox.FormattingEnabled = true;
+            this.itemActivePortTypeComboBox.Location = new System.Drawing.Point(711, 304);
+            this.itemActivePortTypeComboBox.Name = "itemActivePortTypeComboBox";
+            this.itemActivePortTypeComboBox.Size = new System.Drawing.Size(169, 21);
+            this.itemActivePortTypeComboBox.TabIndex = 28;
             // 
-            // button1
+            // itemActiveAddBtn
             // 
-            this.button1.Location = new System.Drawing.Point(135, 488);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 27);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Új";
-            this.button1.UseVisualStyleBackColor = true;
+            this.itemActiveAddBtn.Location = new System.Drawing.Point(135, 488);
+            this.itemActiveAddBtn.Name = "itemActiveAddBtn";
+            this.itemActiveAddBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemActiveAddBtn.TabIndex = 15;
+            this.itemActiveAddBtn.Text = "Új";
+            this.itemActiveAddBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // itemActiveSearchBtm
             // 
-            this.button2.Location = new System.Drawing.Point(349, 488);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 27);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Keresés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.itemActiveSearchBtm.Location = new System.Drawing.Point(349, 488);
+            this.itemActiveSearchBtm.Name = "itemActiveSearchBtm";
+            this.itemActiveSearchBtm.Size = new System.Drawing.Size(97, 27);
+            this.itemActiveSearchBtm.TabIndex = 15;
+            this.itemActiveSearchBtm.Text = "Keresés";
+            this.itemActiveSearchBtm.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // itemActiveModifyBtn
             // 
-            this.button3.Location = new System.Drawing.Point(456, 488);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 27);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Módosít";
-            this.button3.UseVisualStyleBackColor = true;
+            this.itemActiveModifyBtn.Location = new System.Drawing.Point(456, 488);
+            this.itemActiveModifyBtn.Name = "itemActiveModifyBtn";
+            this.itemActiveModifyBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemActiveModifyBtn.TabIndex = 16;
+            this.itemActiveModifyBtn.Text = "Módosít";
+            this.itemActiveModifyBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // itemActiveDeleteBtn
             // 
-            this.button4.Location = new System.Drawing.Point(563, 488);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 27);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Töröl";
-            this.button4.UseVisualStyleBackColor = true;
+            this.itemActiveDeleteBtn.Location = new System.Drawing.Point(563, 488);
+            this.itemActiveDeleteBtn.Name = "itemActiveDeleteBtn";
+            this.itemActiveDeleteBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemActiveDeleteBtn.TabIndex = 16;
+            this.itemActiveDeleteBtn.Text = "Töröl";
+            this.itemActiveDeleteBtn.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // itemActiveDeletePortBtn
             // 
-            this.button5.Location = new System.Drawing.Point(759, 355);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 27);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Port törlése";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.addPortBtn_Click);
+            this.itemActiveDeletePortBtn.Location = new System.Drawing.Point(759, 355);
+            this.itemActiveDeletePortBtn.Name = "itemActiveDeletePortBtn";
+            this.itemActiveDeletePortBtn.Size = new System.Drawing.Size(96, 27);
+            this.itemActiveDeletePortBtn.TabIndex = 15;
+            this.itemActiveDeletePortBtn.Text = "Port törlése";
+            this.itemActiveDeletePortBtn.UseVisualStyleBackColor = true;
+            this.itemActiveDeletePortBtn.Click += new System.EventHandler(this.addPortBtn_Click);
             // 
             // ItemActiveCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.itemActivePortTypeComboBox);
+            this.Controls.Add(this.itemActivePortConfigRichTextBox);
+            this.Controls.Add(this.itemActiveSymbolComboBox);
+            this.Controls.Add(this.itemActiveDescriptionRichTextBox);
+            this.Controls.Add(this.itemActivePortsListBox);
+            this.Controls.Add(this.itemActiveMacTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.itemActiveLocationComboBox);
             this.Controls.Add(this.ItemActiveLbl);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.addPortBtn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.itemActiveDeletePortBtn);
+            this.Controls.Add(this.itemActiveaddPortBtn);
+            this.Controls.Add(this.itemActiveAddBtn);
+            this.Controls.Add(this.itemActiveSearchBtm);
+            this.Controls.Add(this.itemActiveSaveBtn);
+            this.Controls.Add(this.itemActiveDeleteBtn);
+            this.Controls.Add(this.itemActiveModifyBtn);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.locationNameTextbox);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.locationIdTextbox);
+            this.Controls.Add(this.itemActivePortNameTextBox);
+            this.Controls.Add(this.itemActiveNameTextbox);
+            this.Controls.Add(this.itemActiveIpTextBox);
+            this.Controls.Add(this.itemActivePortIdTextBox);
+            this.Controls.Add(this.itemActiveLocationIdTextbox);
             this.Controls.Add(this.locationDescriptionLbl);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -404,38 +404,38 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox itemActiveLocationComboBox;
         private System.Windows.Forms.Label ItemActiveLbl;
-        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button itemActiveSaveBtn;
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.TextBox locationNameTextbox;
-        private System.Windows.Forms.TextBox locationIdTextbox;
+        private System.Windows.Forms.TextBox itemActiveNameTextbox;
+        private System.Windows.Forms.TextBox itemActiveLocationIdTextbox;
         private System.Windows.Forms.Label locationDescriptionLbl;
         private System.Windows.Forms.Label locationParentLbl;
         private System.Windows.Forms.Label locationNameLbl;
         private System.Windows.Forms.Label locationIdLbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox itemActiveIpTextBox;
+        private System.Windows.Forms.TextBox itemActiveMacTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button addPortBtn;
+        private System.Windows.Forms.ListBox itemActivePortsListBox;
+        private System.Windows.Forms.RichTextBox itemActiveDescriptionRichTextBox;
+        private System.Windows.Forms.Button itemActiveaddPortBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox itemActiveSymbolComboBox;
+        private System.Windows.Forms.TextBox itemActivePortIdTextBox;
+        private System.Windows.Forms.TextBox itemActivePortNameTextBox;
+        private System.Windows.Forms.RichTextBox itemActivePortConfigRichTextBox;
+        private System.Windows.Forms.ComboBox itemActivePortTypeComboBox;
+        private System.Windows.Forms.Button itemActiveAddBtn;
+        private System.Windows.Forms.Button itemActiveSearchBtm;
+        private System.Windows.Forms.Button itemActiveModifyBtn;
+        private System.Windows.Forms.Button itemActiveDeleteBtn;
+        private System.Windows.Forms.Button itemActiveDeletePortBtn;
     }
 }

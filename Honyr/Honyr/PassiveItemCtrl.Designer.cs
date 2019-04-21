@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.itemPassivePortTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.itemPassiveSymbolComboBox = new System.Windows.Forms.ComboBox();
+            this.itemPassiveDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.itemPassivePortsListbox = new System.Windows.Forms.ListBox();
+            this.itemPassiveLocationComboBox = new System.Windows.Forms.ComboBox();
             this.ItemActiveLbl = new System.Windows.Forms.Label();
-            this.locationNameTextbox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.locationIdTextbox = new System.Windows.Forms.TextBox();
+            this.itemPassiveNameTxtbox = new System.Windows.Forms.TextBox();
+            this.itemPassivePortIdTxtbox = new System.Windows.Forms.TextBox();
+            this.itemPassiveIdTxtbox = new System.Windows.Forms.TextBox();
             this.locationDescriptionLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,55 +45,56 @@
             this.locationParentLbl = new System.Windows.Forms.Label();
             this.locationNameLbl = new System.Windows.Forms.Label();
             this.locationIdLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.itemPassiveAddBtn = new System.Windows.Forms.Button();
+            this.itemPassiveSearchBtn = new System.Windows.Forms.Button();
+            this.itemPassiveSaveBtn = new System.Windows.Forms.Button();
+            this.itemPassiveDeleteBtn = new System.Windows.Forms.Button();
+            this.itemPassiveModifyBtn = new System.Windows.Forms.Button();
+            this.itemPassiveCancelBtn = new System.Windows.Forms.Button();
+            this.itemPassivePortDeleteBtn = new System.Windows.Forms.Button();
+            this.itemPassivePortAddBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox3
+            // itemPassivePortTypeComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(712, 127);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 21);
-            this.comboBox3.TabIndex = 56;
+            this.itemPassivePortTypeComboBox.FormattingEnabled = true;
+            this.itemPassivePortTypeComboBox.Location = new System.Drawing.Point(712, 127);
+            this.itemPassivePortTypeComboBox.Name = "itemPassivePortTypeComboBox";
+            this.itemPassivePortTypeComboBox.Size = new System.Drawing.Size(169, 21);
+            this.itemPassivePortTypeComboBox.TabIndex = 56;
             // 
-            // comboBox1
+            // itemPassiveSymbolComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 299);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 21);
-            this.comboBox1.TabIndex = 54;
+            this.itemPassiveSymbolComboBox.FormattingEnabled = true;
+            this.itemPassiveSymbolComboBox.Location = new System.Drawing.Point(190, 299);
+            this.itemPassiveSymbolComboBox.Name = "itemPassiveSymbolComboBox";
+            this.itemPassiveSymbolComboBox.Size = new System.Drawing.Size(169, 21);
+            this.itemPassiveSymbolComboBox.TabIndex = 54;
             // 
-            // richTextBox1
+            // itemPassiveDescriptionRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(190, 188);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(328, 96);
-            this.richTextBox1.TabIndex = 53;
-            this.richTextBox1.Text = "";
+            this.itemPassiveDescriptionRichTextBox.Location = new System.Drawing.Point(190, 188);
+            this.itemPassiveDescriptionRichTextBox.Name = "itemPassiveDescriptionRichTextBox";
+            this.itemPassiveDescriptionRichTextBox.Size = new System.Drawing.Size(328, 96);
+            this.itemPassiveDescriptionRichTextBox.TabIndex = 53;
+            this.itemPassiveDescriptionRichTextBox.Text = "";
             // 
-            // listBox1
+            // itemPassivePortsListbox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(545, 97);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(54, 355);
-            this.listBox1.TabIndex = 52;
+            this.itemPassivePortsListbox.FormattingEnabled = true;
+            this.itemPassivePortsListbox.Location = new System.Drawing.Point(545, 97);
+            this.itemPassivePortsListbox.Name = "itemPassivePortsListbox";
+            this.itemPassivePortsListbox.Size = new System.Drawing.Size(54, 355);
+            this.itemPassivePortsListbox.TabIndex = 52;
+            this.itemPassivePortsListbox.SelectedIndexChanged += new System.EventHandler(this.itemPassivePortsListbox_SelectedIndexChanged);
             // 
-            // comboBox2
+            // itemPassiveLocationComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(190, 155);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 21);
-            this.comboBox2.TabIndex = 49;
+            this.itemPassiveLocationComboBox.FormattingEnabled = true;
+            this.itemPassiveLocationComboBox.Location = new System.Drawing.Point(190, 155);
+            this.itemPassiveLocationComboBox.Name = "itemPassiveLocationComboBox";
+            this.itemPassiveLocationComboBox.Size = new System.Drawing.Size(169, 21);
+            this.itemPassiveLocationComboBox.TabIndex = 49;
             // 
             // ItemActiveLbl
             // 
@@ -105,26 +106,26 @@
             this.ItemActiveLbl.TabIndex = 48;
             this.ItemActiveLbl.Text = "Passzív eszköz ";
             // 
-            // locationNameTextbox
+            // itemPassiveNameTxtbox
             // 
-            this.locationNameTextbox.Location = new System.Drawing.Point(190, 124);
-            this.locationNameTextbox.Name = "locationNameTextbox";
-            this.locationNameTextbox.Size = new System.Drawing.Size(220, 20);
-            this.locationNameTextbox.TabIndex = 41;
+            this.itemPassiveNameTxtbox.Location = new System.Drawing.Point(190, 124);
+            this.itemPassiveNameTxtbox.Name = "itemPassiveNameTxtbox";
+            this.itemPassiveNameTxtbox.Size = new System.Drawing.Size(220, 20);
+            this.itemPassiveNameTxtbox.TabIndex = 41;
             // 
-            // textBox3
+            // itemPassivePortIdTxtbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(712, 94);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 43;
+            this.itemPassivePortIdTxtbox.Location = new System.Drawing.Point(712, 94);
+            this.itemPassivePortIdTxtbox.Name = "itemPassivePortIdTxtbox";
+            this.itemPassivePortIdTxtbox.Size = new System.Drawing.Size(169, 20);
+            this.itemPassivePortIdTxtbox.TabIndex = 43;
             // 
-            // locationIdTextbox
+            // itemPassiveIdTxtbox
             // 
-            this.locationIdTextbox.Location = new System.Drawing.Point(190, 97);
-            this.locationIdTextbox.Name = "locationIdTextbox";
-            this.locationIdTextbox.Size = new System.Drawing.Size(220, 20);
-            this.locationIdTextbox.TabIndex = 44;
+            this.itemPassiveIdTxtbox.Location = new System.Drawing.Point(190, 97);
+            this.itemPassiveIdTxtbox.Name = "itemPassiveIdTxtbox";
+            this.itemPassiveIdTxtbox.Size = new System.Drawing.Size(220, 20);
+            this.itemPassiveIdTxtbox.TabIndex = 44;
             // 
             // locationDescriptionLbl
             // 
@@ -152,9 +153,9 @@
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(616, 127);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 17);
+            this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 34;
-            this.label7.Text = "Típus";
+            this.label7.Text = "Típus:";
             // 
             // label4
             // 
@@ -162,9 +163,9 @@
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(616, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Azonosító";
+            this.label4.Text = "Azonosító:";
             // 
             // label3
             // 
@@ -172,9 +173,9 @@
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(458, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 17);
+            this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Portok";
+            this.label3.Text = "Portok:";
             // 
             // locationParentLbl
             // 
@@ -206,100 +207,101 @@
             this.locationIdLbl.TabIndex = 39;
             this.locationIdLbl.Text = "Azonosító:";
             // 
-            // button1
+            // itemPassiveAddBtn
             // 
-            this.button1.Location = new System.Drawing.Point(135, 485);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 27);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Új";
-            this.button1.UseVisualStyleBackColor = true;
+            this.itemPassiveAddBtn.Location = new System.Drawing.Point(135, 485);
+            this.itemPassiveAddBtn.Name = "itemPassiveAddBtn";
+            this.itemPassiveAddBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemPassiveAddBtn.TabIndex = 57;
+            this.itemPassiveAddBtn.Text = "Új";
+            this.itemPassiveAddBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // itemPassiveSearchBtn
             // 
-            this.button2.Location = new System.Drawing.Point(349, 485);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 27);
-            this.button2.TabIndex = 58;
-            this.button2.Text = "Keresés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.itemPassiveSearchBtn.Location = new System.Drawing.Point(349, 485);
+            this.itemPassiveSearchBtn.Name = "itemPassiveSearchBtn";
+            this.itemPassiveSearchBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemPassiveSearchBtn.TabIndex = 58;
+            this.itemPassiveSearchBtn.Text = "Keresés";
+            this.itemPassiveSearchBtn.UseVisualStyleBackColor = true;
             // 
-            // saveBtn
+            // itemPassiveSaveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(242, 485);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(97, 27);
-            this.saveBtn.TabIndex = 59;
-            this.saveBtn.Text = "Mentés";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.itemPassiveSaveBtn.Location = new System.Drawing.Point(242, 485);
+            this.itemPassiveSaveBtn.Name = "itemPassiveSaveBtn";
+            this.itemPassiveSaveBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemPassiveSaveBtn.TabIndex = 59;
+            this.itemPassiveSaveBtn.Text = "Mentés";
+            this.itemPassiveSaveBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // itemPassiveDeleteBtn
             // 
-            this.button4.Location = new System.Drawing.Point(563, 485);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 27);
-            this.button4.TabIndex = 60;
-            this.button4.Text = "Töröl";
-            this.button4.UseVisualStyleBackColor = true;
+            this.itemPassiveDeleteBtn.Location = new System.Drawing.Point(563, 485);
+            this.itemPassiveDeleteBtn.Name = "itemPassiveDeleteBtn";
+            this.itemPassiveDeleteBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemPassiveDeleteBtn.TabIndex = 60;
+            this.itemPassiveDeleteBtn.Text = "Töröl";
+            this.itemPassiveDeleteBtn.UseVisualStyleBackColor = true;
+            this.itemPassiveDeleteBtn.Click += new System.EventHandler(this.itemPassiveDeleteBtn_Click);
             // 
-            // button3
+            // itemPassiveModifyBtn
             // 
-            this.button3.Location = new System.Drawing.Point(456, 485);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 27);
-            this.button3.TabIndex = 61;
-            this.button3.Text = "Módosít";
-            this.button3.UseVisualStyleBackColor = true;
+            this.itemPassiveModifyBtn.Location = new System.Drawing.Point(456, 485);
+            this.itemPassiveModifyBtn.Name = "itemPassiveModifyBtn";
+            this.itemPassiveModifyBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemPassiveModifyBtn.TabIndex = 61;
+            this.itemPassiveModifyBtn.Text = "Módosít";
+            this.itemPassiveModifyBtn.UseVisualStyleBackColor = true;
             // 
-            // cancelBtn
+            // itemPassiveCancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(670, 485);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(97, 27);
-            this.cancelBtn.TabIndex = 62;
-            this.cancelBtn.Text = "Mégse";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.itemPassiveCancelBtn.Location = new System.Drawing.Point(670, 485);
+            this.itemPassiveCancelBtn.Name = "itemPassiveCancelBtn";
+            this.itemPassiveCancelBtn.Size = new System.Drawing.Size(97, 27);
+            this.itemPassiveCancelBtn.TabIndex = 62;
+            this.itemPassiveCancelBtn.Text = "Mégse";
+            this.itemPassiveCancelBtn.UseVisualStyleBackColor = true;
+            this.itemPassiveCancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // button5
+            // itemPassivePortDeleteBtn
             // 
-            this.button5.Location = new System.Drawing.Point(759, 178);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 27);
-            this.button5.TabIndex = 63;
-            this.button5.Text = "Port törlése";
-            this.button5.UseVisualStyleBackColor = true;
+            this.itemPassivePortDeleteBtn.Location = new System.Drawing.Point(759, 178);
+            this.itemPassivePortDeleteBtn.Name = "itemPassivePortDeleteBtn";
+            this.itemPassivePortDeleteBtn.Size = new System.Drawing.Size(96, 27);
+            this.itemPassivePortDeleteBtn.TabIndex = 63;
+            this.itemPassivePortDeleteBtn.Text = "Port törlése";
+            this.itemPassivePortDeleteBtn.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // itemPassivePortAddBtn
             // 
-            this.button6.Location = new System.Drawing.Point(657, 178);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(96, 27);
-            this.button6.TabIndex = 64;
-            this.button6.Text = "Port hozzáadása";
-            this.button6.UseVisualStyleBackColor = true;
+            this.itemPassivePortAddBtn.Location = new System.Drawing.Point(657, 178);
+            this.itemPassivePortAddBtn.Name = "itemPassivePortAddBtn";
+            this.itemPassivePortAddBtn.Size = new System.Drawing.Size(96, 27);
+            this.itemPassivePortAddBtn.TabIndex = 64;
+            this.itemPassivePortAddBtn.Text = "Port hozzáadása";
+            this.itemPassivePortAddBtn.UseVisualStyleBackColor = true;
             // 
             // PassiveItemCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.itemPassivePortDeleteBtn);
+            this.Controls.Add(this.itemPassivePortAddBtn);
+            this.Controls.Add(this.itemPassiveAddBtn);
+            this.Controls.Add(this.itemPassiveSearchBtn);
+            this.Controls.Add(this.itemPassiveSaveBtn);
+            this.Controls.Add(this.itemPassiveDeleteBtn);
+            this.Controls.Add(this.itemPassiveModifyBtn);
+            this.Controls.Add(this.itemPassiveCancelBtn);
+            this.Controls.Add(this.itemPassivePortTypeComboBox);
+            this.Controls.Add(this.itemPassiveSymbolComboBox);
+            this.Controls.Add(this.itemPassiveDescriptionRichTextBox);
+            this.Controls.Add(this.itemPassivePortsListbox);
+            this.Controls.Add(this.itemPassiveLocationComboBox);
             this.Controls.Add(this.ItemActiveLbl);
-            this.Controls.Add(this.locationNameTextbox);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.locationIdTextbox);
+            this.Controls.Add(this.itemPassiveNameTxtbox);
+            this.Controls.Add(this.itemPassivePortIdTxtbox);
+            this.Controls.Add(this.itemPassiveIdTxtbox);
             this.Controls.Add(this.locationDescriptionLbl);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -317,15 +319,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox itemPassivePortTypeComboBox;
+        private System.Windows.Forms.ComboBox itemPassiveSymbolComboBox;
+        private System.Windows.Forms.RichTextBox itemPassiveDescriptionRichTextBox;
+        private System.Windows.Forms.ListBox itemPassivePortsListbox;
+        private System.Windows.Forms.ComboBox itemPassiveLocationComboBox;
         private System.Windows.Forms.Label ItemActiveLbl;
-        private System.Windows.Forms.TextBox locationNameTextbox;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox locationIdTextbox;
+        private System.Windows.Forms.TextBox itemPassiveNameTxtbox;
+        private System.Windows.Forms.TextBox itemPassivePortIdTxtbox;
+        private System.Windows.Forms.TextBox itemPassiveIdTxtbox;
         private System.Windows.Forms.Label locationDescriptionLbl;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -334,13 +336,13 @@
         private System.Windows.Forms.Label locationParentLbl;
         private System.Windows.Forms.Label locationNameLbl;
         private System.Windows.Forms.Label locationIdLbl;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button itemPassiveAddBtn;
+        private System.Windows.Forms.Button itemPassiveSearchBtn;
+        private System.Windows.Forms.Button itemPassiveSaveBtn;
+        private System.Windows.Forms.Button itemPassiveDeleteBtn;
+        private System.Windows.Forms.Button itemPassiveModifyBtn;
+        private System.Windows.Forms.Button itemPassiveCancelBtn;
+        private System.Windows.Forms.Button itemPassivePortDeleteBtn;
+        private System.Windows.Forms.Button itemPassivePortAddBtn;
     }
 }
