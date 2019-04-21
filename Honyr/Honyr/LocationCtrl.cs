@@ -56,5 +56,10 @@ namespace Honyr
             }
 
         }
+
+        private void locationModidyBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

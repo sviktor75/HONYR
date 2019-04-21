@@ -18,7 +18,7 @@ namespace DataLayer.Operations
             try
             {
                 conn.Open();
-                MessageBox.Show("successful connection");
+               // MessageBox.Show("successful connection");
                 return true;
             }
             catch (MySqlException ex)
@@ -43,7 +43,7 @@ namespace DataLayer.Operations
             try
             {
                 conn.Close();
-                MessageBox.Show("successful detach");
+               // MessageBox.Show("successful detach");
             }
             catch (MySqlException ex)
             {

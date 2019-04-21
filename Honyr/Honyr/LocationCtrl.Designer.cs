@@ -214,6 +214,7 @@
             this.locationModidyBtn.TabIndex = 21;
             this.locationModidyBtn.Text = "Módosít";
             this.locationModidyBtn.UseVisualStyleBackColor = true;
+            this.locationModidyBtn.Click += new System.EventHandler(this.locationModidyBtn_Click);
             // 
             // cancelBtn
             // 

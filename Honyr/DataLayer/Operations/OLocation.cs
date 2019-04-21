@@ -16,14 +16,11 @@ namespace DataLayer.Operations
         {
             string query = "INSERT INTO location (name, locationtype, parentid, symbolid, description)"+" VALUES" + " ('"+location.Name+"', '"+location.LocationType+"', '"+location.ParentId+"', '"+location.SymbolId+"', '"+location.Description+"');";
 
-            if (conn.OpenConnection()) //ha sikerül csatlakozni az adatbázishoz
-            {
-                //create command and assign the query and connection from the constructor
-
-                MySqlCommand cmd = new MySqlCommand(query, conn.conn);
-                int effectedRows = cmd.ExecuteNonQuery(); // sql query végrehajtása
-                return effectedRows;
-            }
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            int effectedRows = cmd.ExecuteNonQuery(); // sql query végrehajtása
+            return effectedRows;
+            
         }
 
         public void ModLocation()
