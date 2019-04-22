@@ -17,7 +17,8 @@ namespace Honyr
         BLocation location = new BLocation();
 
         bool vissza = false;
-        bool kereses = false;
+        bool uj = false;
+        bool modosit = false;
 
         public addLocationCtrl()
         {
@@ -47,7 +48,10 @@ namespace Honyr
             }
 
             vissza = true;
-            
+            uj = false;
+            modosit = false;
+
+            txtKeres.Visible = false;
         }
 
         private void addLocationCtrl_Load(object sender, EventArgs e)
@@ -69,26 +73,47 @@ namespace Honyr
             txtDescription.Enabled = false;
 
             vissza = true;
+
+            txtKeres.Visible = false;
         }
 
         private void btnMentes_Click(object sender, EventArgs e)
         {
-
-            int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, int.Parse(comboSymbol.Text), txtDescription.Text);
-
-            if (effectedRows >= 0)
+            if (uj)
             {
-                MessageBox.Show("Lokáció sikeresen hozzáadva.");
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, int.Parse(comboSymbol.Text), txtDescription.Text);
+
+                if (effectedRows >= 0)
+                {
+                    MessageBox.Show("Lokáció sikeresen hozzáadva.");
+                }
+                else
+                {
+                    MessageBox.Show("A lokácót nem sikerült létrehozni.");
+                }
+
+                uj = false;
             }
-            else
+
+            if (modosit)
             {
-                MessageBox.Show("A lokácót nem sikerült létrehozni.");
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, int.Parse(comboSymbol.Text), txtDescription.Text);
+
+                if (effectedRows >= 0)
+                {
+                    MessageBox.Show("Lokáció sikeresen módosítva.");
+                }
+                else
+                {
+                    MessageBox.Show("A lokácót nem sikerült Módosítani.");
+                }
+
+                modosit = false;
             }
 
             vissza = false;
             this.Controls.ClearControls();
             btnMegse.PerformClick();
-            
         }
 
         private void btnUj_Click(object sender, EventArgs e)
@@ -112,7 +137,7 @@ namespace Honyr
             comboParent.DataSource = location.GetLocations();
 
             vissza = false;
-            kereses = false;
+            uj = true;
         }
 
         private void btnKeres_Click(object sender, EventArgs e)
@@ -120,21 +145,21 @@ namespace Honyr
             btnUj.Enabled = false;
             btnMentes.Enabled = false;
             btnKeres.Enabled = true;
-            btnModosit.Enabled = false;
-            btnTorol.Enabled = false;
+            btnModosit.Enabled = true;
+            btnTorol.Enabled = true;
             btnMegse.Enabled = true;
 
             txtAzonosito.Enabled = false;
-            txtMegenevezes.Enabled = true;
-            comboTipus.Enabled = false; // majd lehet így is keresni ...
+            txtMegenevezes.Enabled = false;
+            comboTipus.Enabled = false; // majd lehet így is keresni ... csak meg kell írni hozzá a metódust
             comboParent.Enabled = false; // majd lehet így is keresni ...
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
 
             vissza = false;
-            kereses = true; // oda figyelni mikor kell kikapcsolni !!!
 
-            txtMegenevezes.Focus();
+            txtKeres.Visible = true;
+            txtKeres.Focus();
         }
 
         private void btnModosit_Click(object sender, EventArgs e)
@@ -156,21 +181,49 @@ namespace Honyr
             comboParent.DataSource = location.GetLocations();
 
             vissza = false;
-            kereses = false;
+
+            txtKeres.Visible = false;
+
+            modosit = true;
         }
 
-        private void txtMegenevezes_TextChanged(object sender, EventArgs e)
+
+        private void txtKeres_TextChanged(object sender, EventArgs e)
         {
-            List<string>[] sor = location.GetLocationByName(txtMegenevezes.Text.ToString() + "%"); // ezt nem muszaly átadni .... 
+            List<string> sor = location.GetLocationByName(txtKeres.Text.ToString() + "%");
 
-            string valami = sor[0].ToString(); // ez úgy sem kell
-            txtAzonosito.Text = sor[1].ToString();
-            txtMegenevezes.Text = sor[2].ToString();
-            comboTipus.Text = sor[3].ToString();
-            comboParent.Text = sor[4].ToString();
-            comboSymbol.Text = sor[5].ToString();
-            txtDescription.Text = sor[6].ToString();
+            try
+            {
+                txtIndex.Text = sor[0].ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboTipus.Text = sor[3].ToString();
+                comboParent.Text = sor[4].ToString();
+                comboSymbol.Text = sor[5].ToString();
+                txtDescription.Text = sor[6].ToString();
+            }
+            catch (Exception ex)
+            {
+               
+            }
 
+        }
+
+        private void btnTorol_Click(object sender, EventArgs e)
+        {
+            int effectedRows = location.DelLocation(long.Parse(txtIndex.Text));
+
+            if (effectedRows >= 0)
+            {
+                MessageBox.Show("Lokáció sikeresen törölve.");
+            }
+            else
+            {
+                MessageBox.Show("A lokácót nem sikerült törölni.");
+            }
+
+            this.Controls.ClearControls();
+            btnMegse.PerformClick();
         }
     }
 }

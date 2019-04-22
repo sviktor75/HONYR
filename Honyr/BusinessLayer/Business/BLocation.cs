@@ -16,16 +16,25 @@ namespace BusinessLayer.Business
             return locationOP.AddLocation(locationId, name, locationType, parentId, symbolId, description);
         }
 
+        public int ModLocation(long id, string locationId, string name, string locationType, string parentId, int symbolId, string description)
+        {
+            return locationOP.ModLocation(id, locationId, name, locationType, parentId, symbolId, description);
+        }
+
         public List<String> GetLocations()
         {
             return locationOP.GetLocations();
         }
 
-        public List<String>[] GetLocationByName(string name)
+        public List<String> GetLocationByName(string name)
         {
             return locationOP.GetLocationByName(name);
         }
 
+        public int DelLocation(long id)
+        {
+            return locationOP.DelLocation(id);
+        }
 
     }
 }

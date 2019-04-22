@@ -47,6 +47,8 @@
             this.btnTorol = new System.Windows.Forms.Button();
             this.btnModosit = new System.Windows.Forms.Button();
             this.btnMegse = new System.Windows.Forms.Button();
+            this.txtKeres = new System.Windows.Forms.TextBox();
+            this.txtIndex = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // locationIdLbl
@@ -122,7 +124,6 @@
             this.txtMegenevezes.Name = "txtMegenevezes";
             this.txtMegenevezes.Size = new System.Drawing.Size(470, 20);
             this.txtMegenevezes.TabIndex = 1;
-            this.txtMegenevezes.TextChanged += new System.EventHandler(this.txtMegenevezes_TextChanged);
             // 
             // addLocationLbl
             // 
@@ -208,6 +209,7 @@
             this.btnTorol.TabIndex = 20;
             this.btnTorol.Text = "Töröl";
             this.btnTorol.UseVisualStyleBackColor = true;
+            this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
             // 
             // btnModosit
             // 
@@ -229,10 +231,28 @@
             this.btnMegse.UseVisualStyleBackColor = true;
             this.btnMegse.Click += new System.EventHandler(this.btnMegse_Click_1);
             // 
+            // txtKeres
+            // 
+            this.txtKeres.Location = new System.Drawing.Point(340, 399);
+            this.txtKeres.Name = "txtKeres";
+            this.txtKeres.Size = new System.Drawing.Size(470, 20);
+            this.txtKeres.TabIndex = 23;
+            this.txtKeres.TextChanged += new System.EventHandler(this.txtKeres_TextChanged);
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(340, 109);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(119, 20);
+            this.txtIndex.TabIndex = 24;
+            this.txtIndex.Visible = false;
+            // 
             // addLocationCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.txtKeres);
             this.Controls.Add(this.btnUj);
             this.Controls.Add(this.btnKeres);
             this.Controls.Add(this.btnMentes);
@@ -281,5 +301,7 @@
         private System.Windows.Forms.Button btnTorol;
         private System.Windows.Forms.Button btnModosit;
         private System.Windows.Forms.Button btnMegse;
+        private System.Windows.Forms.TextBox txtKeres;
+        private System.Windows.Forms.TextBox txtIndex;
     }
 }

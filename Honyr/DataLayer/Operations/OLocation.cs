@@ -18,20 +18,32 @@ namespace DataLayer.Operations
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
-            int effectedRows = cmd.ExecuteNonQuery(); // sql query végrehajtása
+            int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
         }
 
 
-        public void ModLocation()
+        public int ModLocation(long id, string locationId, string name, string locationType, string parentId, int symbolId, string description)
         {
+            string query = "update location set locationId='"+locationId+"', name='"+name+"', locationtype='"+locationType+"', parentid='"+parentId+"', symbolid='"+symbolId+"', description='"+description+"' where id='"+id+"';";
 
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            int effectedRows = cmd.ExecuteNonQuery();
+            conn.CloseConnection();
+            return effectedRows;
         }
 
-        public void DelLocation()
+        public int DelLocation(long id)
         {
+            string query = "delete from location where id='" + id + "';";
 
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            int effectedRows = cmd.ExecuteNonQuery();
+            conn.CloseConnection();
+            return effectedRows;
         }
 
         public List<String> GetLocations()
@@ -55,11 +67,11 @@ namespace DataLayer.Operations
         }
 
 
-        public List<String>[] GetLocationByName(string name)
+        public List<String> GetLocationByName(string name)
         {
-            string query = "select * from location;";// where name like '"+name+"' order by name limit 1;";
+            string query = "select * from location where name like '"+name+"' order by name limit 1;";
 
-            List<string>[] retList = new List<string>[7];
+            List<string> retList = new List<string>();
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -68,13 +80,13 @@ namespace DataLayer.Operations
 
             while (dataReader.Read())
             {
-                retList[0].Add(dataReader["id"] + "");
-                retList[1].Add(dataReader["locationId"] + "");
-                retList[2].Add(dataReader["name"] + "");
-                retList[3].Add(dataReader["locationtype"] + "");
-                retList[4].Add(dataReader["parentid"] + "");
-                retList[5].Add(dataReader["symbolid"] + "");
-                retList[6].Add(dataReader["description"] + "");
+                retList.Add(dataReader["id"] + "");
+                retList.Add(dataReader["locationId"] + "");
+                retList.Add(dataReader["name"] + "");
+                retList.Add(dataReader["locationtype"] + "");
+                retList.Add(dataReader["parentid"] + "");
+                retList.Add(dataReader["symbolid"] + "");
+                retList.Add(dataReader["description"] + "");
             }
             dataReader.Close();
             conn.CloseConnection();
