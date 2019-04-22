@@ -668,11 +668,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\EItem.cs" />
-    <Compile Include="Entities\ELocation.cs" />
-    <Compile Include="Entities\EPort.cs" />
-    <Compile Include="Entities\ESymbol.cs" />
-    <Compile Include="Entities\EWallConnector.cs" />
     <Compile Include="Operations\OInitDataConnection.cs" />
     <Compile Include="Operations\OItem.cs" />
     <Compile Include="Operations\OLocation.cs" />

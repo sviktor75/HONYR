@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLayer.Entities;
-using DataLayer.Operations;
+using BusinessLayer.Business;
+
 
 namespace Honyr
 {
@@ -35,16 +35,9 @@ namespace Honyr
 
         private void locationSaveBtn_Click(object sender, EventArgs e)
         {
-            ELocation location = new ELocation();
-            OLocation locationOP = new OLocation();
+            BLocation location = new BLocation();
 
-            location.Name = locationNameTextbox.Text;
-            location.LocationType = locationTypeComboBox.Text;
-            location.ParentId = long.Parse(LocationParentComboBox.Text); // ezt át kell majd írni
-            location.SymbolId = int.Parse(locationSymbolComboBox.Text); // ezt át kell majd írni
-            location.Description = locationDescriptionRichTextBox.Text;
-
-            int effectedRows = locationOP.AddLocation(location);
+            int effectedRows = location.AddLocation(locationNameTextbox.Text, locationTypeComboBox.Text, long.Parse(LocationParentComboBox.Text), int.Parse(locationSymbolComboBox.Text), locationDescriptionRichTextBox.Text);
 
             if (effectedRows >= 0)
             {
