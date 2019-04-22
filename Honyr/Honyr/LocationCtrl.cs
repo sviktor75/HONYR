@@ -14,6 +14,8 @@ namespace Honyr
 {
     public partial class addLocationCtrl : UserControl
     {
+        BLocation location = new BLocation();
+
         bool vissza = false;
         public addLocationCtrl()
         {
@@ -41,6 +43,8 @@ namespace Honyr
             {
                 SendToBack();
             }
+
+            vissza = true;
             
         }
 
@@ -67,9 +71,8 @@ namespace Honyr
 
         private void btnMentes_Click(object sender, EventArgs e)
         {
-            BLocation location = new BLocation();
 
-            int effectedRows = location.AddLocation(txtMegenevezes.Text, comboTipus.Text, long.Parse(comboParent.Text), int.Parse(comboSymbol.Text), txtDescription.Text);
+            int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, int.Parse(comboSymbol.Text), txtDescription.Text);
 
             if (effectedRows >= 0)
             {
@@ -81,7 +84,9 @@ namespace Honyr
             }
 
             vissza = false;
-            btnMegse.Click += btnMegse_Click_1;
+            this.Controls.ClearControls();
+            btnMegse.PerformClick();
+            
         }
 
         private void btnUj_Click(object sender, EventArgs e)
@@ -95,12 +100,14 @@ namespace Honyr
             btnTorol.Enabled = false;
             btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = false;
+            txtAzonosito.Enabled = true;
             txtMegenevezes.Enabled = true;
             comboTipus.Enabled = true;
             comboParent.Enabled = true;
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
+
+            comboParent.DataSource = location.GetLocations();
 
             vissza = false;
         }
@@ -133,12 +140,14 @@ namespace Honyr
             btnTorol.Enabled = false;
             btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = false;
+            txtAzonosito.Enabled = true;
             txtMegenevezes.Enabled = true;
             comboTipus.Enabled = true;
             comboParent.Enabled = true;
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
+
+            comboParent.DataSource = location.GetLocations();
 
             vissza = false;
         }

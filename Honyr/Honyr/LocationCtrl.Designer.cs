@@ -53,7 +53,7 @@
             // 
             this.locationIdLbl.AutoSize = true;
             this.locationIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationIdLbl.Location = new System.Drawing.Point(93, 146);
+            this.locationIdLbl.Location = new System.Drawing.Point(81, 146);
             this.locationIdLbl.Name = "locationIdLbl";
             this.locationIdLbl.Size = new System.Drawing.Size(79, 18);
             this.locationIdLbl.TabIndex = 0;
@@ -63,17 +63,17 @@
             // 
             this.locationNameLbl.AutoSize = true;
             this.locationNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationNameLbl.Location = new System.Drawing.Point(93, 172);
+            this.locationNameLbl.Location = new System.Drawing.Point(81, 172);
             this.locationNameLbl.Name = "locationNameLbl";
-            this.locationNameLbl.Size = new System.Drawing.Size(153, 18);
+            this.locationNameLbl.Size = new System.Drawing.Size(149, 18);
             this.locationNameLbl.TabIndex = 0;
-            this.locationNameLbl.Text = "Megnevezés , száma:";
+            this.locationNameLbl.Text = "Megnevezés, száma:";
             // 
             // locationTypeLbl
             // 
             this.locationTypeLbl.AutoSize = true;
             this.locationTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTypeLbl.Location = new System.Drawing.Point(93, 198);
+            this.locationTypeLbl.Location = new System.Drawing.Point(81, 198);
             this.locationTypeLbl.Name = "locationTypeLbl";
             this.locationTypeLbl.Size = new System.Drawing.Size(48, 18);
             this.locationTypeLbl.TabIndex = 0;
@@ -83,17 +83,17 @@
             // 
             this.locationParentLbl.AutoSize = true;
             this.locationParentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationParentLbl.Location = new System.Drawing.Point(92, 225);
+            this.locationParentLbl.Location = new System.Drawing.Point(80, 225);
             this.locationParentLbl.Name = "locationParentLbl";
-            this.locationParentLbl.Size = new System.Drawing.Size(265, 18);
+            this.locationParentLbl.Size = new System.Drawing.Size(254, 18);
             this.locationParentLbl.TabIndex = 0;
-            this.locationParentLbl.Text = "Tartalmazó épület/helység azonosítója:";
+            this.locationParentLbl.Text = "Tartalmazó épület/helység azonosító:";
             // 
             // locationSymbolLbl
             // 
             this.locationSymbolLbl.AutoSize = true;
             this.locationSymbolLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationSymbolLbl.Location = new System.Drawing.Point(93, 252);
+            this.locationSymbolLbl.Location = new System.Drawing.Point(81, 252);
             this.locationSymbolLbl.Name = "locationSymbolLbl";
             this.locationSymbolLbl.Size = new System.Drawing.Size(60, 18);
             this.locationSymbolLbl.TabIndex = 0;
@@ -103,7 +103,7 @@
             // 
             this.locationDescriptionLbl.AutoSize = true;
             this.locationDescriptionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationDescriptionLbl.Location = new System.Drawing.Point(92, 279);
+            this.locationDescriptionLbl.Location = new System.Drawing.Point(80, 279);
             this.locationDescriptionLbl.Name = "locationDescriptionLbl";
             this.locationDescriptionLbl.Size = new System.Drawing.Size(198, 18);
             this.locationDescriptionLbl.TabIndex = 0;
@@ -129,9 +129,9 @@
             this.addLocationLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addLocationLbl.Location = new System.Drawing.Point(399, 35);
             this.addLocationLbl.Name = "addLocationLbl";
-            this.addLocationLbl.Size = new System.Drawing.Size(114, 37);
+            this.addLocationLbl.Size = new System.Drawing.Size(130, 37);
             this.addLocationLbl.TabIndex = 3;
-            this.addLocationLbl.Text = "Helyég";
+            this.addLocationLbl.Text = "Helység";
             // 
             // comboSymbol
             // 
