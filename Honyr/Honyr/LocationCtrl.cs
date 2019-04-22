@@ -17,6 +17,8 @@ namespace Honyr
         BLocation location = new BLocation();
 
         bool vissza = false;
+        bool kereses = false;
+
         public addLocationCtrl()
         {
             InitializeComponent();
@@ -110,6 +112,7 @@ namespace Honyr
             comboParent.DataSource = location.GetLocations();
 
             vissza = false;
+            kereses = false;
         }
 
         private void btnKeres_Click(object sender, EventArgs e)
@@ -129,6 +132,9 @@ namespace Honyr
             txtDescription.Enabled = false;
 
             vissza = false;
+            kereses = true; // oda figyelni mikor kell kikapcsolni !!!
+
+            txtMegenevezes.Focus();
         }
 
         private void btnModosit_Click(object sender, EventArgs e)
@@ -150,6 +156,21 @@ namespace Honyr
             comboParent.DataSource = location.GetLocations();
 
             vissza = false;
+            kereses = false;
+        }
+
+        private void txtMegenevezes_TextChanged(object sender, EventArgs e)
+        {
+            List<string>[] sor = location.GetLocationByName(txtMegenevezes.Text.ToString() + "%"); // ezt nem muszaly átadni .... 
+
+            string valami = sor[0].ToString(); // ez úgy sem kell
+            txtAzonosito.Text = sor[1].ToString();
+            txtMegenevezes.Text = sor[2].ToString();
+            comboTipus.Text = sor[3].ToString();
+            comboParent.Text = sor[4].ToString();
+            comboSymbol.Text = sor[5].ToString();
+            txtDescription.Text = sor[6].ToString();
+
         }
     }
 }

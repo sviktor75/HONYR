@@ -122,6 +122,7 @@
             this.txtMegenevezes.Name = "txtMegenevezes";
             this.txtMegenevezes.Size = new System.Drawing.Size(470, 20);
             this.txtMegenevezes.TabIndex = 1;
+            this.txtMegenevezes.TextChanged += new System.EventHandler(this.txtMegenevezes_TextChanged);
             // 
             // addLocationLbl
             // 

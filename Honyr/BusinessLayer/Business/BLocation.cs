@@ -20,7 +20,11 @@ namespace BusinessLayer.Business
         {
             return locationOP.GetLocations();
         }
-        
+
+        public List<String>[] GetLocationByName(string name)
+        {
+            return locationOP.GetLocationByName(name);
+        }
 
 
     }
