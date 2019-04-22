@@ -39,9 +39,9 @@ namespace Honyr
             this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addLocation1 = new Honyr.addLocationCtrl();
             this.defaultMain1 = new Honyr.defaultMainCtrl();
-            this.mountWall1 = new Honyr.mountWall();
+            this.mountWall1 = new Honyr.WallMount();
             this.itemActiveCtrl1 = new Honyr.ItemActiveCtrl();
-            this.passiveItemCtrl1 = new Honyr.PassiveItemCtrl();
+            this.passiveItemCtrl1 = new Honyr.ItemPassiveCtrl();
             this.keresésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eszközToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faliCsatlakzóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -210,13 +210,13 @@ namespace Honyr
         public defaultMainCtrl defaultMain1;
         public addLocationCtrl addLocation1;
         public System.Windows.Forms.ToolStripMenuItem newItemToolStripMenuItem;
-        private mountWall mountWall1;
+        private WallMount mountWall1;
         private ItemActiveCtrl itemActiveCtrl1;
         private System.Windows.Forms.ToolStripMenuItem aktívToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem passzívToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helységToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem faliCsatlakozóToolStripMenuItem;
-        private PassiveItemCtrl passiveItemCtrl1;
+        private ItemPassiveCtrl passiveItemCtrl1;
         private System.Windows.Forms.ToolStripMenuItem keresésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eszközToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faliCsatlakzóToolStripMenuItem;

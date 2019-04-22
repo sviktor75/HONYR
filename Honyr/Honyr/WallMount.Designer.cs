@@ -1,6 +1,6 @@
 ﻿namespace Honyr
 {
-    partial class mountWall
+    partial class WallMount
     {
         /// <summary> 
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Honyr
 {
-    partial class PassiveItemCtrl
+    partial class ItemPassiveCtrl
     {
         /// <summary> 
         /// Required designer variable.

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Honyr
 {
-    public partial class PassiveItemCtrl : UserControl
+    public partial class ItemPassiveCtrl : UserControl
     {
 
-        public PassiveItemCtrl()
+        public ItemPassiveCtrl()
         {
             InitializeComponent();
         }

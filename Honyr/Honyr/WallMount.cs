@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Honyr
 {
-    public partial class mountWall : UserControl
+    public partial class WallMount : UserControl
     {
-        public mountWall()
+        public WallMount()
         {
             InitializeComponent();
         }

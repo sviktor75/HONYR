@@ -19,8 +19,8 @@ namespace DataLayer.Operations
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             int effectedRows = cmd.ExecuteNonQuery(); // sql query végrehajtása
+            conn.CloseConnection();
             return effectedRows;
-            
         }
 
         public void ModLocation()
