@@ -38,6 +38,7 @@
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
+    <Compile Include="FormClear.cs" />
     <Compile Include="LocationCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>

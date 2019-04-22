@@ -68,5 +68,10 @@ namespace Honyr
             passiveItemCtrl1.SendToBack();
             itemActiveCtrl1.SendToBack();
         }
+
+        private void passiveItemCtrl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
