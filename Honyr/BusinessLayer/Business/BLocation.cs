@@ -11,6 +11,7 @@ namespace BusinessLayer.Business
     public class BLocation
     {
         OLocation locationOP = new OLocation();
+
         public int AddLocation(string locationId, string name, string locationType, string parentId, int symbolId, string description)
         {
             return locationOP.AddLocation(locationId, name, locationType, parentId, symbolId, description);
@@ -21,6 +22,11 @@ namespace BusinessLayer.Business
             return locationOP.ModLocation(id, locationId, name, locationType, parentId, symbolId, description);
         }
 
+        public int DelLocation(long id)
+        {
+            return locationOP.DelLocation(id);
+        }
+
         public List<String> GetLocations()
         {
             return locationOP.GetLocations();
@@ -29,11 +35,6 @@ namespace BusinessLayer.Business
         public List<String> GetLocationByName(string name)
         {
             return locationOP.GetLocationByName(name);
-        }
-
-        public int DelLocation(long id)
-        {
-            return locationOP.DelLocation(id);
         }
 
     }
