@@ -9,3 +9,14 @@ C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileI
 C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\MySql.Data.xml
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.pdb

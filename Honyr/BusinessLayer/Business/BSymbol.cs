@@ -16,7 +16,7 @@ namespace BusinessLayer.Business
             return symbolOP.GetSymbols();
         }
         
-        public List<String> GetSymbolById(int id)
+        public List<object> GetSymbolById(int id)
         {
             return symbolOP.GetSymbolById(id);
         }

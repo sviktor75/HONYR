@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace DataLayer.Operations
 {
@@ -34,23 +36,23 @@ namespace DataLayer.Operations
 
 
 
-        public List <String> GetSymbolById(int id)
+        public List <object> GetSymbolById(int id)
         {
+
             string query = "select * from symbol where id='" + id + "';";
 
-            List<string> retList = new List<string>();
+            List<object> retList = new List<object>();
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
-            MySqlDataReader dataReader = cmd.ExecuteReader();
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable table = new DataTable();
 
-            if (dataReader.Read())
-            {
-                retList.Add(dataReader["name"] + "");
-                retList.Add(dataReader["image"] + "");
-            }
+            da.Fill(table);
+            retList.Add(table.Rows[0][1].ToString());
+            byte[] img = (byte[])table.Rows[0][2];
+            retList.Add(img);
 
-            dataReader.Close();
             conn.CloseConnection();
 
             return retList;

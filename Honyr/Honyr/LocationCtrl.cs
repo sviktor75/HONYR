@@ -47,6 +47,7 @@ namespace Honyr
             if (vissza)
             {
                 SendToBack();
+                this.Controls.ClearControls();
             }
 
             vissza = true;
@@ -83,7 +84,7 @@ namespace Honyr
         {
             if (uj)
             {
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, int.Parse(comboSymbol.Text), txtDescription.Text);
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -99,7 +100,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, int.Parse(comboSymbol.Text), txtDescription.Text);
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -137,6 +138,9 @@ namespace Honyr
             txtDescription.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
+            comboSymbol.DataSource = symbol.GetSymbols();
+            kepBetoltes();
+
 
             vissza = false;
             uj = true;
@@ -181,6 +185,7 @@ namespace Honyr
             txtDescription.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
+            comboSymbol.DataSource = symbol.GetSymbols();
 
             vissza = false;
 
@@ -204,21 +209,15 @@ namespace Honyr
 
                 int.TryParse(sor[5], out int sid);
 
-                List<String> kep = symbol.GetSymbolById(sid);
+                List<object> kep = symbol.GetSymbolById(sid);
                 comboSymbol.Text = kep[0].ToString();
-
-                // képet az adatbázisból a picturboxba
-
-                Byte[] data = new Byte[0];
-                data = Encoding.UTF8.GetBytes(kep[1]);
-                MemoryStream ms = new MemoryStream(data);
-                picSymbol.Image = Image.FromStream(ms); // itt hal meg !!!
-                                                        // ezért már a description-t sem tölti be
+                MemoryStream ms = new MemoryStream((byte[])kep[1]);
+                picSymbol.Image = Image.FromStream(ms);
                 txtDescription.Text = sor[6].ToString();
             }
             catch (Exception ex)
             {
-               
+
             }
 
         }
@@ -238,6 +237,19 @@ namespace Honyr
 
             this.Controls.ClearControls();
             btnMegse.PerformClick();
+        }
+
+        private void kepBetoltes()
+        {
+        List<object> kep = symbol.GetSymbolById(comboSymbol.SelectedIndex + 1);
+        comboSymbol.Text = kep[0].ToString();
+        MemoryStream ms = new MemoryStream((byte[])kep[1]);
+        picSymbol.Image = Image.FromStream(ms);
+        }
+
+        private void comboSymbol_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            kepBetoltes();
         }
     }
 }

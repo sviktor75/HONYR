@@ -28,8 +28,6 @@ C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.csprojAssemblyR
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.addLocationCtrl.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Form1.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.mountWall.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.PassiveItemCtrl.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.defaultMainCtrl.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.csproj.GenerateResource.cache
@@ -253,3 +251,7 @@ C:\projekt\HONYR\Honyr\Honyr\bin\Debug\BusinessLayer.dll
 C:\projekt\HONYR\Honyr\Honyr\bin\Debug\BusinessLayer.pdb
 C:\projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.WallMount.resources
 C:\projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemPassiveCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\BusinessLayer.dll
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\BusinessLayer.pdb
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.WallMount.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemPassiveCtrl.resources

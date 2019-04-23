@@ -57,9 +57,10 @@
             // 
             this.locationIdLbl.AutoSize = true;
             this.locationIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationIdLbl.Location = new System.Drawing.Point(81, 146);
+            this.locationIdLbl.Location = new System.Drawing.Point(122, 225);
+            this.locationIdLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationIdLbl.Name = "locationIdLbl";
-            this.locationIdLbl.Size = new System.Drawing.Size(79, 18);
+            this.locationIdLbl.Size = new System.Drawing.Size(124, 29);
             this.locationIdLbl.TabIndex = 0;
             this.locationIdLbl.Text = "Azonosító:";
             // 
@@ -67,9 +68,10 @@
             // 
             this.locationNameLbl.AutoSize = true;
             this.locationNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationNameLbl.Location = new System.Drawing.Point(81, 172);
+            this.locationNameLbl.Location = new System.Drawing.Point(122, 265);
+            this.locationNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationNameLbl.Name = "locationNameLbl";
-            this.locationNameLbl.Size = new System.Drawing.Size(149, 18);
+            this.locationNameLbl.Size = new System.Drawing.Size(237, 29);
             this.locationNameLbl.TabIndex = 0;
             this.locationNameLbl.Text = "Megnevezés, száma:";
             // 
@@ -77,9 +79,10 @@
             // 
             this.locationTypeLbl.AutoSize = true;
             this.locationTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTypeLbl.Location = new System.Drawing.Point(81, 198);
+            this.locationTypeLbl.Location = new System.Drawing.Point(122, 305);
+            this.locationTypeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationTypeLbl.Name = "locationTypeLbl";
-            this.locationTypeLbl.Size = new System.Drawing.Size(48, 18);
+            this.locationTypeLbl.Size = new System.Drawing.Size(80, 29);
             this.locationTypeLbl.TabIndex = 0;
             this.locationTypeLbl.Text = "Típus:";
             // 
@@ -87,9 +90,10 @@
             // 
             this.locationParentLbl.AutoSize = true;
             this.locationParentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationParentLbl.Location = new System.Drawing.Point(80, 225);
+            this.locationParentLbl.Location = new System.Drawing.Point(120, 346);
+            this.locationParentLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationParentLbl.Name = "locationParentLbl";
-            this.locationParentLbl.Size = new System.Drawing.Size(254, 18);
+            this.locationParentLbl.Size = new System.Drawing.Size(412, 29);
             this.locationParentLbl.TabIndex = 0;
             this.locationParentLbl.Text = "Tartalmazó épület/helység azonosító:";
             // 
@@ -97,9 +101,10 @@
             // 
             this.locationSymbolLbl.AutoSize = true;
             this.locationSymbolLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationSymbolLbl.Location = new System.Drawing.Point(81, 252);
+            this.locationSymbolLbl.Location = new System.Drawing.Point(122, 388);
+            this.locationSymbolLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationSymbolLbl.Name = "locationSymbolLbl";
-            this.locationSymbolLbl.Size = new System.Drawing.Size(60, 18);
+            this.locationSymbolLbl.Size = new System.Drawing.Size(100, 29);
             this.locationSymbolLbl.TabIndex = 0;
             this.locationSymbolLbl.Text = "Rajzjele";
             // 
@@ -107,57 +112,65 @@
             // 
             this.locationDescriptionLbl.AutoSize = true;
             this.locationDescriptionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationDescriptionLbl.Location = new System.Drawing.Point(80, 279);
+            this.locationDescriptionLbl.Location = new System.Drawing.Point(120, 429);
+            this.locationDescriptionLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationDescriptionLbl.Name = "locationDescriptionLbl";
-            this.locationDescriptionLbl.Size = new System.Drawing.Size(198, 18);
+            this.locationDescriptionLbl.Size = new System.Drawing.Size(327, 29);
             this.locationDescriptionLbl.TabIndex = 0;
             this.locationDescriptionLbl.Text = "Fizikai elhelyezkedés leírása:";
             // 
             // txtAzonosito
             // 
-            this.txtAzonosito.Location = new System.Drawing.Point(340, 146);
+            this.txtAzonosito.Location = new System.Drawing.Point(510, 225);
+            this.txtAzonosito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAzonosito.Name = "txtAzonosito";
-            this.txtAzonosito.Size = new System.Drawing.Size(470, 20);
+            this.txtAzonosito.Size = new System.Drawing.Size(703, 26);
             this.txtAzonosito.TabIndex = 1;
             // 
             // txtMegenevezes
             // 
-            this.txtMegenevezes.Location = new System.Drawing.Point(340, 172);
+            this.txtMegenevezes.Location = new System.Drawing.Point(510, 265);
+            this.txtMegenevezes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMegenevezes.Name = "txtMegenevezes";
-            this.txtMegenevezes.Size = new System.Drawing.Size(470, 20);
+            this.txtMegenevezes.Size = new System.Drawing.Size(703, 26);
             this.txtMegenevezes.TabIndex = 1;
             // 
             // addLocationLbl
             // 
             this.addLocationLbl.AutoSize = true;
             this.addLocationLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addLocationLbl.Location = new System.Drawing.Point(399, 35);
+            this.addLocationLbl.Location = new System.Drawing.Point(598, 54);
+            this.addLocationLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addLocationLbl.Name = "addLocationLbl";
-            this.addLocationLbl.Size = new System.Drawing.Size(130, 37);
+            this.addLocationLbl.Size = new System.Drawing.Size(198, 55);
             this.addLocationLbl.TabIndex = 3;
             this.addLocationLbl.Text = "Helység";
             // 
             // comboSymbol
             // 
             this.comboSymbol.FormattingEnabled = true;
-            this.comboSymbol.Location = new System.Drawing.Point(340, 252);
+            this.comboSymbol.Location = new System.Drawing.Point(510, 388);
+            this.comboSymbol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboSymbol.Name = "comboSymbol";
-            this.comboSymbol.Size = new System.Drawing.Size(169, 21);
+            this.comboSymbol.Size = new System.Drawing.Size(252, 28);
             this.comboSymbol.TabIndex = 4;
+            this.comboSymbol.SelectionChangeCommitted += new System.EventHandler(this.comboSymbol_SelectionChangeCommitted);
             // 
             // comboParent
             // 
             this.comboParent.FormattingEnabled = true;
-            this.comboParent.Location = new System.Drawing.Point(340, 225);
+            this.comboParent.Location = new System.Drawing.Point(510, 346);
+            this.comboParent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboParent.Name = "comboParent";
-            this.comboParent.Size = new System.Drawing.Size(169, 21);
+            this.comboParent.Size = new System.Drawing.Size(252, 28);
             this.comboParent.TabIndex = 5;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(340, 279);
+            this.txtDescription.Location = new System.Drawing.Point(510, 429);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(470, 96);
+            this.txtDescription.Size = new System.Drawing.Size(703, 146);
             this.txtDescription.TabIndex = 6;
             this.txtDescription.Text = "";
             // 
@@ -168,16 +181,18 @@
             "épület",
             "folyosó",
             "iroda"});
-            this.comboTipus.Location = new System.Drawing.Point(340, 198);
+            this.comboTipus.Location = new System.Drawing.Point(510, 305);
+            this.comboTipus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboTipus.Name = "comboTipus";
-            this.comboTipus.Size = new System.Drawing.Size(169, 21);
+            this.comboTipus.Size = new System.Drawing.Size(252, 28);
             this.comboTipus.TabIndex = 5;
             // 
             // btnUj
             // 
-            this.btnUj.Location = new System.Drawing.Point(135, 446);
+            this.btnUj.Location = new System.Drawing.Point(202, 686);
+            this.btnUj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUj.Name = "btnUj";
-            this.btnUj.Size = new System.Drawing.Size(97, 27);
+            this.btnUj.Size = new System.Drawing.Size(146, 42);
             this.btnUj.TabIndex = 17;
             this.btnUj.Text = "Új";
             this.btnUj.UseVisualStyleBackColor = true;
@@ -185,9 +200,10 @@
             // 
             // btnKeres
             // 
-            this.btnKeres.Location = new System.Drawing.Point(349, 446);
+            this.btnKeres.Location = new System.Drawing.Point(524, 686);
+            this.btnKeres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKeres.Name = "btnKeres";
-            this.btnKeres.Size = new System.Drawing.Size(97, 27);
+            this.btnKeres.Size = new System.Drawing.Size(146, 42);
             this.btnKeres.TabIndex = 18;
             this.btnKeres.Text = "Keresés";
             this.btnKeres.UseVisualStyleBackColor = true;
@@ -195,9 +211,10 @@
             // 
             // btnMentes
             // 
-            this.btnMentes.Location = new System.Drawing.Point(242, 446);
+            this.btnMentes.Location = new System.Drawing.Point(363, 686);
+            this.btnMentes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMentes.Name = "btnMentes";
-            this.btnMentes.Size = new System.Drawing.Size(97, 27);
+            this.btnMentes.Size = new System.Drawing.Size(146, 42);
             this.btnMentes.TabIndex = 19;
             this.btnMentes.Text = "Mentés";
             this.btnMentes.UseVisualStyleBackColor = true;
@@ -205,9 +222,10 @@
             // 
             // btnTorol
             // 
-            this.btnTorol.Location = new System.Drawing.Point(563, 446);
+            this.btnTorol.Location = new System.Drawing.Point(844, 686);
+            this.btnTorol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTorol.Name = "btnTorol";
-            this.btnTorol.Size = new System.Drawing.Size(97, 27);
+            this.btnTorol.Size = new System.Drawing.Size(146, 42);
             this.btnTorol.TabIndex = 20;
             this.btnTorol.Text = "Töröl";
             this.btnTorol.UseVisualStyleBackColor = true;
@@ -215,9 +233,10 @@
             // 
             // btnModosit
             // 
-            this.btnModosit.Location = new System.Drawing.Point(456, 446);
+            this.btnModosit.Location = new System.Drawing.Point(684, 686);
+            this.btnModosit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModosit.Name = "btnModosit";
-            this.btnModosit.Size = new System.Drawing.Size(97, 27);
+            this.btnModosit.Size = new System.Drawing.Size(146, 42);
             this.btnModosit.TabIndex = 21;
             this.btnModosit.Text = "Módosít";
             this.btnModosit.UseVisualStyleBackColor = true;
@@ -225,9 +244,10 @@
             // 
             // btnMegse
             // 
-            this.btnMegse.Location = new System.Drawing.Point(670, 446);
+            this.btnMegse.Location = new System.Drawing.Point(1005, 686);
+            this.btnMegse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMegse.Name = "btnMegse";
-            this.btnMegse.Size = new System.Drawing.Size(97, 27);
+            this.btnMegse.Size = new System.Drawing.Size(146, 42);
             this.btnMegse.TabIndex = 22;
             this.btnMegse.Text = "Mégse";
             this.btnMegse.UseVisualStyleBackColor = true;
@@ -235,31 +255,35 @@
             // 
             // txtKeres
             // 
-            this.txtKeres.Location = new System.Drawing.Point(340, 399);
+            this.txtKeres.Location = new System.Drawing.Point(510, 614);
+            this.txtKeres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKeres.Name = "txtKeres";
-            this.txtKeres.Size = new System.Drawing.Size(470, 20);
+            this.txtKeres.Size = new System.Drawing.Size(703, 26);
             this.txtKeres.TabIndex = 23;
             this.txtKeres.TextChanged += new System.EventHandler(this.txtKeres_TextChanged);
             // 
             // txtIndex
             // 
-            this.txtIndex.Location = new System.Drawing.Point(340, 109);
+            this.txtIndex.Location = new System.Drawing.Point(510, 168);
+            this.txtIndex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIndex.Name = "txtIndex";
-            this.txtIndex.Size = new System.Drawing.Size(119, 20);
+            this.txtIndex.Size = new System.Drawing.Size(176, 26);
             this.txtIndex.TabIndex = 24;
             this.txtIndex.Visible = false;
             // 
             // picSymbol
             // 
-            this.picSymbol.Location = new System.Drawing.Point(538, 198);
+            this.picSymbol.Location = new System.Drawing.Point(807, 305);
+            this.picSymbol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picSymbol.Name = "picSymbol";
-            this.picSymbol.Size = new System.Drawing.Size(105, 72);
+            this.picSymbol.Size = new System.Drawing.Size(158, 111);
+            this.picSymbol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picSymbol.TabIndex = 25;
             this.picSymbol.TabStop = false;
             // 
             // addLocationCtrl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.picSymbol);
             this.Controls.Add(this.txtIndex);
@@ -283,8 +307,9 @@
             this.Controls.Add(this.locationTypeLbl);
             this.Controls.Add(this.locationNameLbl);
             this.Controls.Add(this.locationIdLbl);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "addLocationCtrl";
-            this.Size = new System.Drawing.Size(903, 544);
+            this.Size = new System.Drawing.Size(1354, 837);
             this.Load += new System.EventHandler(this.addLocationCtrl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).EndInit();
             this.ResumeLayout(false);
