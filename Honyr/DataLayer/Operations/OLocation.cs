@@ -12,7 +12,7 @@ namespace DataLayer.Operations
     {
         OInitDataConnection conn = new OInitDataConnection();
 
-        public int AddLocation(string locationId, string name, string locationType, string parentId, int symbolId, string description)
+        public int AddLocation(string locationId, string name, string locationType, long parentId, int symbolId, string description)
         {
             string query = "INSERT INTO location (locationId, name, locationtype, parentid, symbolid, description)" + " VALUES" + " ('" + locationId + "', '" + name + "', '" + locationType + "', '" + parentId + "', '" + symbolId + "', '" + description + "');";
 
@@ -24,7 +24,7 @@ namespace DataLayer.Operations
         }
 
 
-        public int ModLocation(long id, string locationId, string name, string locationType, string parentId, int symbolId, string description)
+        public int ModLocation(long id, string locationId, string name, string locationType, long parentId, int symbolId, string description)
         {
             string query = "update location set locationId='"+locationId+"', name='"+name+"', locationtype='"+locationType+"', parentid='"+parentId+"', symbolid='"+symbolId+"', description='"+description+"' where id='"+id+"';";
 

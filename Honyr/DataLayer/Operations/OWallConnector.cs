@@ -66,9 +66,9 @@ namespace DataLayer.Operations
         }
 
 
-        public List<String> GetConnectorByName(string connectorid)
+        public List<String> GetConnectorByName(string name)
         {
-            string query = "select * from WallConnector where connectorid like '" + connectorid + "' order by name limit 1;";
+            string query = "select * from WallConnector where name like '" + name + "' order by name limit 1;";
 
             List<string> retList = new List<string>();
 

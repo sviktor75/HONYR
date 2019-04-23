@@ -41,6 +41,7 @@ namespace Honyr
             txtAzonosito.Enabled = false;
             txtMegenevezes.Enabled = false;
             comboTipus.Enabled = false;
+            txtKialakitas.Enabled = false;
             comboParent.Enabled = false;
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
@@ -62,6 +63,7 @@ namespace Honyr
             txtAzonosito.Enabled = false;
             txtMegenevezes.Enabled = false;
             comboTipus.Enabled = false;
+            txtKialakitas.Enabled = false;
             comboParent.Enabled = false;
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
@@ -79,28 +81,6 @@ namespace Honyr
             txtKeres.Visible = false;
         }
 
-        private void addLocationCtrl_Load(object sender, EventArgs e)
-        {
-            this.Controls.ClearControls();
-
-            btnUj.Enabled = true;
-            btnMentes.Enabled = false;
-            btnKeres.Enabled = true;
-            btnModosit.Enabled = false;
-            btnTorol.Enabled = false;
-            btnMegse.Enabled = true;
-
-            txtAzonosito.Enabled = false;
-            txtMegenevezes.Enabled = false;
-            comboTipus.Enabled = false;
-            comboParent.Enabled = false;
-            comboSymbol.Enabled = false;
-            txtDescription.Enabled = false;
-
-            vissza = true;
-
-            txtKeres.Visible = false;
-        }
 
         private void btnMentes_Click(object sender, EventArgs e)
         {
@@ -155,11 +135,12 @@ namespace Honyr
             txtAzonosito.Enabled = true;
             txtMegenevezes.Enabled = true;
             comboTipus.Enabled = true;
+            txtKialakitas.Enabled = true;
             comboParent.Enabled = true;
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
 
-            comboParent.DataSource = wc.GetConnecctor();
+            comboParent.DataSource = wc.GetConnector();
             comboSymbol.DataSource = symbol.GetSymbols();
             kepBetoltes();
 
@@ -179,8 +160,9 @@ namespace Honyr
 
             txtAzonosito.Enabled = false;
             txtMegenevezes.Enabled = false;
-            comboTipus.Enabled = false; // majd lehet így is keresni ... csak meg kell írni hozzá a metódust
-            comboParent.Enabled = false; // majd lehet így is keresni ...
+            comboTipus.Enabled = false; 
+            txtKialakitas.Enabled = false;
+            comboParent.Enabled = false;
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
 
@@ -202,11 +184,12 @@ namespace Honyr
             txtAzonosito.Enabled = true;
             txtMegenevezes.Enabled = true;
             comboTipus.Enabled = true;
+            txtKialakitas.Enabled = true;
             comboParent.Enabled = true;
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
 
-            comboParent.DataSource = wc.GetConnecctor();
+            comboParent.DataSource = wc.GetConnector();
             comboSymbol.DataSource = symbol.GetSymbols();
 
             vissza = false;
@@ -219,6 +202,29 @@ namespace Honyr
 
         private void txtKeres_TextChanged(object sender, EventArgs e)
         {
+            List<string> sor = wc.GetConnectorByName(txtKeres.Text.ToString() + "%");
+
+            try
+            {
+                txtIndex.Text = sor[0].ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboTipus.Text = sor[3].ToString();
+                txtKialakitas.Text = sor[4].ToString();
+                comboParent.Text = sor[5].ToString();
+
+                int.TryParse(sor[6], out int sid);
+
+                List<object> kep = symbol.GetSymbolById(sid);
+                comboSymbol.Text = kep[0].ToString();
+                MemoryStream ms = new MemoryStream((byte[])kep[1]);
+                picSymbol.Image = Image.FromStream(ms);
+                txtDescription.Text = sor[7].ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
 
         }
 

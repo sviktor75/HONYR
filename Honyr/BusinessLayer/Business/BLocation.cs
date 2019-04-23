@@ -12,12 +12,12 @@ namespace BusinessLayer.Business
     {
         OLocation locationOP = new OLocation();
 
-        public int AddLocation(string locationId, string name, string locationType, string parentId, int symbolId, string description)
+        public int AddLocation(string locationId, string name, string locationType, long parentId, int symbolId, string description)
         {
             return locationOP.AddLocation(locationId, name, locationType, parentId, symbolId, description);
         }
 
-        public int ModLocation(long id, string locationId, string name, string locationType, string parentId, int symbolId, string description)
+        public int ModLocation(long id, string locationId, string name, string locationType, long parentId, int symbolId, string description)
         {
             return locationOP.ModLocation(id, locationId, name, locationType, parentId, symbolId, description);
         }

@@ -26,7 +26,7 @@ namespace BusinessLayer.Business
             return wcOP.DelConnector(id);
         }
 
-        public List<String> GetConnecctor()
+        public List<String> GetConnector()
         {
             return wcOP.GetConnector();
         }

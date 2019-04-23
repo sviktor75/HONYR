@@ -84,7 +84,7 @@ namespace Honyr
         {
             if (uj)
             {
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, long.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -100,7 +100,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, comboParent.Text, comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, long.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
