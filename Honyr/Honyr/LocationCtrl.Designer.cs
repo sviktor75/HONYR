@@ -49,6 +49,8 @@
             this.btnMegse = new System.Windows.Forms.Button();
             this.txtKeres = new System.Windows.Forms.TextBox();
             this.txtIndex = new System.Windows.Forms.TextBox();
+            this.picSymbol = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
             // locationIdLbl
@@ -247,10 +249,19 @@
             this.txtIndex.TabIndex = 24;
             this.txtIndex.Visible = false;
             // 
+            // picSymbol
+            // 
+            this.picSymbol.Location = new System.Drawing.Point(538, 198);
+            this.picSymbol.Name = "picSymbol";
+            this.picSymbol.Size = new System.Drawing.Size(105, 72);
+            this.picSymbol.TabIndex = 25;
+            this.picSymbol.TabStop = false;
+            // 
             // addLocationCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.picSymbol);
             this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.txtKeres);
             this.Controls.Add(this.btnUj);
@@ -275,6 +286,7 @@
             this.Name = "addLocationCtrl";
             this.Size = new System.Drawing.Size(903, 544);
             this.Load += new System.EventHandler(this.addLocationCtrl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +315,6 @@
         private System.Windows.Forms.Button btnMegse;
         private System.Windows.Forms.TextBox txtKeres;
         private System.Windows.Forms.TextBox txtIndex;
+        private System.Windows.Forms.PictureBox picSymbol;
     }
 }

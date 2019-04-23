@@ -7,15 +7,15 @@ using DataLayer.Operations;
 
 namespace BusinessLayer.Business
 {
-    class BSymbol
+    public class BSymbol
     {
         OSymbol symbolOP = new OSymbol();
-        /*
+        
         public List<String> GetSymbols()
         {
             return symbolOP.GetSymbols();
         }
-        */
+        
         public List<String> GetSymbolById(int id)
         {
             return symbolOP.GetSymbolById(id);

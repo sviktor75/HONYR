@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer.Business;
+using System.IO;
 
 
 namespace Honyr
@@ -15,6 +16,7 @@ namespace Honyr
     public partial class addLocationCtrl : UserControl
     {
         BLocation location = new BLocation();
+        BSymbol symbol = new BSymbol();
 
         bool vissza = false;
         bool uj = false;
@@ -199,7 +201,19 @@ namespace Honyr
                 txtMegenevezes.Text = sor[2].ToString();
                 comboTipus.Text = sor[3].ToString();
                 comboParent.Text = sor[4].ToString();
-                comboSymbol.Text = sor[5].ToString();
+
+                int.TryParse(sor[5], out int sid);
+
+                List<String> kep = symbol.GetSymbolById(sid);
+                comboSymbol.Text = kep[0].ToString();
+
+                // képet az adatbázisból a picturboxba
+
+                Byte[] data = new Byte[0];
+                data = Encoding.UTF8.GetBytes(kep[1]);
+                MemoryStream ms = new MemoryStream(data);
+                picSymbol.Image = Image.FromStream(ms); // itt hal meg !!!
+                                                        // ezért már a description-t sem tölti be
                 txtDescription.Text = sor[6].ToString();
             }
             catch (Exception ex)
