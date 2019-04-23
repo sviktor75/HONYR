@@ -17,8 +17,9 @@ namespace Honyr
             {typeof(GroupBox), c => ((GroupBox)c).Controls.ClearControls()},
             {typeof(Panel), c => ((Panel)c).Controls.ClearControls()},
             {typeof(RichTextBox), c => ((RichTextBox)c).Clear()},
-            {typeof(ComboBox), c => ((ComboBox)c).ResetText() }
-        };
+            {typeof(ComboBox), c => ((ComboBox)c).ResetText()},
+            {typeof(PictureBox), c => ((PictureBox)c).Image = null}
+};
 
         private static void FindAndInvoke(Type type, Control control)
         {

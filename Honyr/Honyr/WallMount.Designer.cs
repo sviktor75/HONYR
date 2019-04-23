@@ -29,66 +29,75 @@
         private void InitializeComponent()
         {
             this.addMountWallMainLbl = new System.Windows.Forms.Label();
-            this.wallMountFormationTextbox = new System.Windows.Forms.TextBox();
-            this.wallMountNameTextbox = new System.Windows.Forms.TextBox();
-            this.wallMountIdTextbox = new System.Windows.Forms.TextBox();
+            this.txtKialakitas = new System.Windows.Forms.TextBox();
+            this.txtMegenevezes = new System.Windows.Forms.TextBox();
+            this.txtAzonosito = new System.Windows.Forms.TextBox();
             this.mountWallDescriptionLbl = new System.Windows.Forms.Label();
             this.mountWallSymbolLbl = new System.Windows.Forms.Label();
             this.mountWallKialakitasaLbl = new System.Windows.Forms.Label();
             this.mountWallTypeLbl = new System.Windows.Forms.Label();
             this.MountWallNameLbl = new System.Windows.Forms.Label();
             this.MountWallIdLbl = new System.Windows.Forms.Label();
-            this.wallMountDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.wallMountSymbolComboBox = new System.Windows.Forms.ComboBox();
-            this.wallMountTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.wallMountLoctaionComboBox = new System.Windows.Forms.ComboBox();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.comboSymbol = new System.Windows.Forms.ComboBox();
+            this.comboTipus = new System.Windows.Forms.ComboBox();
+            this.comboParent = new System.Windows.Forms.ComboBox();
             this.locationParentLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
+            this.btnUj = new System.Windows.Forms.Button();
+            this.btnKeres = new System.Windows.Forms.Button();
+            this.btnMentes = new System.Windows.Forms.Button();
+            this.btnTorol = new System.Windows.Forms.Button();
+            this.btnModosit = new System.Windows.Forms.Button();
+            this.btnMegse = new System.Windows.Forms.Button();
+            this.picSymbol = new System.Windows.Forms.PictureBox();
+            this.txtKeres = new System.Windows.Forms.TextBox();
+            this.txtIndex = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
             // addMountWallMainLbl
             // 
             this.addMountWallMainLbl.AutoSize = true;
             this.addMountWallMainLbl.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMountWallMainLbl.Location = new System.Drawing.Point(346, 23);
+            this.addMountWallMainLbl.Location = new System.Drawing.Point(519, 35);
+            this.addMountWallMainLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addMountWallMainLbl.Name = "addMountWallMainLbl";
-            this.addMountWallMainLbl.Size = new System.Drawing.Size(211, 34);
+            this.addMountWallMainLbl.Size = new System.Drawing.Size(315, 50);
             this.addMountWallMainLbl.TabIndex = 18;
             this.addMountWallMainLbl.Text = "Fali csatlakozó";
             // 
-            // wallMountFormationTextbox
+            // txtKialakitas
             // 
-            this.wallMountFormationTextbox.Location = new System.Drawing.Point(340, 204);
-            this.wallMountFormationTextbox.Name = "wallMountFormationTextbox";
-            this.wallMountFormationTextbox.Size = new System.Drawing.Size(470, 20);
-            this.wallMountFormationTextbox.TabIndex = 12;
+            this.txtKialakitas.Location = new System.Drawing.Point(510, 314);
+            this.txtKialakitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtKialakitas.Name = "txtKialakitas";
+            this.txtKialakitas.Size = new System.Drawing.Size(703, 26);
+            this.txtKialakitas.TabIndex = 12;
             // 
-            // wallMountNameTextbox
+            // txtMegenevezes
             // 
-            this.wallMountNameTextbox.Location = new System.Drawing.Point(340, 151);
-            this.wallMountNameTextbox.Name = "wallMountNameTextbox";
-            this.wallMountNameTextbox.Size = new System.Drawing.Size(470, 20);
-            this.wallMountNameTextbox.TabIndex = 14;
+            this.txtMegenevezes.Location = new System.Drawing.Point(510, 232);
+            this.txtMegenevezes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMegenevezes.Name = "txtMegenevezes";
+            this.txtMegenevezes.Size = new System.Drawing.Size(703, 26);
+            this.txtMegenevezes.TabIndex = 14;
             // 
-            // wallMountIdTextbox
+            // txtAzonosito
             // 
-            this.wallMountIdTextbox.Location = new System.Drawing.Point(340, 126);
-            this.wallMountIdTextbox.Name = "wallMountIdTextbox";
-            this.wallMountIdTextbox.Size = new System.Drawing.Size(470, 20);
-            this.wallMountIdTextbox.TabIndex = 15;
+            this.txtAzonosito.Location = new System.Drawing.Point(510, 194);
+            this.txtAzonosito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAzonosito.Name = "txtAzonosito";
+            this.txtAzonosito.Size = new System.Drawing.Size(703, 26);
+            this.txtAzonosito.TabIndex = 15;
             // 
             // mountWallDescriptionLbl
             // 
             this.mountWallDescriptionLbl.AutoSize = true;
             this.mountWallDescriptionLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallDescriptionLbl.Location = new System.Drawing.Point(92, 282);
+            this.mountWallDescriptionLbl.Location = new System.Drawing.Point(138, 463);
+            this.mountWallDescriptionLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mountWallDescriptionLbl.Name = "mountWallDescriptionLbl";
-            this.mountWallDescriptionLbl.Size = new System.Drawing.Size(186, 17);
+            this.mountWallDescriptionLbl.Size = new System.Drawing.Size(282, 25);
             this.mountWallDescriptionLbl.TabIndex = 4;
             this.mountWallDescriptionLbl.Text = "Fizikai elhelyezkedés leírása:";
             // 
@@ -96,9 +105,10 @@
             // 
             this.mountWallSymbolLbl.AutoSize = true;
             this.mountWallSymbolLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallSymbolLbl.Location = new System.Drawing.Point(92, 256);
+            this.mountWallSymbolLbl.Location = new System.Drawing.Point(138, 400);
+            this.mountWallSymbolLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mountWallSymbolLbl.Name = "mountWallSymbolLbl";
-            this.mountWallSymbolLbl.Size = new System.Drawing.Size(58, 17);
+            this.mountWallSymbolLbl.Size = new System.Drawing.Size(88, 25);
             this.mountWallSymbolLbl.TabIndex = 5;
             this.mountWallSymbolLbl.Text = "Rajzjele";
             // 
@@ -106,9 +116,10 @@
             // 
             this.mountWallKialakitasaLbl.AutoSize = true;
             this.mountWallKialakitasaLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallKialakitasaLbl.Location = new System.Drawing.Point(92, 204);
+            this.mountWallKialakitasaLbl.Location = new System.Drawing.Point(138, 314);
+            this.mountWallKialakitasaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mountWallKialakitasaLbl.Name = "mountWallKialakitasaLbl";
-            this.mountWallKialakitasaLbl.Size = new System.Drawing.Size(83, 17);
+            this.mountWallKialakitasaLbl.Size = new System.Drawing.Size(126, 25);
             this.mountWallKialakitasaLbl.TabIndex = 6;
             this.mountWallKialakitasaLbl.Text = "Kialakítása:";
             // 
@@ -116,9 +127,10 @@
             // 
             this.mountWallTypeLbl.AutoSize = true;
             this.mountWallTypeLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mountWallTypeLbl.Location = new System.Drawing.Point(92, 177);
+            this.mountWallTypeLbl.Location = new System.Drawing.Point(138, 272);
+            this.mountWallTypeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mountWallTypeLbl.Name = "mountWallTypeLbl";
-            this.mountWallTypeLbl.Size = new System.Drawing.Size(45, 17);
+            this.mountWallTypeLbl.Size = new System.Drawing.Size(69, 25);
             this.mountWallTypeLbl.TabIndex = 7;
             this.mountWallTypeLbl.Text = "Típus:";
             // 
@@ -126,9 +138,10 @@
             // 
             this.MountWallNameLbl.AutoSize = true;
             this.MountWallNameLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MountWallNameLbl.Location = new System.Drawing.Point(92, 149);
+            this.MountWallNameLbl.Location = new System.Drawing.Point(138, 229);
+            this.MountWallNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MountWallNameLbl.Name = "MountWallNameLbl";
-            this.MountWallNameLbl.Size = new System.Drawing.Size(175, 17);
+            this.MountWallNameLbl.Size = new System.Drawing.Size(268, 25);
             this.MountWallNameLbl.TabIndex = 8;
             this.MountWallNameLbl.Text = "Megnevezés , száma, felirat:";
             // 
@@ -136,136 +149,186 @@
             // 
             this.MountWallIdLbl.AutoSize = true;
             this.MountWallIdLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MountWallIdLbl.Location = new System.Drawing.Point(92, 126);
+            this.MountWallIdLbl.Location = new System.Drawing.Point(138, 194);
+            this.MountWallIdLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MountWallIdLbl.Name = "MountWallIdLbl";
-            this.MountWallIdLbl.Size = new System.Drawing.Size(71, 17);
+            this.MountWallIdLbl.Size = new System.Drawing.Size(107, 25);
             this.MountWallIdLbl.TabIndex = 9;
             this.MountWallIdLbl.Text = "Azonosító:";
             // 
-            // wallMountDescriptionRichTextBox
+            // txtDescription
             // 
-            this.wallMountDescriptionRichTextBox.Location = new System.Drawing.Point(340, 282);
-            this.wallMountDescriptionRichTextBox.Name = "wallMountDescriptionRichTextBox";
-            this.wallMountDescriptionRichTextBox.Size = new System.Drawing.Size(470, 96);
-            this.wallMountDescriptionRichTextBox.TabIndex = 21;
-            this.wallMountDescriptionRichTextBox.Text = "";
+            this.txtDescription.Location = new System.Drawing.Point(510, 463);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(703, 146);
+            this.txtDescription.TabIndex = 21;
+            this.txtDescription.Text = "";
             // 
-            // wallMountSymbolComboBox
+            // comboSymbol
             // 
-            this.wallMountSymbolComboBox.FormattingEnabled = true;
-            this.wallMountSymbolComboBox.Location = new System.Drawing.Point(340, 256);
-            this.wallMountSymbolComboBox.Name = "wallMountSymbolComboBox";
-            this.wallMountSymbolComboBox.Size = new System.Drawing.Size(169, 21);
-            this.wallMountSymbolComboBox.TabIndex = 20;
+            this.comboSymbol.FormattingEnabled = true;
+            this.comboSymbol.Location = new System.Drawing.Point(510, 400);
+            this.comboSymbol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboSymbol.Name = "comboSymbol";
+            this.comboSymbol.Size = new System.Drawing.Size(252, 28);
+            this.comboSymbol.TabIndex = 20;
+            this.comboSymbol.SelectionChangeCommitted += new System.EventHandler(this.comboSymbol_SelectionChangeCommitted);
             // 
-            // wallMountTypeComboBox
+            // comboTipus
             // 
-            this.wallMountTypeComboBox.FormattingEnabled = true;
-            this.wallMountTypeComboBox.Location = new System.Drawing.Point(340, 177);
-            this.wallMountTypeComboBox.Name = "wallMountTypeComboBox";
-            this.wallMountTypeComboBox.Size = new System.Drawing.Size(169, 21);
-            this.wallMountTypeComboBox.TabIndex = 22;
+            this.comboTipus.FormattingEnabled = true;
+            this.comboTipus.Location = new System.Drawing.Point(510, 272);
+            this.comboTipus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboTipus.Name = "comboTipus";
+            this.comboTipus.Size = new System.Drawing.Size(252, 28);
+            this.comboTipus.TabIndex = 22;
             // 
-            // wallMountLoctaionComboBox
+            // comboParent
             // 
-            this.wallMountLoctaionComboBox.FormattingEnabled = true;
-            this.wallMountLoctaionComboBox.Location = new System.Drawing.Point(340, 229);
-            this.wallMountLoctaionComboBox.Name = "wallMountLoctaionComboBox";
-            this.wallMountLoctaionComboBox.Size = new System.Drawing.Size(169, 21);
-            this.wallMountLoctaionComboBox.TabIndex = 25;
+            this.comboParent.FormattingEnabled = true;
+            this.comboParent.Location = new System.Drawing.Point(510, 358);
+            this.comboParent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboParent.Name = "comboParent";
+            this.comboParent.Size = new System.Drawing.Size(252, 28);
+            this.comboParent.TabIndex = 25;
             // 
             // locationParentLbl
             // 
             this.locationParentLbl.AutoSize = true;
             this.locationParentLbl.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationParentLbl.Location = new System.Drawing.Point(92, 229);
+            this.locationParentLbl.Location = new System.Drawing.Point(138, 358);
+            this.locationParentLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationParentLbl.Name = "locationParentLbl";
-            this.locationParentLbl.Size = new System.Drawing.Size(242, 17);
+            this.locationParentLbl.Size = new System.Drawing.Size(365, 25);
             this.locationParentLbl.TabIndex = 23;
             this.locationParentLbl.Text = "Tartalmazó épület/helység azonosítója:";
             // 
-            // button1
+            // btnUj
             // 
-            this.button1.Location = new System.Drawing.Point(135, 463);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 27);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Új";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUj.Location = new System.Drawing.Point(202, 712);
+            this.btnUj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUj.Name = "btnUj";
+            this.btnUj.Size = new System.Drawing.Size(146, 42);
+            this.btnUj.TabIndex = 26;
+            this.btnUj.Text = "Új";
+            this.btnUj.UseVisualStyleBackColor = true;
+            this.btnUj.Click += new System.EventHandler(this.btnUj_Click);
             // 
-            // button2
+            // btnKeres
             // 
-            this.button2.Location = new System.Drawing.Point(349, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 27);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Keresés";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnKeres.Location = new System.Drawing.Point(524, 712);
+            this.btnKeres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnKeres.Name = "btnKeres";
+            this.btnKeres.Size = new System.Drawing.Size(146, 42);
+            this.btnKeres.TabIndex = 27;
+            this.btnKeres.Text = "Keresés";
+            this.btnKeres.UseVisualStyleBackColor = true;
+            this.btnKeres.Click += new System.EventHandler(this.btnKeres_Click);
             // 
-            // saveBtn
+            // btnMentes
             // 
-            this.saveBtn.Location = new System.Drawing.Point(242, 463);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(97, 27);
-            this.saveBtn.TabIndex = 28;
-            this.saveBtn.Text = "Mentés";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.btnMentes.Location = new System.Drawing.Point(363, 712);
+            this.btnMentes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMentes.Name = "btnMentes";
+            this.btnMentes.Size = new System.Drawing.Size(146, 42);
+            this.btnMentes.TabIndex = 28;
+            this.btnMentes.Text = "Mentés";
+            this.btnMentes.UseVisualStyleBackColor = true;
+            this.btnMentes.Click += new System.EventHandler(this.btnMentes_Click);
             // 
-            // button4
+            // btnTorol
             // 
-            this.button4.Location = new System.Drawing.Point(563, 463);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 27);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Töröl";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTorol.Location = new System.Drawing.Point(844, 712);
+            this.btnTorol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTorol.Name = "btnTorol";
+            this.btnTorol.Size = new System.Drawing.Size(146, 42);
+            this.btnTorol.TabIndex = 29;
+            this.btnTorol.Text = "Töröl";
+            this.btnTorol.UseVisualStyleBackColor = true;
+            this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
             // 
-            // button3
+            // btnModosit
             // 
-            this.button3.Location = new System.Drawing.Point(456, 463);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 27);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Módosít";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnModosit.Location = new System.Drawing.Point(684, 712);
+            this.btnModosit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnModosit.Name = "btnModosit";
+            this.btnModosit.Size = new System.Drawing.Size(146, 42);
+            this.btnModosit.TabIndex = 30;
+            this.btnModosit.Text = "Módosít";
+            this.btnModosit.UseVisualStyleBackColor = true;
+            this.btnModosit.Click += new System.EventHandler(this.btnModosit_Click);
             // 
-            // cancelBtn
+            // btnMegse
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(670, 463);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(97, 27);
-            this.cancelBtn.TabIndex = 31;
-            this.cancelBtn.Text = "Mégse";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click_1);
+            this.btnMegse.Location = new System.Drawing.Point(1005, 712);
+            this.btnMegse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMegse.Name = "btnMegse";
+            this.btnMegse.Size = new System.Drawing.Size(146, 42);
+            this.btnMegse.TabIndex = 31;
+            this.btnMegse.Text = "Mégse";
+            this.btnMegse.UseVisualStyleBackColor = true;
+            this.btnMegse.Click += new System.EventHandler(this.btnMegse_Click_1);
             // 
-            // mountWall
+            // picSymbol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.picSymbol.Location = new System.Drawing.Point(832, 348);
+            this.picSymbol.Name = "picSymbol";
+            this.picSymbol.Size = new System.Drawing.Size(128, 107);
+            this.picSymbol.TabIndex = 33;
+            this.picSymbol.TabStop = false;
+            // 
+            // txtKeres
+            // 
+            this.txtKeres.Location = new System.Drawing.Point(317, 641);
+            this.txtKeres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtKeres.Name = "txtKeres";
+            this.txtKeres.Size = new System.Drawing.Size(703, 26);
+            this.txtKeres.TabIndex = 34;
+            this.txtKeres.TextChanged += new System.EventHandler(this.txtKeres_TextChanged);
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(510, 134);
+            this.txtIndex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(176, 26);
+            this.txtIndex.TabIndex = 35;
+            this.txtIndex.Visible = false;
+            // 
+            // WallMount
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.wallMountLoctaionComboBox);
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.txtKeres);
+            this.Controls.Add(this.picSymbol);
+            this.Controls.Add(this.btnUj);
+            this.Controls.Add(this.btnKeres);
+            this.Controls.Add(this.btnMentes);
+            this.Controls.Add(this.btnTorol);
+            this.Controls.Add(this.btnModosit);
+            this.Controls.Add(this.btnMegse);
+            this.Controls.Add(this.comboParent);
             this.Controls.Add(this.locationParentLbl);
-            this.Controls.Add(this.wallMountTypeComboBox);
-            this.Controls.Add(this.wallMountDescriptionRichTextBox);
-            this.Controls.Add(this.wallMountSymbolComboBox);
+            this.Controls.Add(this.comboTipus);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.comboSymbol);
             this.Controls.Add(this.addMountWallMainLbl);
-            this.Controls.Add(this.wallMountFormationTextbox);
-            this.Controls.Add(this.wallMountNameTextbox);
-            this.Controls.Add(this.wallMountIdTextbox);
+            this.Controls.Add(this.txtKialakitas);
+            this.Controls.Add(this.txtMegenevezes);
+            this.Controls.Add(this.txtAzonosito);
             this.Controls.Add(this.mountWallDescriptionLbl);
             this.Controls.Add(this.mountWallSymbolLbl);
             this.Controls.Add(this.mountWallKialakitasaLbl);
             this.Controls.Add(this.mountWallTypeLbl);
             this.Controls.Add(this.MountWallNameLbl);
             this.Controls.Add(this.MountWallIdLbl);
-            this.Name = "mountWall";
-            this.Size = new System.Drawing.Size(903, 544);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "WallMount";
+            this.Size = new System.Drawing.Size(1354, 837);
+            this.Load += new System.EventHandler(this.WallMount_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,25 +337,28 @@
         #endregion
 
         private System.Windows.Forms.Label addMountWallMainLbl;
-        private System.Windows.Forms.TextBox wallMountFormationTextbox;
-        private System.Windows.Forms.TextBox wallMountNameTextbox;
-        private System.Windows.Forms.TextBox wallMountIdTextbox;
+        private System.Windows.Forms.TextBox txtKialakitas;
+        private System.Windows.Forms.TextBox txtMegenevezes;
+        private System.Windows.Forms.TextBox txtAzonosito;
         private System.Windows.Forms.Label mountWallDescriptionLbl;
         private System.Windows.Forms.Label mountWallSymbolLbl;
         private System.Windows.Forms.Label mountWallKialakitasaLbl;
         private System.Windows.Forms.Label mountWallTypeLbl;
         private System.Windows.Forms.Label MountWallNameLbl;
         private System.Windows.Forms.Label MountWallIdLbl;
-        private System.Windows.Forms.RichTextBox wallMountDescriptionRichTextBox;
-        private System.Windows.Forms.ComboBox wallMountSymbolComboBox;
-        private System.Windows.Forms.ComboBox wallMountTypeComboBox;
-        private System.Windows.Forms.ComboBox wallMountLoctaionComboBox;
+        private System.Windows.Forms.RichTextBox txtDescription;
+        private System.Windows.Forms.ComboBox comboSymbol;
+        private System.Windows.Forms.ComboBox comboTipus;
+        private System.Windows.Forms.ComboBox comboParent;
         private System.Windows.Forms.Label locationParentLbl;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button btnUj;
+        private System.Windows.Forms.Button btnKeres;
+        private System.Windows.Forms.Button btnMentes;
+        private System.Windows.Forms.Button btnTorol;
+        private System.Windows.Forms.Button btnModosit;
+        private System.Windows.Forms.Button btnMegse;
+        private System.Windows.Forms.PictureBox picSymbol;
+        private System.Windows.Forms.TextBox txtKeres;
+        private System.Windows.Forms.TextBox txtIndex;
     }
 }
