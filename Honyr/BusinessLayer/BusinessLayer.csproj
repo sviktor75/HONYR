@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BItem.cs" />
     <Compile Include="Business\BLocation.cs" />
     <Compile Include="Business\BPort.cs" />
     <Compile Include="Business\BSymbol.cs" />
