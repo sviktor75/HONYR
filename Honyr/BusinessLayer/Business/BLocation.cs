@@ -11,10 +11,12 @@ namespace BusinessLayer.Business
     public class BLocation
     {
         OLocation locationOP = new OLocation();
+       
 
         public int AddLocation(string locationId, string name, string locationType, long parentId, int symbolId, string description)
         {
             return locationOP.AddLocation(locationId, name, locationType, parentId, symbolId, description);
+
         }
 
         public int ModLocation(long id, string locationId, string name, string locationType, long parentId, int symbolId, string description)

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BLocation.cs" />
+    <Compile Include="Business\BPort.cs" />
     <Compile Include="Business\BSymbol.cs" />
     <Compile Include="Business\BWallConnector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

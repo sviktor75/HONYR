@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Operations
 {
-    class OItem
+    public class OItem
     {
         public void AddItem()
         {

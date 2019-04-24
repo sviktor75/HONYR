@@ -94,5 +94,10 @@ namespace DataLayer.Operations
             return retList;
 
         }
+
+        public void GetLocationidByID()
+        {
+
+        }
     }
 }
