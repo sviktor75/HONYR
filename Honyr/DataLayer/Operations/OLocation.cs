@@ -15,7 +15,7 @@ namespace DataLayer.Operations
         public int AddLocation(string locationId, string name, string locationType, long parentId, int symbolId, string description)
         {
             string query = "INSERT INTO location (locationId, name, locationtype, parentid, symbolid, description)" + " VALUES" + " ('" + locationId + "', '" + name + "', '" + locationType + "', '" + parentId + "', '" + symbolId + "', '" + description + "');";
-
+            MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             int effectedRows = cmd.ExecuteNonQuery();
@@ -95,9 +95,50 @@ namespace DataLayer.Operations
 
         }
 
-        public void GetLocationidByID()
+        public int GetididByLocationid(string locationid)
         {
+            string query = "select id from location where locationid = '" + locationid + "';";
+
+            int id=0;
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                id = int.Parse(dataReader["id"] + "");
+            }
+            conn.CloseConnection();
+
+            return id;
 
         }
+
+        public string GetLocationidByID(int id)
+        {
+            string query = "select locationid from location where id=" + id + ";";
+
+            string retString = "";
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+
+            while (dataReader.Read())
+            {
+                retString = dataReader["locationId"] + "";
+            }
+
+            dataReader.Close();
+            conn.CloseConnection();
+
+            return retString;
+
+        }
+            
+
     }
 }
+

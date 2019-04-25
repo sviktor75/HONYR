@@ -39,5 +39,14 @@ namespace BusinessLayer.Business
             return locationOP.GetLocationByName(name);
         }
 
+        public int GetididByLocationid(string locationid)
+        {
+            return locationOP.GetididByLocationid(locationid);
+        }
+
+        public string GetLocationidByID(int id)
+        {
+            return locationOP.GetLocationidByID(id);
+        }
     }
 }

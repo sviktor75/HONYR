@@ -87,6 +87,7 @@ namespace Honyr
         {
             if (uj)
             {
+                int parent = int.Parse(comboParent.Text);
                 int effectedRows = wc.AddConnector(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, int.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
