@@ -16,6 +16,7 @@ namespace Honyr
     {
         BSymbol symbol = new BSymbol();
         BWallConnector wc = new BWallConnector();
+        BLocation location = new BLocation();
 
         bool vissza = false;
         bool uj = false;
@@ -189,7 +190,7 @@ namespace Honyr
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
 
-            comboParent.DataSource = wc.GetConnector();
+            comboParent.DataSource = location.GetLocations(); 
             comboSymbol.DataSource = symbol.GetSymbols();
 
             vissza = false;

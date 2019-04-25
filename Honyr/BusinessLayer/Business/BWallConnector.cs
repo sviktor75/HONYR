@@ -10,6 +10,7 @@ namespace BusinessLayer.Business
     public class BWallConnector
     {
         OWallConnector wcOP = new OWallConnector();
+        BLocation location = new BLocation();
 
         public int AddConnector(string connectorid, string name, string type, string property, int locationid, int symbolId, string description)
         {
@@ -28,7 +29,7 @@ namespace BusinessLayer.Business
 
         public List<String> GetConnector()
         {
-            return wcOP.GetConnector();
+            return location.GetLocations();
         }
 
         public List<String> GetConnectorByName(string name)

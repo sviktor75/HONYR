@@ -45,25 +45,25 @@ namespace DataLayer.Operations
             return effectedRows;
         }
 
-        public List<String> GetConnector()
-        {
-            string query = "select connectorid from WallConnector;";
+        //public List<String> GetConnector()
+        //{
+        //    string query = "select connectorid from WallConnector;";
 
-            List<string> retList = new List<string>();
+        //    List<string> retList = new List<string>();
 
-            conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
-            MySqlDataReader dataReader = cmd.ExecuteReader();
+        //    conn.OpenConnection();
+        //    MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+        //    MySqlDataReader dataReader = cmd.ExecuteReader();
 
-            while (dataReader.Read())
-            {
-                retList.Add(dataReader["connectorid"] + "");
-            }
-            dataReader.Close();
-            conn.CloseConnection();
+        //    while (dataReader.Read())
+        //    {
+        //        retList.Add(dataReader["connectorid"] + "");
+        //    }
+        //    dataReader.Close();
+        //    conn.CloseConnection();
 
-            return retList;
-        }
+        //    return retList;
+        //}
 
 
         public List<String> GetConnectorByName(string name)

@@ -20,3 +20,14 @@ C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\bin\Debug\MySql.Data.dll
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\bin\Debug\MySql.Data.xml
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\tothalexlaszlo\Downloads\Suli\Github\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.pdb

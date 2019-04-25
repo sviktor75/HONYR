@@ -10,6 +10,7 @@ namespace BusinessLayer.Business
     public class BItem
     {
         OItem itemOP = new OItem();
+        BLocation location = new BLocation();
 
 
         public int AddItem(bool active, string deviceID, string deviceName, string ip, string mac, long locationid, int symbolId, string description)
@@ -28,14 +29,14 @@ namespace BusinessLayer.Business
             return itemOP.DelItem(id);
         }
 
-        public List<String> GetItem()
+        public List<String> GetLocations()
         {
-            return itemOP.GetItem();
+            return location.GetLocations();
         }
 
-        public List<String> GetItemByName(string name)
+        public List<String> GetItemByName(string name, bool active)
         {
-            return itemOP.GetItemByName(name);
+            return itemOP.GetItemByName(name, active);
         }
     }
 }
