@@ -61,6 +61,7 @@ namespace DataLayer.Operations
                 retList.Add(dataReader["name"] + "");
                 retList.Add((byte[])(dataReader["image"]));
             }
+
             dataReader.Close();
             conn.CloseConnection();
 
