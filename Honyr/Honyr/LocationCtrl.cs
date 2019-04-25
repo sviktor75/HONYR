@@ -22,6 +22,8 @@ namespace Honyr
         bool uj = false;
         bool modosit = false;
 
+        public void reset() { this.Controls.ClearControls(); }
+
         public addLocationCtrl()
         {
             InitializeComponent();
@@ -43,6 +45,9 @@ namespace Honyr
             comboParent.Enabled = false;
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
+
+            this.Controls.ClearControls<ComboBox>();
+            this.Controls.ClearControls<PictureBox>();
 
             if (vissza)
             {

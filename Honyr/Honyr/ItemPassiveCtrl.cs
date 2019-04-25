@@ -27,8 +27,11 @@ namespace Honyr
         public ItemPassiveCtrl()
         {
             InitializeComponent();
+
         }
        
+        public void reset() { this.Controls.ClearControls(); }
+
         private void ItemPassiveCtrl_Load(object sender, EventArgs e)
         {
             this.Controls.ClearControls();
@@ -74,6 +77,9 @@ namespace Honyr
             listPort.Enabled = false;
             txtPortAzonosito.Enabled = false;
             comboPortTipus.Enabled = false;
+
+            this.Controls.ClearControls<ComboBox>();
+            this.Controls.ClearControls<PictureBox>();
 
             if (vissza)
             {

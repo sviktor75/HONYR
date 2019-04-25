@@ -21,6 +21,7 @@ namespace Honyr
         bool vissza = false;
         bool uj = false;
         bool modosit = false;
+        public void reset() { this.Controls.ClearControls(); }
 
         public ItemActiveCtrl()
         {
@@ -81,6 +82,9 @@ namespace Honyr
             txtPortMegnevezes.Enabled = false;
             txtPortKonfig.Enabled = false;
             comboPortTipus.Enabled = false;
+
+            this.Controls.ClearControls<ComboBox>();
+            this.Controls.ClearControls<PictureBox>();
 
             if (vissza)
             {

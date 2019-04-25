@@ -39,6 +39,11 @@ namespace Honyr
             mountWall1.SendToBack();
             addLocation1.SendToBack();
             itemActiveCtrl1.SendToBack();
+
+            mountWall1.reset();
+            addLocation1.reset();
+            itemActiveCtrl1.reset(); 
+            passiveItemCtrl1.reset();
         }
 
         private void aktívToolStripMenuItem_Click(object sender, EventArgs e) 
@@ -49,6 +54,11 @@ namespace Honyr
             addLocation1.SendToBack();
             passiveItemCtrl1.SendToBack();
 
+            mountWall1.reset();
+            addLocation1.reset();
+            itemActiveCtrl1.reset();
+            passiveItemCtrl1.reset();
+
         }
 
         private void helységToolStripMenuItem1_Click(object sender, EventArgs e) 
@@ -58,6 +68,11 @@ namespace Honyr
             mountWall1.SendToBack();
             passiveItemCtrl1.SendToBack();
             itemActiveCtrl1.SendToBack();
+
+            mountWall1.reset();
+            addLocation1.reset();
+            itemActiveCtrl1.reset();
+            passiveItemCtrl1.reset();
         }
 
         private void faliCsatlakozóToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -67,6 +82,11 @@ namespace Honyr
             addLocation1.SendToBack();
             passiveItemCtrl1.SendToBack();
             itemActiveCtrl1.SendToBack();
+
+            mountWall1.reset();
+            addLocation1.reset();
+            itemActiveCtrl1.reset();
+            passiveItemCtrl1.reset();
         }
 
         private void passiveItemCtrl1_Load(object sender, EventArgs e)
