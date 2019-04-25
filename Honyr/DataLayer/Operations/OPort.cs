@@ -11,9 +11,9 @@ namespace DataLayer.Operations
     {
         OInitDataConnection conn = new OInitDataConnection();
 
-        public int AddPort(int portnumber, string portID, string portName, string portConfig, string portPhysicalType)
+        public int AddPort(int portnumber, string portID, string portName, string portConfig, string portPhysicalType, long itemId)
         {
-            string query = "INSERT INTO location (portnumber, portID, portName, portConfig, portPhysicalType)" + " VALUES" + " ('" + portnumber + "', '" + portName + "', '" + portConfig + "', '" + portPhysicalType + "');";
+            string query = "INSERT INTO port (portnumber, portID, portName, portConfig, portPhysicalType, itemId)" + " VALUES" + " ('" + portnumber + "', '" + portID + "', '" + portName + "', '" + portConfig + "', '" + portPhysicalType + "', '" + itemId + "');";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -22,10 +22,9 @@ namespace DataLayer.Operations
             return effectedRows;
         }
 
-
-        public int ModPort(long id, int portnumber, string portID, string portName, string portConfig, string portPhysicalType)
+        public int ModPort(long id, int portnumber, string portID, string portName, string portConfig, string portPhysicalType, long itemId)
         {
-            string query = "update port set portNumber='" + portnumber + "', portID='" + portID + "', portName='" + portName + "', portConfig='" + portConfig + "', portPhysicalType='" + portPhysicalType + "';";
+            string query = "update port set portnumber='" + portnumber + "', portID='" + portID + "', portName='" + portName + "', portConfig='" + portConfig + "', portPhysicalType='" + portPhysicalType + "', itemId='" + itemId + "' where id='" + id + "';";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -33,9 +32,11 @@ namespace DataLayer.Operations
             conn.CloseConnection();
             return effectedRows;
         }
+
 
         public int DelPort(long id)
         {
+
             string query = "delete from port where id='" + id + "';";
 
             conn.OpenConnection();
@@ -44,6 +45,7 @@ namespace DataLayer.Operations
             conn.CloseConnection();
             return effectedRows;
         }
+
 
         public List<String> GetPorts()
         {
