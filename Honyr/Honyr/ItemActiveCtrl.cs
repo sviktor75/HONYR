@@ -241,9 +241,10 @@ namespace Honyr
                 txtIndex.Text = sor[0].ToString();
                 txtAzonosito.Text = sor[2].ToString();
                 txtMegenevezes.Text = sor[3].ToString();
-                comboParent.Text = location.GetLocationidByID( int.Parse(sor[4])).ToString();
-                txtIP.Text = sor[5].ToString();
-                txtMAC.Text = sor[6].ToString();
+                txtIP.Text = sor[4].ToString();
+                txtMAC.Text = sor[5].ToString();
+                comboParent.Text = location.GetLocationidByID( int.Parse(sor[6])).ToString();
+
                 
 
                 int.TryParse(sor[7], out int sid);

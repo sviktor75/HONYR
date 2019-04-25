@@ -12,10 +12,9 @@ namespace DataLayer.Operations
     {
         OInitDataConnection conn = new OInitDataConnection();
 
-
         public int AddItem(bool active, string deviceID, string deviceName, string ip, string mac, long locationid, int symbolId, string description)
         { 
-            string query = "INSERT INTO item (active, deviceID, deviceName, ip, mac, locationid, symbolid, description)" + " VALUES" + " (" + true + ", '" + deviceID + "', '" + deviceName + "', '" + ip + "', '" + mac + "', '" + locationid + "','" + symbolId + "','" + description + "');";
+            string query = "INSERT INTO item (active, deviceID, deviceName, ip, mac, locationid, symbolid, description)" + " VALUES" + " (" + active + ", '" + deviceID + "', '" + deviceName + "', '" + ip + "', '" + mac + "', '" + locationid + "','" + symbolId + "','" + description + "');";
             MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -27,7 +26,7 @@ namespace DataLayer.Operations
 
         public int ModItem(long id, bool active, string deviceID, string deviceName, string ip, string mac, long locationid, int symbolId, string description)
         {
-            string query = "update item set active=" + true + ", deviceID='" + deviceID + "', deviceName='" + deviceName + "', ip='" + ip + "', mac='" + mac + "', locationid='" + locationid + "', symbolid='" + symbolId + "', description='" + description + "' where id='" + id + "';";
+            string query = "update item set active=" + active + ", deviceID='" + deviceID + "', deviceName='" + deviceName + "', ip='" + ip + "', mac='" + mac + "', locationid='" + locationid + "', symbolid='" + symbolId + "', description='" + description + "' where id='" + id + "';";
             MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -94,7 +93,6 @@ namespace DataLayer.Operations
             }
             dataReader.Close();
             conn.CloseConnection();
-
             return retList;
 
         }

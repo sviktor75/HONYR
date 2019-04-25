@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.itemPassivePortTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.itemPassiveSymbolComboBox = new System.Windows.Forms.ComboBox();
-            this.itemPassiveDescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.itemPassivePortsListbox = new System.Windows.Forms.ListBox();
-            this.itemPassiveLocationComboBox = new System.Windows.Forms.ComboBox();
+            this.comboPortTipus = new System.Windows.Forms.ComboBox();
+            this.comboSymbol = new System.Windows.Forms.ComboBox();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.listPort = new System.Windows.Forms.ListBox();
+            this.comboParent = new System.Windows.Forms.ComboBox();
             this.ItemActiveLbl = new System.Windows.Forms.Label();
-            this.itemPassiveNameTxtbox = new System.Windows.Forms.TextBox();
-            this.itemPassivePortIdTxtbox = new System.Windows.Forms.TextBox();
-            this.itemPassiveIdTxtbox = new System.Windows.Forms.TextBox();
+            this.txtMegenevezes = new System.Windows.Forms.TextBox();
+            this.txtPortAzonosito = new System.Windows.Forms.TextBox();
+            this.txtAzonosito = new System.Windows.Forms.TextBox();
             this.locationDescriptionLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,56 +45,60 @@
             this.locationParentLbl = new System.Windows.Forms.Label();
             this.locationNameLbl = new System.Windows.Forms.Label();
             this.locationIdLbl = new System.Windows.Forms.Label();
-            this.itemPassiveAddBtn = new System.Windows.Forms.Button();
-            this.itemPassiveSearchBtn = new System.Windows.Forms.Button();
-            this.itemPassiveSaveBtn = new System.Windows.Forms.Button();
-            this.itemPassiveDeleteBtn = new System.Windows.Forms.Button();
-            this.itemPassiveModifyBtn = new System.Windows.Forms.Button();
-            this.itemPassiveCancelBtn = new System.Windows.Forms.Button();
-            this.itemPassivePortDeleteBtn = new System.Windows.Forms.Button();
-            this.itemPassivePortAddBtn = new System.Windows.Forms.Button();
+            this.btnUj = new System.Windows.Forms.Button();
+            this.btnKeres = new System.Windows.Forms.Button();
+            this.btnMentes = new System.Windows.Forms.Button();
+            this.btnTorol = new System.Windows.Forms.Button();
+            this.btnModosit = new System.Windows.Forms.Button();
+            this.btnMegse = new System.Windows.Forms.Button();
+            this.btnPortTorol = new System.Windows.Forms.Button();
+            this.btnPortHozzaad = new System.Windows.Forms.Button();
+            this.picSymbol = new System.Windows.Forms.PictureBox();
+            this.txtKeres = new System.Windows.Forms.TextBox();
+            this.txtIndex = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
-            // itemPassivePortTypeComboBox
+            // comboPortTipus
             // 
-            this.itemPassivePortTypeComboBox.FormattingEnabled = true;
-            this.itemPassivePortTypeComboBox.Location = new System.Drawing.Point(712, 127);
-            this.itemPassivePortTypeComboBox.Name = "itemPassivePortTypeComboBox";
-            this.itemPassivePortTypeComboBox.Size = new System.Drawing.Size(169, 21);
-            this.itemPassivePortTypeComboBox.TabIndex = 56;
+            this.comboPortTipus.FormattingEnabled = true;
+            this.comboPortTipus.Location = new System.Drawing.Point(712, 127);
+            this.comboPortTipus.Name = "comboPortTipus";
+            this.comboPortTipus.Size = new System.Drawing.Size(169, 21);
+            this.comboPortTipus.TabIndex = 56;
             // 
-            // itemPassiveSymbolComboBox
+            // comboSymbol
             // 
-            this.itemPassiveSymbolComboBox.FormattingEnabled = true;
-            this.itemPassiveSymbolComboBox.Location = new System.Drawing.Point(190, 299);
-            this.itemPassiveSymbolComboBox.Name = "itemPassiveSymbolComboBox";
-            this.itemPassiveSymbolComboBox.Size = new System.Drawing.Size(169, 21);
-            this.itemPassiveSymbolComboBox.TabIndex = 54;
+            this.comboSymbol.FormattingEnabled = true;
+            this.comboSymbol.Location = new System.Drawing.Point(190, 299);
+            this.comboSymbol.Name = "comboSymbol";
+            this.comboSymbol.Size = new System.Drawing.Size(169, 21);
+            this.comboSymbol.TabIndex = 54;
+            this.comboSymbol.SelectionChangeCommitted += new System.EventHandler(this.comboSymbol_SelectionChangeCommitted);
             // 
-            // itemPassiveDescriptionRichTextBox
+            // txtDescription
             // 
-            this.itemPassiveDescriptionRichTextBox.Location = new System.Drawing.Point(190, 188);
-            this.itemPassiveDescriptionRichTextBox.Name = "itemPassiveDescriptionRichTextBox";
-            this.itemPassiveDescriptionRichTextBox.Size = new System.Drawing.Size(328, 96);
-            this.itemPassiveDescriptionRichTextBox.TabIndex = 53;
-            this.itemPassiveDescriptionRichTextBox.Text = "";
+            this.txtDescription.Location = new System.Drawing.Point(190, 188);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(328, 96);
+            this.txtDescription.TabIndex = 53;
+            this.txtDescription.Text = "";
             // 
-            // itemPassivePortsListbox
+            // listPort
             // 
-            this.itemPassivePortsListbox.FormattingEnabled = true;
-            this.itemPassivePortsListbox.Location = new System.Drawing.Point(545, 97);
-            this.itemPassivePortsListbox.Name = "itemPassivePortsListbox";
-            this.itemPassivePortsListbox.Size = new System.Drawing.Size(54, 355);
-            this.itemPassivePortsListbox.TabIndex = 52;
-            this.itemPassivePortsListbox.SelectedIndexChanged += new System.EventHandler(this.itemPassivePortsListbox_SelectedIndexChanged);
+            this.listPort.FormattingEnabled = true;
+            this.listPort.Location = new System.Drawing.Point(545, 97);
+            this.listPort.Name = "listPort";
+            this.listPort.Size = new System.Drawing.Size(54, 355);
+            this.listPort.TabIndex = 52;
             // 
-            // itemPassiveLocationComboBox
+            // comboParent
             // 
-            this.itemPassiveLocationComboBox.FormattingEnabled = true;
-            this.itemPassiveLocationComboBox.Location = new System.Drawing.Point(190, 155);
-            this.itemPassiveLocationComboBox.Name = "itemPassiveLocationComboBox";
-            this.itemPassiveLocationComboBox.Size = new System.Drawing.Size(169, 21);
-            this.itemPassiveLocationComboBox.TabIndex = 49;
+            this.comboParent.FormattingEnabled = true;
+            this.comboParent.Location = new System.Drawing.Point(190, 155);
+            this.comboParent.Name = "comboParent";
+            this.comboParent.Size = new System.Drawing.Size(169, 21);
+            this.comboParent.TabIndex = 49;
             // 
             // ItemActiveLbl
             // 
@@ -106,26 +110,26 @@
             this.ItemActiveLbl.TabIndex = 48;
             this.ItemActiveLbl.Text = "Passzív eszköz ";
             // 
-            // itemPassiveNameTxtbox
+            // txtMegenevezes
             // 
-            this.itemPassiveNameTxtbox.Location = new System.Drawing.Point(190, 124);
-            this.itemPassiveNameTxtbox.Name = "itemPassiveNameTxtbox";
-            this.itemPassiveNameTxtbox.Size = new System.Drawing.Size(220, 20);
-            this.itemPassiveNameTxtbox.TabIndex = 41;
+            this.txtMegenevezes.Location = new System.Drawing.Point(190, 124);
+            this.txtMegenevezes.Name = "txtMegenevezes";
+            this.txtMegenevezes.Size = new System.Drawing.Size(220, 20);
+            this.txtMegenevezes.TabIndex = 41;
             // 
-            // itemPassivePortIdTxtbox
+            // txtPortAzonosito
             // 
-            this.itemPassivePortIdTxtbox.Location = new System.Drawing.Point(712, 94);
-            this.itemPassivePortIdTxtbox.Name = "itemPassivePortIdTxtbox";
-            this.itemPassivePortIdTxtbox.Size = new System.Drawing.Size(169, 20);
-            this.itemPassivePortIdTxtbox.TabIndex = 43;
+            this.txtPortAzonosito.Location = new System.Drawing.Point(712, 94);
+            this.txtPortAzonosito.Name = "txtPortAzonosito";
+            this.txtPortAzonosito.Size = new System.Drawing.Size(169, 20);
+            this.txtPortAzonosito.TabIndex = 43;
             // 
-            // itemPassiveIdTxtbox
+            // txtAzonosito
             // 
-            this.itemPassiveIdTxtbox.Location = new System.Drawing.Point(190, 97);
-            this.itemPassiveIdTxtbox.Name = "itemPassiveIdTxtbox";
-            this.itemPassiveIdTxtbox.Size = new System.Drawing.Size(220, 20);
-            this.itemPassiveIdTxtbox.TabIndex = 44;
+            this.txtAzonosito.Location = new System.Drawing.Point(190, 97);
+            this.txtAzonosito.Name = "txtAzonosito";
+            this.txtAzonosito.Size = new System.Drawing.Size(220, 20);
+            this.txtAzonosito.TabIndex = 44;
             // 
             // locationDescriptionLbl
             // 
@@ -207,101 +211,132 @@
             this.locationIdLbl.TabIndex = 39;
             this.locationIdLbl.Text = "Azonosító:";
             // 
-            // itemPassiveAddBtn
+            // btnUj
             // 
-            this.itemPassiveAddBtn.Location = new System.Drawing.Point(135, 485);
-            this.itemPassiveAddBtn.Name = "itemPassiveAddBtn";
-            this.itemPassiveAddBtn.Size = new System.Drawing.Size(97, 27);
-            this.itemPassiveAddBtn.TabIndex = 57;
-            this.itemPassiveAddBtn.Text = "Új";
-            this.itemPassiveAddBtn.UseVisualStyleBackColor = true;
+            this.btnUj.Location = new System.Drawing.Point(135, 485);
+            this.btnUj.Name = "btnUj";
+            this.btnUj.Size = new System.Drawing.Size(97, 27);
+            this.btnUj.TabIndex = 57;
+            this.btnUj.Text = "Új";
+            this.btnUj.UseVisualStyleBackColor = true;
+            this.btnUj.Click += new System.EventHandler(this.btnUj_Click);
             // 
-            // itemPassiveSearchBtn
+            // btnKeres
             // 
-            this.itemPassiveSearchBtn.Location = new System.Drawing.Point(349, 485);
-            this.itemPassiveSearchBtn.Name = "itemPassiveSearchBtn";
-            this.itemPassiveSearchBtn.Size = new System.Drawing.Size(97, 27);
-            this.itemPassiveSearchBtn.TabIndex = 58;
-            this.itemPassiveSearchBtn.Text = "Keresés";
-            this.itemPassiveSearchBtn.UseVisualStyleBackColor = true;
+            this.btnKeres.Location = new System.Drawing.Point(349, 485);
+            this.btnKeres.Name = "btnKeres";
+            this.btnKeres.Size = new System.Drawing.Size(97, 27);
+            this.btnKeres.TabIndex = 58;
+            this.btnKeres.Text = "Keresés";
+            this.btnKeres.UseVisualStyleBackColor = true;
+            this.btnKeres.Click += new System.EventHandler(this.btnKeres_Click);
             // 
-            // itemPassiveSaveBtn
+            // btnMentes
             // 
-            this.itemPassiveSaveBtn.Location = new System.Drawing.Point(242, 485);
-            this.itemPassiveSaveBtn.Name = "itemPassiveSaveBtn";
-            this.itemPassiveSaveBtn.Size = new System.Drawing.Size(97, 27);
-            this.itemPassiveSaveBtn.TabIndex = 59;
-            this.itemPassiveSaveBtn.Text = "Mentés";
-            this.itemPassiveSaveBtn.UseVisualStyleBackColor = true;
+            this.btnMentes.Location = new System.Drawing.Point(242, 485);
+            this.btnMentes.Name = "btnMentes";
+            this.btnMentes.Size = new System.Drawing.Size(97, 27);
+            this.btnMentes.TabIndex = 59;
+            this.btnMentes.Text = "Mentés";
+            this.btnMentes.UseVisualStyleBackColor = true;
+            this.btnMentes.Click += new System.EventHandler(this.btnMentes_Click);
             // 
-            // itemPassiveDeleteBtn
+            // btnTorol
             // 
-            this.itemPassiveDeleteBtn.Location = new System.Drawing.Point(563, 485);
-            this.itemPassiveDeleteBtn.Name = "itemPassiveDeleteBtn";
-            this.itemPassiveDeleteBtn.Size = new System.Drawing.Size(97, 27);
-            this.itemPassiveDeleteBtn.TabIndex = 60;
-            this.itemPassiveDeleteBtn.Text = "Töröl";
-            this.itemPassiveDeleteBtn.UseVisualStyleBackColor = true;
-            this.itemPassiveDeleteBtn.Click += new System.EventHandler(this.itemPassiveDeleteBtn_Click);
+            this.btnTorol.Location = new System.Drawing.Point(563, 485);
+            this.btnTorol.Name = "btnTorol";
+            this.btnTorol.Size = new System.Drawing.Size(97, 27);
+            this.btnTorol.TabIndex = 60;
+            this.btnTorol.Text = "Töröl";
+            this.btnTorol.UseVisualStyleBackColor = true;
+            this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
             // 
-            // itemPassiveModifyBtn
+            // btnModosit
             // 
-            this.itemPassiveModifyBtn.Location = new System.Drawing.Point(456, 485);
-            this.itemPassiveModifyBtn.Name = "itemPassiveModifyBtn";
-            this.itemPassiveModifyBtn.Size = new System.Drawing.Size(97, 27);
-            this.itemPassiveModifyBtn.TabIndex = 61;
-            this.itemPassiveModifyBtn.Text = "Módosít";
-            this.itemPassiveModifyBtn.UseVisualStyleBackColor = true;
+            this.btnModosit.Location = new System.Drawing.Point(456, 485);
+            this.btnModosit.Name = "btnModosit";
+            this.btnModosit.Size = new System.Drawing.Size(97, 27);
+            this.btnModosit.TabIndex = 61;
+            this.btnModosit.Text = "Módosít";
+            this.btnModosit.UseVisualStyleBackColor = true;
+            this.btnModosit.Click += new System.EventHandler(this.btnModosit_Click);
             // 
-            // itemPassiveCancelBtn
+            // btnMegse
             // 
-            this.itemPassiveCancelBtn.Location = new System.Drawing.Point(670, 485);
-            this.itemPassiveCancelBtn.Name = "itemPassiveCancelBtn";
-            this.itemPassiveCancelBtn.Size = new System.Drawing.Size(97, 27);
-            this.itemPassiveCancelBtn.TabIndex = 62;
-            this.itemPassiveCancelBtn.Text = "Mégse";
-            this.itemPassiveCancelBtn.UseVisualStyleBackColor = true;
-            this.itemPassiveCancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.btnMegse.Location = new System.Drawing.Point(670, 485);
+            this.btnMegse.Name = "btnMegse";
+            this.btnMegse.Size = new System.Drawing.Size(97, 27);
+            this.btnMegse.TabIndex = 62;
+            this.btnMegse.Text = "Mégse";
+            this.btnMegse.UseVisualStyleBackColor = true;
+            this.btnMegse.Click += new System.EventHandler(this.btnMegse_Click_1);
             // 
-            // itemPassivePortDeleteBtn
+            // btnPortTorol
             // 
-            this.itemPassivePortDeleteBtn.Location = new System.Drawing.Point(759, 178);
-            this.itemPassivePortDeleteBtn.Name = "itemPassivePortDeleteBtn";
-            this.itemPassivePortDeleteBtn.Size = new System.Drawing.Size(96, 27);
-            this.itemPassivePortDeleteBtn.TabIndex = 63;
-            this.itemPassivePortDeleteBtn.Text = "Port törlése";
-            this.itemPassivePortDeleteBtn.UseVisualStyleBackColor = true;
+            this.btnPortTorol.Location = new System.Drawing.Point(759, 178);
+            this.btnPortTorol.Name = "btnPortTorol";
+            this.btnPortTorol.Size = new System.Drawing.Size(96, 27);
+            this.btnPortTorol.TabIndex = 63;
+            this.btnPortTorol.Text = "Port törlése";
+            this.btnPortTorol.UseVisualStyleBackColor = true;
             // 
-            // itemPassivePortAddBtn
+            // btnPortHozzaad
             // 
-            this.itemPassivePortAddBtn.Location = new System.Drawing.Point(657, 178);
-            this.itemPassivePortAddBtn.Name = "itemPassivePortAddBtn";
-            this.itemPassivePortAddBtn.Size = new System.Drawing.Size(96, 27);
-            this.itemPassivePortAddBtn.TabIndex = 64;
-            this.itemPassivePortAddBtn.Text = "Port hozzáadása";
-            this.itemPassivePortAddBtn.UseVisualStyleBackColor = true;
+            this.btnPortHozzaad.Location = new System.Drawing.Point(657, 178);
+            this.btnPortHozzaad.Name = "btnPortHozzaad";
+            this.btnPortHozzaad.Size = new System.Drawing.Size(96, 27);
+            this.btnPortHozzaad.TabIndex = 64;
+            this.btnPortHozzaad.Text = "Port hozzáadása";
+            this.btnPortHozzaad.UseVisualStyleBackColor = true;
             // 
-            // PassiveItemCtrl
+            // picSymbol
+            // 
+            this.picSymbol.Location = new System.Drawing.Point(222, 341);
+            this.picSymbol.Name = "picSymbol";
+            this.picSymbol.Size = new System.Drawing.Size(90, 73);
+            this.picSymbol.TabIndex = 65;
+            this.picSymbol.TabStop = false;
+            // 
+            // txtKeres
+            // 
+            this.txtKeres.Location = new System.Drawing.Point(48, 432);
+            this.txtKeres.Name = "txtKeres";
+            this.txtKeres.Size = new System.Drawing.Size(470, 20);
+            this.txtKeres.TabIndex = 66;
+            this.txtKeres.TextChanged += new System.EventHandler(this.txtKeres_TextChanged);
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(190, 57);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(119, 20);
+            this.txtIndex.TabIndex = 67;
+            this.txtIndex.Visible = false;
+            // 
+            // ItemPassiveCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.itemPassivePortDeleteBtn);
-            this.Controls.Add(this.itemPassivePortAddBtn);
-            this.Controls.Add(this.itemPassiveAddBtn);
-            this.Controls.Add(this.itemPassiveSearchBtn);
-            this.Controls.Add(this.itemPassiveSaveBtn);
-            this.Controls.Add(this.itemPassiveDeleteBtn);
-            this.Controls.Add(this.itemPassiveModifyBtn);
-            this.Controls.Add(this.itemPassiveCancelBtn);
-            this.Controls.Add(this.itemPassivePortTypeComboBox);
-            this.Controls.Add(this.itemPassiveSymbolComboBox);
-            this.Controls.Add(this.itemPassiveDescriptionRichTextBox);
-            this.Controls.Add(this.itemPassivePortsListbox);
-            this.Controls.Add(this.itemPassiveLocationComboBox);
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.txtKeres);
+            this.Controls.Add(this.picSymbol);
+            this.Controls.Add(this.btnPortTorol);
+            this.Controls.Add(this.btnPortHozzaad);
+            this.Controls.Add(this.btnUj);
+            this.Controls.Add(this.btnKeres);
+            this.Controls.Add(this.btnMentes);
+            this.Controls.Add(this.btnTorol);
+            this.Controls.Add(this.btnModosit);
+            this.Controls.Add(this.btnMegse);
+            this.Controls.Add(this.comboPortTipus);
+            this.Controls.Add(this.comboSymbol);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.listPort);
+            this.Controls.Add(this.comboParent);
             this.Controls.Add(this.ItemActiveLbl);
-            this.Controls.Add(this.itemPassiveNameTxtbox);
-            this.Controls.Add(this.itemPassivePortIdTxtbox);
-            this.Controls.Add(this.itemPassiveIdTxtbox);
+            this.Controls.Add(this.txtMegenevezes);
+            this.Controls.Add(this.txtPortAzonosito);
+            this.Controls.Add(this.txtAzonosito);
             this.Controls.Add(this.locationDescriptionLbl);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -310,8 +345,10 @@
             this.Controls.Add(this.locationParentLbl);
             this.Controls.Add(this.locationNameLbl);
             this.Controls.Add(this.locationIdLbl);
-            this.Name = "PassiveItemCtrl";
+            this.Name = "ItemPassiveCtrl";
             this.Size = new System.Drawing.Size(903, 544);
+            this.Load += new System.EventHandler(this.ItemPassiveCtrl_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,15 +356,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox itemPassivePortTypeComboBox;
-        private System.Windows.Forms.ComboBox itemPassiveSymbolComboBox;
-        private System.Windows.Forms.RichTextBox itemPassiveDescriptionRichTextBox;
-        private System.Windows.Forms.ListBox itemPassivePortsListbox;
-        private System.Windows.Forms.ComboBox itemPassiveLocationComboBox;
+        private System.Windows.Forms.ComboBox comboPortTipus;
+        private System.Windows.Forms.ComboBox comboSymbol;
+        private System.Windows.Forms.RichTextBox txtDescription;
+        private System.Windows.Forms.ListBox listPort;
+        private System.Windows.Forms.ComboBox comboParent;
         private System.Windows.Forms.Label ItemActiveLbl;
-        private System.Windows.Forms.TextBox itemPassiveNameTxtbox;
-        private System.Windows.Forms.TextBox itemPassivePortIdTxtbox;
-        private System.Windows.Forms.TextBox itemPassiveIdTxtbox;
+        private System.Windows.Forms.TextBox txtMegenevezes;
+        private System.Windows.Forms.TextBox txtPortAzonosito;
+        private System.Windows.Forms.TextBox txtAzonosito;
         private System.Windows.Forms.Label locationDescriptionLbl;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -336,13 +373,16 @@
         private System.Windows.Forms.Label locationParentLbl;
         private System.Windows.Forms.Label locationNameLbl;
         private System.Windows.Forms.Label locationIdLbl;
-        private System.Windows.Forms.Button itemPassiveAddBtn;
-        private System.Windows.Forms.Button itemPassiveSearchBtn;
-        private System.Windows.Forms.Button itemPassiveSaveBtn;
-        private System.Windows.Forms.Button itemPassiveDeleteBtn;
-        private System.Windows.Forms.Button itemPassiveModifyBtn;
-        private System.Windows.Forms.Button itemPassiveCancelBtn;
-        private System.Windows.Forms.Button itemPassivePortDeleteBtn;
-        private System.Windows.Forms.Button itemPassivePortAddBtn;
+        private System.Windows.Forms.Button btnUj;
+        private System.Windows.Forms.Button btnKeres;
+        private System.Windows.Forms.Button btnMentes;
+        private System.Windows.Forms.Button btnTorol;
+        private System.Windows.Forms.Button btnModosit;
+        private System.Windows.Forms.Button btnMegse;
+        private System.Windows.Forms.Button btnPortTorol;
+        private System.Windows.Forms.Button btnPortHozzaad;
+        private System.Windows.Forms.PictureBox picSymbol;
+        private System.Windows.Forms.TextBox txtKeres;
+        private System.Windows.Forms.TextBox txtIndex;
     }
 }
