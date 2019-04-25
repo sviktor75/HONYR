@@ -45,14 +45,24 @@ namespace DataLayer.Operations
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            /*MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
 
             da.Fill(table);
             retList.Add(table.Rows[0][1].ToString());
             byte[] img = (byte[])table.Rows[0][2];
             retList.Add(img);
+            */
 
+            while (dataReader.Read())
+            {
+                retList.Add(dataReader["name"] + "");
+                byte[] img = (byte[])(dataReader["image"]);
+                retList.Add(img);
+            }
+            dataReader.Close();
             conn.CloseConnection();
 
             return retList;
