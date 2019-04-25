@@ -100,7 +100,7 @@ namespace Honyr
         {
             if (uj)
             {
-                int effectedRows = item.AddItem(true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, long.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.AddItem(true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -116,7 +116,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, long.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -235,13 +235,13 @@ namespace Honyr
         private void txtKeres_TextChanged(object sender, EventArgs e)
         {
             List<string> sor = item.GetItemByName(txtKeres.Text.ToString() + "%", true);
-
+        
             try
             {
                 txtIndex.Text = sor[0].ToString();
                 txtAzonosito.Text = sor[2].ToString();
                 txtMegenevezes.Text = sor[3].ToString();
-                comboParent.Text = sor[4].ToString();
+                comboParent.Text = location.GetLocationidByID( int.Parse(sor[4])).ToString();
                 txtIP.Text = sor[5].ToString();
                 txtMAC.Text = sor[6].ToString();
                 

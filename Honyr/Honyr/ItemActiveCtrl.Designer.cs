@@ -372,6 +372,7 @@
             this.txtKeres.Name = "txtKeres";
             this.txtKeres.Size = new System.Drawing.Size(470, 20);
             this.txtKeres.TabIndex = 29;
+            this.txtKeres.TextChanged += new System.EventHandler(this.txtKeres_TextChanged);
             // 
             // picSymbol
             // 

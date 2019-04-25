@@ -88,7 +88,7 @@ namespace Honyr
             if (uj)
             {
                 int parent = int.Parse(comboParent.Text);
-                int effectedRows = wc.AddConnector(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, int.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = wc.AddConnector(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -104,7 +104,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = wc.ModConnector(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, int.Parse(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = wc.ModConnector(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -213,7 +213,7 @@ namespace Honyr
                 txtMegenevezes.Text = sor[2].ToString();
                 comboTipus.Text = sor[3].ToString();
                 txtKialakitas.Text = sor[4].ToString();
-                comboParent.Text = sor[5].ToString();
+                comboParent.Text = location.GetLocationidByID(int.Parse(sor[5])).ToString();
 
                 int.TryParse(sor[6], out int sid);
 
