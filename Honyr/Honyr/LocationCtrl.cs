@@ -22,7 +22,7 @@ namespace Honyr
         bool uj = false;
         bool modosit = false;
 
-        public void reset() { this.Controls.ClearControls(); }
+        public void resetForm() { this.Controls.ClearControls(); }
 
         public addLocationCtrl()
         {
@@ -52,7 +52,7 @@ namespace Honyr
             if (vissza)
             {
                 SendToBack();
-                this.Controls.ClearControls();
+                resetForm();
             }
 
             vissza = true;
@@ -64,7 +64,7 @@ namespace Honyr
 
         private void addLocationCtrl_Load(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            resetForm();
 
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
@@ -90,7 +90,7 @@ namespace Honyr
             if (uj)
             {
 
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -106,7 +106,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -127,7 +127,7 @@ namespace Honyr
 
         private void btnUj_Click(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            resetForm();
 
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
@@ -163,8 +163,8 @@ namespace Honyr
 
             txtAzonosito.Enabled = false;
             txtMegenevezes.Enabled = false;
-            comboTipus.Enabled = false; // majd lehet így is keresni ... csak meg kell írni hozzá a metódust
-            comboParent.Enabled = false; // majd lehet így is keresni ...
+            comboTipus.Enabled = false; 
+            comboParent.Enabled = false; 
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
 
@@ -241,7 +241,7 @@ namespace Honyr
                 MessageBox.Show("A lokácót nem sikerült törölni.");
             }
 
-            this.Controls.ClearControls();
+            resetForm();
             btnMegse.PerformClick();
         }
 

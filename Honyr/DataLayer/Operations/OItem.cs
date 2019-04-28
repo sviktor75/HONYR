@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataLayer.Operations
@@ -12,9 +9,9 @@ namespace DataLayer.Operations
     {
         OInitDataConnection conn = new OInitDataConnection();
 
-        public int AddItem(bool active, string deviceID, string deviceName, string ip, string mac, long locationid, int symbolId, string description)
+        public int AddItem(string deviceID, string deviceName, long locationID, int symbolID, string description)
         { 
-            string query = "INSERT INTO item (active, deviceID, deviceName, ip, mac, locationid, symbolid, description)" + " VALUES" + " (" + active + ", '" + deviceID + "', '" + deviceName + "', '" + ip + "', '" + mac + "', '" + locationid + "','" + symbolId + "','" + description + "');";
+            string query = "INSERT INTO itemactive (deviceid, devicename, locationId, symbolid, description)" + " VALUES" + " ('"+ deviceID + "', '" + deviceName + "','" + locationID + "','" + symbolID + "','" + description + "');";
             MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -24,9 +21,9 @@ namespace DataLayer.Operations
         }
 
 
-        public int ModItem(long id, bool active, string deviceID, string deviceName, string ip, string mac, long locationid, int symbolId, string description)
+        public int ModItem(long id, string deviceID, string deviceName, long locationID, int symbolID, string description)
         {
-            string query = "update item set active=" + active + ", deviceID='" + deviceID + "', deviceName='" + deviceName + "', ip='" + ip + "', mac='" + mac + "', locationid='" + locationid + "', symbolid='" + symbolId + "', description='" + description + "' where id='" + id + "';";
+            string query = "update itemactive set deviceid='" + deviceID + "', devicename='" + deviceName + "', locationid='" + locationID + "', symbolid='" + symbolID + "', description='" + description + "' where id='" + id + "';";
             MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -38,7 +35,7 @@ namespace DataLayer.Operations
         public int DelItem(long id)
         {
             
-            string query = "delete from item where id='" + id + "';";
+            string query = "delete from itemactive where id='" + id + "';";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -47,30 +44,10 @@ namespace DataLayer.Operations
             return effectedRows;
         }
 
-        //public List<String> GetItemLoctaion()
-        //{
-        //    string query = "select locationid from item;";
 
-        //    List<string> retList = new List<string>();
-
-        //    conn.OpenConnection();
-        //    MySqlCommand cmd = new MySqlCommand(query, conn.conn);
-        //    MySqlDataReader dataReader = cmd.ExecuteReader();
-
-        //    while (dataReader.Read())
-        //    {
-        //        retList.Add(dataReader["locationid"] + "");
-        //    }
-        //    dataReader.Close();
-        //    conn.CloseConnection();
-
-        //    return retList;
-        //}
-
-
-        public List<String> GetItemByName(string name, bool active)
+        public List<String> GetItemByName(string name)
         {
-            string query = "select * from item where deviceName like '" + name + "' AND active= "+ active +" order by deviceName limit 1;";
+            string query = "select * from itemactive where devicename like '" + name + "' order by devicename limit 1;";
 
             List<string> retList = new List<string>();
 
@@ -82,11 +59,60 @@ namespace DataLayer.Operations
             while (dataReader.Read())
             {
                 retList.Add(dataReader["id"] + "");
-                retList.Add(dataReader["active"] + "");
-                retList.Add(dataReader["deviceID"] + "");
-                retList.Add(dataReader["deviceName"] + "");
-                retList.Add(dataReader["ip"] + "");
-                retList.Add(dataReader["mac"] + "");
+                retList.Add(dataReader["deviceid"] + "");
+                retList.Add(dataReader["devicename"] + "");
+                retList.Add(dataReader["locationid"] + "");
+                retList.Add(dataReader["symbolid"] + "");
+                retList.Add(dataReader["description"] + "");
+            }
+            dataReader.Close();
+            conn.CloseConnection();
+            return retList;
+
+        }
+
+        public List<String> GetItemByID(long id)
+        {
+            string query = "select * from itemactive where id=" + id+";";
+
+            List<string> retList = new List<string>();
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+
+            while (dataReader.Read())
+            {
+                retList.Add(dataReader["id"] + "");
+                retList.Add(dataReader["deviceid"] + "");
+                retList.Add(dataReader["devicename"] + "");
+                retList.Add(dataReader["locationid"] + "");
+                retList.Add(dataReader["symbolid"] + "");
+                retList.Add(dataReader["description"] + "");
+            }
+            dataReader.Close();
+            conn.CloseConnection();
+            return retList;
+
+        }
+
+        public List<String> GetItemByDeviceID(string deviceID)
+        {
+            string query = "select * from itemactive where deviceid=" + deviceID + ";";
+
+            List<string> retList = new List<string>();
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+
+            while (dataReader.Read())
+            {
+                retList.Add(dataReader["id"] + "");
+                retList.Add(dataReader["deviceid"] + "");
+                retList.Add(dataReader["devicename"] + "");
                 retList.Add(dataReader["locationid"] + "");
                 retList.Add(dataReader["symbolid"] + "");
                 retList.Add(dataReader["description"] + "");

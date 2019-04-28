@@ -21,7 +21,7 @@ namespace Honyr
         bool vissza = false;
         bool uj = false;
         bool modosit = false;
-        public void reset() { this.Controls.ClearControls(); }
+        public void resetForm() { this.Controls.ClearControls(); }
 
         public ItemActiveCtrl()
         {
@@ -30,7 +30,7 @@ namespace Honyr
 
         private void ItemActiveCtrl_Load(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            resetForm();
 
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
@@ -89,7 +89,7 @@ namespace Honyr
             if (vissza)
             {
                 SendToBack();
-                this.Controls.ClearControls();
+                resetForm();
             }
 
             vissza = true;
@@ -104,7 +104,7 @@ namespace Honyr
         {
             if (uj)
             {
-                int effectedRows = item.AddItem(true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.AddItem(txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -120,7 +120,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -135,13 +135,13 @@ namespace Honyr
             }
 
             vissza = false;
-            this.Controls.ClearControls();
+            resetForm();
             btnMegse.PerformClick();
         }
 
         private void btnUj_Click(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            resetForm();
 
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
@@ -238,7 +238,7 @@ namespace Honyr
 
         private void txtKeres_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = item.GetItemByName(txtKeres.Text.ToString() + "%", true);
+            List<string> sor = item.GetItemByName(txtKeres.Text.ToString() + "%");
         
             try
             {
