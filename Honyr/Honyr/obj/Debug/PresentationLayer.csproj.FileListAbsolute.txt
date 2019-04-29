@@ -20,3 +20,15 @@ C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.Ite
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.WallMount.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.ItemPassiveCtrl.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.defaultMainCtrl.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csprojAssemblyReference.cache
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.addLocationCtrl.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.Form1.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.ItemActiveCtrl.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.WallMount.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.ItemPassiveCtrl.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.defaultMainCtrl.resources
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.exe
+C:\Users\peter\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.pdb
