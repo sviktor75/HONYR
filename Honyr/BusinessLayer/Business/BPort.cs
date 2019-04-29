@@ -7,6 +7,7 @@ using DataLayer.Operations;
 
 namespace BusinessLayer.Business
 {
+
     public class BPort
     {
         OPort portOP = new OPort();
@@ -14,18 +15,18 @@ namespace BusinessLayer.Business
         public int AddPortActive(int portnumber, string portID, string portName, string portConfig, string portPhysicalType, long itemId)
         { return portOP.AddPortActive(portnumber, portID, portName, portConfig, portPhysicalType, itemId); }
 
-    //public int AddPortPassive(long itemId, int portnumber, string portID, string portPhysicalType)
-    //{return }
+        //public int AddPortPassive(long itemId, int portnumber, string portID, string portPhysicalType)
+        //{return }
 
-    //    public int ModPortActive(long id, int portnumber, string portID, string portName, string portConfig, string portPhysicalType, long itemId)
-    //    { }
+        //    public int ModPortActive(long id, int portnumber, string portID, string portName, string portConfig, string portPhysicalType, long itemId)
+        //    { }
 
-    //    public int ModPortPassive(long id, int portnumber, string portID, string portPhysicalType, long itemId)
-    //    { }
+        //    public int ModPortPassive(long id, int portnumber, string portID, string portPhysicalType, long itemId)
+        //    { }
 
 
-    //    public int DelPortActive(long id)
-    //    { }
+        //    public int DelPortActive(long id)
+        //    { }
 
         public int DelPortPassive(long id)
         { return portOP.DelPortPassive(id); }
@@ -59,14 +60,17 @@ namespace BusinessLayer.Business
 
         public List<String> GetPortsByItemId(long itemid, bool active)
         {
-            return portOP.GetPortsByItemId(itemid,active);
+            return portOP.GetPortsByItemId(itemid, active);
         }
+
 
         public List<string> getPortDetaisByPortNumber(long itemid, int portnumber)
         {
-            return portOP.getPortDetaisByPortNumber(itemid,portnumber);
+            return portOP.getPortDetaisByPortNumber(itemid, portnumber);
         }
 
 
+
     }
+
 }

@@ -8,10 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// This is the code for your desktop app.
-// Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
 
-namespace Honyr
+namespace PresentationLayer
 {
     public partial class Form1 : Form
     {
@@ -41,12 +39,12 @@ namespace Honyr
             itemActiveCtrl1.SendToBack();
 
             mountWall1.reset();
-            addLocation1.reset();
-            itemActiveCtrl1.reset(); 
-            passiveItemCtrl1.reset();
+            addLocation1.resetForm();
+            itemActiveCtrl1.resetForm(); 
+            passiveItemCtrl1.resetForm();
         }
 
-        private void aktívToolStripMenuItem_Click(object sender, EventArgs e) 
+        private void AktivToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             itemActiveCtrl1.BringToFront();
 
@@ -55,13 +53,13 @@ namespace Honyr
             passiveItemCtrl1.SendToBack();
 
             mountWall1.reset();
-            addLocation1.reset();
-            itemActiveCtrl1.reset();
-            passiveItemCtrl1.reset();
+            addLocation1.resetForm();
+            itemActiveCtrl1.resetForm();
+            passiveItemCtrl1.resetForm();
 
         }
 
-        private void helységToolStripMenuItem1_Click(object sender, EventArgs e) 
+        private void HelyisegToolStripMenuItem1_Click(object sender, EventArgs e) 
         {
             addLocation1.BringToFront();
 
@@ -70,12 +68,12 @@ namespace Honyr
             itemActiveCtrl1.SendToBack();
 
             mountWall1.reset();
-            addLocation1.reset();
-            itemActiveCtrl1.reset();
-            passiveItemCtrl1.reset();
+            addLocation1.resetForm();
+            itemActiveCtrl1.resetForm();
+            passiveItemCtrl1.resetForm();
         }
 
-        private void faliCsatlakozóToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void FaliCsatlakozoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             mountWall1.BringToFront();
 
@@ -84,14 +82,10 @@ namespace Honyr
             itemActiveCtrl1.SendToBack();
 
             mountWall1.reset();
-            addLocation1.reset();
-            itemActiveCtrl1.reset();
-            passiveItemCtrl1.reset();
+            addLocation1.resetForm();
+            itemActiveCtrl1.resetForm();
+            passiveItemCtrl1.resetForm();
         }
 
-        private void passiveItemCtrl1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

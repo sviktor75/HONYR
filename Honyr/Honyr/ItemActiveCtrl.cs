@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using BusinessLayer.Business;
 using System.IO;
 
-namespace Honyr
+namespace PresentationLayer
 {
     public partial class ItemActiveCtrl : UserControl
     {
@@ -19,10 +19,12 @@ namespace Honyr
         BLocation location = new BLocation();
         BPort port = new BPort();
 
+        private bool activeItem = true;
         bool vissza = false;
         bool uj = false;
         bool modosit = false;
-        public void reset() { this.Controls.ClearControls(); }
+
+        public void resetForm() { this.Controls.ClearControls(); }
 
         public ItemActiveCtrl()
         {
@@ -31,7 +33,7 @@ namespace Honyr
 
         private void ItemActiveCtrl_Load(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            resetForm();
 
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
@@ -90,7 +92,7 @@ namespace Honyr
             if (vissza)
             {
                 SendToBack();
-                this.Controls.ClearControls();
+                resetForm();
             }
 
             vissza = true;
@@ -105,7 +107,7 @@ namespace Honyr
         {
             if (uj)
             {
-                int effectedRows = item.AddItem(true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.AddItem(txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text, activeItem);
 
                 if (effectedRows >= 0)
                 {
@@ -121,7 +123,7 @@ namespace Honyr
 
             if (modosit)
             {
-                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), true, txtAzonosito.Text, txtMegenevezes.Text, txtIP.Text, txtMAC.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -136,13 +138,13 @@ namespace Honyr
             }
 
             vissza = false;
-            this.Controls.ClearControls();
+            resetForm();
             btnMegse.PerformClick();
         }
 
         private void btnUj_Click(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            resetForm();
 
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
@@ -239,30 +241,33 @@ namespace Honyr
 
         private void txtKeres_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = item.GetItemByName(txtKeres.Text.ToString() + "%", true);
+            List<string> sor = item.GetItemByName(txtKeres.Text.ToString() + "%",activeItem);
         
             try
             {
                 txtIndex.Text = sor[0].ToString();
-                txtAzonosito.Text = sor[2].ToString();
-                txtMegenevezes.Text = sor[3].ToString();
-                txtIP.Text = sor[4].ToString();
-                txtMAC.Text = sor[5].ToString();
-                comboParent.Text = location.GetLocationidByID( int.Parse(sor[6])).ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboParent.Text = location.GetLocationidByID( int.Parse(sor[3])).ToString();
 
                 
 
-                int.TryParse(sor[7], out int sid);
+                int.TryParse(sor[4], out int sid);
 
                 List<object> kep = symbol.GetSymbolById(sid);
                 comboSymbol.Text = kep[0].ToString();
                 MemoryStream ms = new MemoryStream((byte[])kep[1]);
                 picSymbol.Image = Image.FromStream(ms);
+
                 
                 txtDescription.Text = sor[8].ToString();
                 
+
+
+                txtDescription.Text = sor[5].ToString();
+
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

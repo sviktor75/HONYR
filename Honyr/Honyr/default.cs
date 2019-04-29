@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Honyr
+namespace PresentationLayer
 {
     public partial class defaultMainCtrl : UserControl
     {

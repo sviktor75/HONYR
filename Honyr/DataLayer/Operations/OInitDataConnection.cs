@@ -10,15 +10,19 @@ namespace DataLayer.Operations
 {
     public class OInitDataConnection
     {
-        static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;encrypt=false;";
-        public MySqlConnection conn = new MySqlConnection(connString);
 
+        static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;encrypt=false;";
+
+    
+        static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;";
+
+        public MySqlConnection conn = new MySqlConnection(connString);
+        
         public bool OpenConnection()
         {
             try
             {
                 conn.Open();
-               // MessageBox.Show("successful connection");
                 return true;
             }
             catch (MySqlException ex)
@@ -33,7 +37,7 @@ namespace DataLayer.Operations
                         MessageBox.Show("Invalid username/password, please try again");
                         break;
                 }
-                MessageBox.Show(ex.Message + connString);
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }
@@ -43,11 +47,10 @@ namespace DataLayer.Operations
             try
             {
                 conn.Close();
-               // MessageBox.Show("successful detach");
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message + connString);
+                MessageBox.Show(ex.Message);
             }
         }
     }

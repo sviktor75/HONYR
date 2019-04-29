@@ -10,43 +10,42 @@ namespace BusinessLayer.Business
 {
     public class BLocation
     {
-        OLocation locationOP = new OLocation();
-       
+        OLocation location = new OLocation();    
 
-        public int AddLocation(string locationId, string name, string locationType, long parentId, int symbolId, string description)
+        public int AddLocation(string locationId, string name, int locationTypeId, long parentId, int symbolId, string description)
         {
-            return locationOP.AddLocation(locationId, name, locationType, parentId, symbolId, description);
+            return location.AddLocation(locationId, name, locationTypeId, parentId, symbolId, description);
 
         }
 
-        public int ModLocation(long id, string locationId, string name, string locationType, long parentId, int symbolId, string description)
+        public int ModLocation(long id, string locationId, string name, int locationTypeId, long parentId, int symbolId, string description)
         {
-            return locationOP.ModLocation(id, locationId, name, locationType, parentId, symbolId, description);
+            return location.ModLocation(id, locationId, name, locationTypeId, parentId, symbolId, description);
         }
 
         public int DelLocation(long id)
         {
-            return locationOP.DelLocation(id);
+            return location.DelLocation(id);
         }
 
         public List<String> GetLocations()
         {
-            return locationOP.GetLocations();
+            return location.GetLocations();
         }
 
         public List<String> GetLocationByName(string name)
         {
-            return locationOP.GetLocationByName(name);
+            return location.GetLocationByName(name);
         }
 
         public int GetididByLocationid(string locationid)
         {
-            return locationOP.GetididByLocationid(locationid);
+            return location.GetididByLocationid(locationid);
         }
 
         public string GetLocationidByID(int id)
         {
-            return locationOP.GetLocationidByID(id);
+            return location.GetLocationidByID(id);
         }
     }
 }
