@@ -10,7 +10,7 @@ namespace DataLayer.Operations
 {
     public class OInitDataConnection
     {
-        static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;";
+        static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;encrypt=false;";
         public MySqlConnection conn = new MySqlConnection(connString);
 
         public bool OpenConnection()

@@ -17,6 +17,7 @@ namespace Honyr
         BItem item = new BItem();
         BSymbol symbol = new BSymbol();
         BLocation location = new BLocation();
+        BPort port = new BPort();
 
         bool vissza = false;
         bool uj = false;
@@ -190,7 +191,7 @@ namespace Honyr
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
 
-            listPort.Enabled = false;
+            listPort.Enabled = true;
             txtPortAzonosito.Enabled = false;
             txtPortMegnevezes.Enabled = false;
             txtPortKonfig.Enabled = false;
@@ -257,14 +258,15 @@ namespace Honyr
                 comboSymbol.Text = kep[0].ToString();
                 MemoryStream ms = new MemoryStream((byte[])kep[1]);
                 picSymbol.Image = Image.FromStream(ms);
-
+                
                 txtDescription.Text = sor[8].ToString();
+                
             }
             catch (Exception ex)
             {
 
             }
-
+            portokListazasa();
         }
 
         private void btnTorol_Click(object sender, EventArgs e)
@@ -297,6 +299,30 @@ namespace Honyr
             kepBetoltes();
         }
 
+        private void portokListazasa()
+        {
 
+            foreach (string port in port.GetPortsByItemId(long.Parse(txtIndex.Text), true) )
+            {
+                listPort.Items.Add(port);
+                
+            }
+
+
+        }
+        //   -------------------  VALAMI NEM KEREK :-)  ---------------------
+
+        //------------------  portlistában szereplő port adatainak megjelenítése -----------------------
+
+        private void listPort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            MessageBox.Show(port.GetPortsByItemId(long.Parse(txtIndex.Text), true)[2]);
+            txtPortAzonosito.Text = port.GetPortsByItemId(long.Parse(txtIndex.Text), true)[1];
+            txtPortMegnevezes.Text = port.GetPortsByItemId(long.Parse(txtIndex.Text), true)[2];
+            //txtPortKonfig.Text = port.GetPortsByItemId(long.Parse(txtIndex.Text), true)[3];
+            //comboPortTipus.Items.Add(port.GetPortsByItemId(long.Parse(txtIndex.Text), true)[4]);
+                       
+        }
     }
 }

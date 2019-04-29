@@ -70,7 +70,7 @@ namespace DataLayer.Operations
 
         public List<String> GetItemByName(string name, bool active)
         {
-            string query = "select * from item where deviceName like '" + name + "' AND active= "+ active +" order by deviceName limit 1;";
+            string query = "select * from itemactive where devicename like '" + name + "'  order by devicename limit 1;";
 
             List<string> retList = new List<string>();
 
@@ -82,11 +82,10 @@ namespace DataLayer.Operations
             while (dataReader.Read())
             {
                 retList.Add(dataReader["id"] + "");
-                retList.Add(dataReader["active"] + "");
-                retList.Add(dataReader["deviceID"] + "");
-                retList.Add(dataReader["deviceName"] + "");
-                retList.Add(dataReader["ip"] + "");
-                retList.Add(dataReader["mac"] + "");
+                
+                retList.Add(dataReader["deviceid"] + "");
+                retList.Add(dataReader["devicename"] + "");
+                
                 retList.Add(dataReader["locationid"] + "");
                 retList.Add(dataReader["symbolid"] + "");
                 retList.Add(dataReader["description"] + "");
