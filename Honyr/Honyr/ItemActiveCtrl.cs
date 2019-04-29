@@ -249,21 +249,13 @@ namespace PresentationLayer
                 txtAzonosito.Text = sor[1].ToString();
                 txtMegenevezes.Text = sor[2].ToString();
                 comboParent.Text = location.GetLocationidByID( int.Parse(sor[3])).ToString();
-
-                
-
+            
                 int.TryParse(sor[4], out int sid);
-
                 List<object> kep = symbol.GetSymbolById(sid);
                 comboSymbol.Text = kep[0].ToString();
                 MemoryStream ms = new MemoryStream((byte[])kep[1]);
-                picSymbol.Image = Image.FromStream(ms);
-
-                
-                txtDescription.Text = sor[8].ToString();
-                
-
-
+                picSymbol.Image = Image.FromStream(ms);   
+            
                 txtDescription.Text = sor[5].ToString();
 
             }

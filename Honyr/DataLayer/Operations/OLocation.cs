@@ -12,7 +12,6 @@ namespace DataLayer.Operations
         public int AddLocation(string locationId, string name, int locationTypeId, long parentId, int symbolId, string description)
         {
             string query = "INSERT INTO location (locationid, name, locationtypeid, parentid, symbolid, description)" + " VALUES" + " ('" + locationId + "', '" + name + "', '" + locationTypeId + "', '" + parentId + "', '" + symbolId + "', '" + description + "');";
-            MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             int effectedRows = cmd.ExecuteNonQuery();
@@ -80,7 +79,7 @@ namespace DataLayer.Operations
                 retList.Add(dataReader["id"] + "");
                 retList.Add(dataReader["locationid"] + "");
                 retList.Add(dataReader["name"] + "");
-                retList.Add(dataReader["locationtype"] + "");
+                retList.Add(dataReader["locationtypeid"] + "");
                 retList.Add(dataReader["parentid"] + "");
                 retList.Add(dataReader["symbolid"] + "");
                 retList.Add(dataReader["description"] + "");

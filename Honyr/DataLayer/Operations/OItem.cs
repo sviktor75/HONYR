@@ -100,8 +100,6 @@ namespace DataLayer.Operations
         public List<String> GetItemByDeviceID(string deviceID, bool active)
         {
 
-            string query = "select * from itemactive where devicename like '" + name + "'  order by devicename limit 1;";
-
             string query = "select * from item where deviceid=" + deviceID + " and active=" + active + ";";
 
 

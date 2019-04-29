@@ -13,8 +13,6 @@ namespace DataLayer.Operations
 
         static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;encrypt=false;";
 
-    
-        static string connString = "SERVER=sql.autodl.de;PORT=3306;DATABASE=leltar;UID=ppeti;PASSWORD=ppeti;";
 
         public MySqlConnection conn = new MySqlConnection(connString);
         
