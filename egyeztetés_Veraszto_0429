@@ -1,0 +1,90 @@
+Kedves Sándor!
+
+A Kettes csoport projektvezetőjeként kereslek az alábbiak miatt.
+
+Múlt hét pénteken Honfi tanár úr óráján bemutattuk az elképzelésünket, illetve ami eddig megvalósult belőle a nyilvántartó modullal kapcsolatban. Felmerült a bemutatón, hogy némely adatokat célszerű lenne új táblába szervezni. Ebben kérném a tanácsodat.
+
+Az általad korábban részünkre megküldött  (Szabó Viktor részére) példaadatokból mi azt vettük ki, hogy az aktív eszközöknél a rögzítendő adatok:
+-Eszköz azonosítója (string)
+-Eszk. megnev. (string)
+-Eszk. fizikai elhelyezkedése (épület/helyiség)
+-Eszk Layer 2 és Layer 3 címei (ip és Mac)
+
+POrtokhoz:
+
+- POrt azonosítója (string)
+- Port megnevezése (string)
+- POrt konfig (string)
+- Port fizikai típusa (string)
+- Rajzjel  (kép)
+- Fiz . elhelyezkedés leírása (string)
+
+A levelemhez mellékeltem az hétvégén összeállított struktúrát, valamint benne van a korábbi változat is. !!-(A korábbi változathoz szeretném hozzátenni, hogy az itemactive és az itempassive táblák ott hasonlónak tűnnek. Nyilván amiatt, mert azokból a táblákból kiemeltünk egy két adatot, és portactive és portpassive táblákba szerveztük őket. )
+
+A kérdésem az lenne, hogy jónak tartod-e az adb szerkezetet az Új felirat alatti módon.
+
+A leglényegesebb dolog, hogy az aktív eszközöknél nem az eszköz tulajdonsága az IP cím és a MACcím, hanem azokat a portactive táblában szerepeltetjük, a megfelelő port adataiként. (kicsit olyan így, mint a cisco network management szoftverben)
+
+Ha így megfelelő, akkor folytatnánk a munkát, ha úgy gondolod, hogy más táblaszerkezetet tartasz indokoltnak, akkor felhívnálak, egy alkalmas időpontban.
+
+Köszönöm a segítséget!
+
+Üdv:
+
+Pilvein Péter
+BGG5K4 mérnökinformatikus hallgató (II. évfolyam.)
+
+válasz:
+
+Kedves Péter!
+
+ 
+
+Szerintem a portok (aktív , passzív) egyedek ugyanúgy összevonhatók mint ahogy az item történt.
+
+ 
+
+Az aktív egyedben lévő „aktív attribútumok” az összevont egyedben lehetnek üresek (Passzív esetében), és egy bool tipusú mezővel jelölhető.
+
+ 
+
+Üdv
+
+Vera
+
+
+levél_2:
+
+Bocsánat, egy nagyon fontos dolgot elfelejtettem, de a struktúrából jól kivehető:
+
+MI nem gondolkodunk portok szerinti szimbólumokban, mert a portokhoz nem találtunk cisco szerinti rajzjelet, csak az eszközökhöz (kb. 290 db). 
+Ha mégis van, akkor a segítségedet szeretném abban kérni, hogyan kotorjuk azt elő:-)
+
+üdv
+
+
+levél_2 válasz:
+
+Kedves Péter!
+
+ 
+
+A portnak nem feltétlenül kell szimbólum (cisco), de nem volna baj, ha esetleg tipizáltan lenne neki.
+
+Pl
+
+rezes port esetében egy kép a rezes portról
+
+optika esetében képpel megkülönböztetni (mono, multi) (sfp, gbic) típusokat
+
+ 
+
+Üdv
+
+Vera
+
+
+
+
+
+
