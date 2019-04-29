@@ -11,7 +11,7 @@ using BusinessLayer.Business;
 using System.IO;
 
 
-namespace Honyr
+namespace PresentationLayer
 {
     public partial class addLocationCtrl : UserControl
     {
@@ -221,7 +221,7 @@ namespace Honyr
                 picSymbol.Image = Image.FromStream(ms);
                 txtDescription.Text = sor[6].ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

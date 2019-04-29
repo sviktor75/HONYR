@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using BusinessLayer.Business;
 using System.IO;
 
-namespace Honyr
+namespace PresentationLayer
 {
     public partial class WallMount : UserControl
     {
@@ -229,7 +229,7 @@ namespace Honyr
                 picSymbol.Image = Image.FromStream(ms);
                 txtDescription.Text = sor[7].ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

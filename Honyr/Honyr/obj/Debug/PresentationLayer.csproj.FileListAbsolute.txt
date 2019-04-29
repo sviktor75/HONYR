@@ -1,10 +1,4 @@
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.addLocationCtrl.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Form1.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemActiveCtrl.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.WallMount.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.ItemPassiveCtrl.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.Properties.Resources.resources
-C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.defaultMainCtrl.resources
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\Honyr.exe
@@ -20,3 +14,9 @@ C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\DataLayer.pdb
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\bin\Debug\MySql.Data.xml
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csprojAssemblyReference.cache
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csproj.CopyComplete
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.addLocationCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.Form1.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.ItemActiveCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.WallMount.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.ItemPassiveCtrl.resources
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.defaultMainCtrl.resources

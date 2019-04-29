@@ -1,4 +1,4 @@
-﻿namespace Honyr
+﻿namespace PresentationLayer
 {
     partial class ItemActiveCtrl
     {

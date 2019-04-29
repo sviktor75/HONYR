@@ -9,9 +9,9 @@ namespace DataLayer.Operations
     {
         OInitDataConnection conn = new OInitDataConnection();
 
-        public int AddItem(string deviceID, string deviceName, long locationID, int symbolID, string description)
+        public int AddItem(string deviceID, string deviceName, long locationID, int symbolID, string description, bool active)
         { 
-            string query = "INSERT INTO itemactive (deviceid, devicename, locationId, symbolid, description)" + " VALUES" + " ('"+ deviceID + "', '" + deviceName + "','" + locationID + "','" + symbolID + "','" + description + "');";
+            string query = "INSERT INTO item (deviceid, devicename, locationId, symbolid, description, active)" + " VALUES" + " ('"+ deviceID + "', '" + deviceName + "','" + locationID + "','" + symbolID + "','" + description + "'," + active + ");";
             MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -23,7 +23,7 @@ namespace DataLayer.Operations
 
         public int ModItem(long id, string deviceID, string deviceName, long locationID, int symbolID, string description)
         {
-            string query = "update itemactive set deviceid='" + deviceID + "', devicename='" + deviceName + "', locationid='" + locationID + "', symbolid='" + symbolID + "', description='" + description + "' where id='" + id + "';";
+            string query = "update item set deviceid='" + deviceID + "', devicename='" + deviceName + "', locationid='" + locationID + "', symbolid='" + symbolID + "', description='" + description + "' where id='" + id + "';";
             MessageBox.Show(query);
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -35,7 +35,7 @@ namespace DataLayer.Operations
         public int DelItem(long id)
         {
             
-            string query = "delete from itemactive where id='" + id + "';";
+            string query = "delete from item where id='" + id + "';";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -45,9 +45,9 @@ namespace DataLayer.Operations
         }
 
 
-        public List<String> GetItemByName(string name)
+        public List<String> GetItemByName(string name, bool active)
         {
-            string query = "select * from itemactive where devicename like '" + name + "' order by devicename limit 1;";
+            string query = "select * from item where devicename like '" + name + "' and active=" + active + ";";
 
             List<string> retList = new List<string>();
 
@@ -71,9 +71,9 @@ namespace DataLayer.Operations
 
         }
 
-        public List<String> GetItemByID(long id)
+        public List<String> GetItemByID(long id, bool active)
         {
-            string query = "select * from itemactive where id=" + id+";";
+            string query = "select * from item where id=" + id + " and active=" + active + ";";
 
             List<string> retList = new List<string>();
 
@@ -97,9 +97,9 @@ namespace DataLayer.Operations
 
         }
 
-        public List<String> GetItemByDeviceID(string deviceID)
+        public List<String> GetItemByDeviceID(string deviceID, bool active)
         {
-            string query = "select * from itemactive where deviceid=" + deviceID + ";";
+            string query = "select * from item where deviceid=" + deviceID + " and active=" + active + ";";
 
             List<string> retList = new List<string>();
 

@@ -12,9 +12,9 @@ namespace BusinessLayer.Business
         OItem itemActive = new OItem();
 
 
-        public int AddItem(string deviceID, string deviceName, long locationID, int symbolId, string description)
+        public int AddItem(string deviceID, string deviceName, long locationID, int symbolId, string description, bool active)
         {
-            return itemActive.AddItem(deviceID,deviceName,locationID,symbolId,description);
+            return itemActive.AddItem(deviceID,deviceName,locationID,symbolId,description,active);
 
         }
 
@@ -29,9 +29,9 @@ namespace BusinessLayer.Business
         }
 
 
-        public List<String> GetItemByName(string name)
+        public List<String> GetItemByName(string name, bool active)
         {
-            return itemActive.GetItemByName(name);
+            return itemActive.GetItemByName(name, active);
         }
     }
 }
