@@ -64,9 +64,9 @@ namespace BusinessLayer.Business
         }
 
 
-        public List<string> getPortDetaisByPortNumber(long itemid, int portnumber)
+        public List<string> GetPortDetailsByPortNumber(long itemid, int portnumber)
         {
-            return portOP.getPortDetaisByPortNumber(itemid, portnumber);
+            return portOP.GetPortDetailsByPortNumber(itemid, portnumber);
         }
 
 

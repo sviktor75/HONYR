@@ -113,7 +113,7 @@ namespace DataLayer.Operations
             return retList;
         }
 
-        public List<string> getPortDetaisByPortNumber(long itemid, int portnumber)
+        public List<string> GetPortDetailsByPortNumber(long itemid, int portnumber)
         {
 
             string query = "select * from portactive where itemid=" + itemid + " AND portnumber=" + portnumber +";";
