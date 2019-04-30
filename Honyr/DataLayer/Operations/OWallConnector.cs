@@ -13,7 +13,7 @@ namespace DataLayer.Operations
 
         public int AddConnector(string connectorId, string name, string connectorType, string connectorProperty, int locationId, int symbolId, string description)
         {
-            string query = "INSERT INTO WallConnector (connectorid, name, type, property, locationid, symbolid, description)" + " VALUES" + " ('" + connectorId + "','" + name + "', '" + connectorType + "', '" + connectorProperty + "', '" + locationId + "', '" + symbolId + "', '" + description + "');";
+            string query = "INSERT INTO wallconnector (connectorid, name, type, property, locationid, symbolid, description)" + " VALUES" + " ('" + connectorId + "','" + name + "', '" + connectorType + "', '" + connectorProperty + "', '" + locationId + "', '" + symbolId + "', '" + description + "');";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -25,7 +25,7 @@ namespace DataLayer.Operations
 
         public int ModConnector(long id, string connectorID, string name, string connectorType, string connectorProperty, int locationId, int symbolId, string description)
         {
-            string query = "update WallConnector set connectorId='" + connectorID + "', name='" + name + "', type='" + connectorType + "', property='" + connectorProperty + "', locationid='" + locationId + "', symbolid='" + symbolId + "', description='" + description + "' where id='" + id + "';";
+            string query = "update wallconnector set connectorId='" + connectorID + "', name='" + name + "', type='" + connectorType + "', property='" + connectorProperty + "', locationid='" + locationId + "', symbolid='" + symbolId + "', description='" + description + "' where id='" + id + "';";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -36,7 +36,7 @@ namespace DataLayer.Operations
 
         public int DelConnector(long id)
         {
-            string query = "delete from WallConnector where id='" + id + "';";
+            string query = "delete from wallconnector where id='" + id + "';";
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
@@ -47,7 +47,7 @@ namespace DataLayer.Operations
 
         //public List<String> GetConnector()
         //{
-        //    string query = "select connectorid from WallConnector;";
+        //    string query = "select connectorid from wallconnector;";
 
         //    List<string> retList = new List<string>();
 
@@ -68,7 +68,7 @@ namespace DataLayer.Operations
 
         public List<String> GetConnectorByName(string name)
         {
-            string query = "select * from WallConnector where name like '" + name + "' order by name limit 1;";
+            string query = "select * from wallconnector where name like '" + name + "' order by name limit 1;";
 
             List<string> retList = new List<string>();
 
