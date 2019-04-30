@@ -87,5 +87,9 @@ namespace PresentationLayer
             passiveItemCtrl1.resetForm();
         }
 
+        private void típusokMeghatározásaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

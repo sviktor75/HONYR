@@ -59,7 +59,7 @@ namespace PresentationLayer
             uj = false;
             modosit = false;
 
-            txtKeres.Visible = false;
+            kereses(false);
         }
 
         private void addLocationCtrl_Load(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace PresentationLayer
 
             vissza = true;
 
-            txtKeres.Visible = false;
+            kereses(false);
         }
 
         private void btnMentes_Click(object sender, EventArgs e)
@@ -170,8 +170,7 @@ namespace PresentationLayer
 
             vissza = false;
 
-            txtKeres.Visible = true;
-            txtKeres.Focus();
+            kereses(true);
         }
 
         private void btnModosit_Click(object sender, EventArgs e)
@@ -195,15 +194,15 @@ namespace PresentationLayer
 
             vissza = false;
 
-            txtKeres.Visible = false;
+            kereses(false);
 
             modosit = true;
         }
 
 
-        private void txtKeres_TextChanged(object sender, EventArgs e)
+        private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = location.GetLocationByName(txtKeres.Text.ToString() + "%");
+            List<string> sor = location.GetLocationByName(txtKeresNev.Text.ToString() + "%");
 
             try
             {
@@ -256,6 +255,40 @@ namespace PresentationLayer
         private void comboSymbol_SelectionChangeCommitted(object sender, EventArgs e)
         {
             kepBetoltes();
+        }
+
+        private void kereses(bool active)
+        {
+            if (active)
+            {
+                lblKeresAzonositoSzerint.Visible = true;
+                lblKeresesNevSzerint.Visible = true;
+                txtKeresAzonosito.Visible = true;
+                txtKeresNev.Visible = true;
+                txtKeresAzonosito.Focus();
+            }
+            else
+            {
+                lblKeresAzonositoSzerint.Visible = false;
+                lblKeresesNevSzerint.Visible = false;
+                txtKeresAzonosito.Visible = false;
+                txtKeresNev.Visible = false;
+            }
+        }
+
+        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblKeresesNevSzerint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblKeresAzonositoSzerint_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

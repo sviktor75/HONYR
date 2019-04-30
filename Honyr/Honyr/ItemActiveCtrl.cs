@@ -59,8 +59,7 @@ namespace PresentationLayer
 
             vissza = true;
 
-            txtKeres.Visible = false;
-
+            kereses(false);
         }
 
         private void btnMegse_Click_1(object sender, EventArgs e)
@@ -99,10 +98,10 @@ namespace PresentationLayer
             uj = false;
             modosit = false;
 
-            txtKeres.Visible = false;
+            kereses(false);
         }
 
-      
+
         private void btnMentes_Click(object sender, EventArgs e)
         {
             if (uj)
@@ -171,6 +170,7 @@ namespace PresentationLayer
             comboSymbol.DataSource = symbol.GetSymbols();
             kepBetoltes();
 
+            kereses(false);
 
             vissza = false;
             uj = true;
@@ -201,8 +201,8 @@ namespace PresentationLayer
 
             vissza = false;
 
-            txtKeres.Visible = true;
-            txtKeres.Focus();
+            kereses(true);
+            
         }
 
         private void btnModosit_Click(object sender, EventArgs e)
@@ -233,15 +233,15 @@ namespace PresentationLayer
 
             vissza = false;
 
-            txtKeres.Visible = false;
+            kereses(false);
 
             modosit = true;
         }
 
 
-        private void txtKeres_TextChanged(object sender, EventArgs e)
+        private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = item.GetItemByName(txtKeres.Text.ToString() + "%",activeItem);
+            List<string> sor = item.GetItemByName(txtKeresNev.Text.ToString() + "%",activeItem);
         
             try
             {
@@ -291,6 +291,25 @@ namespace PresentationLayer
             picSymbol.Image = Image.FromStream(ms);
         }
 
+        private void kereses(bool active)
+        {
+            if (active)
+            {
+                lblKeresAzonositoSzerint.Visible = true;
+                lblKeresesNevSzerint.Visible = true;
+                txtKeresAzonosito.Visible = true;
+                txtKeresNev.Visible = true;
+                txtKeresAzonosito.Focus();
+            }
+            else
+            {
+                lblKeresAzonositoSzerint.Visible = false;
+                lblKeresesNevSzerint.Visible = false;
+                txtKeresAzonosito.Visible = false;
+                txtKeresNev.Visible = false;
+            }
+        }
+
         private void comboSymbol_SelectionChangeCommitted(object sender, EventArgs e)
         {
             kepBetoltes();
@@ -321,5 +340,11 @@ namespace PresentationLayer
             //comboPortTipus.Items.Add(port.GetPortsByItemId(long.Parse(txtIndex.Text), true)[4]);
                        
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{85EE226F-84AD-4387-8B5E-670BE8A82EC8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Honyr</RootNamespace>
+    <RootNamespace>PresentationLayer</RootNamespace>
     <AssemblyName>Honyr</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -38,6 +38,7 @@
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
+    <Compile Include="CommonControls.cs" />
     <Compile Include="FormClear.cs" />
     <Compile Include="LocationCtrl.cs">
       <SubType>UserControl</SubType>
@@ -56,6 +57,12 @@
     </Compile>
     <Compile Include="ItemActiveCtrl.Designer.cs">
       <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeCreatorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TypeCreatorCtrl.Designer.cs">
+      <DependentUpon>TypeCreatorCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="WallMount.cs">
       <SubType>UserControl</SubType>
@@ -85,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemActiveCtrl.resx">
       <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeCreatorCtrl.resx">
+      <DependentUpon>TypeCreatorCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WallMount.resx">
       <DependentUpon>WallMount.cs</DependentUpon>
@@ -127,6 +137,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">

@@ -42,6 +42,7 @@ namespace PresentationLayer
             this.helyésgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beállításokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.felhasználóiFelületToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.szimbólumokFelviteleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.szerverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.súgóToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,7 @@ namespace PresentationLayer
             this.mountWall1 = new PresentationLayer.WallMount();
             this.itemActiveCtrl1 = new PresentationLayer.ItemActiveCtrl();
             this.passiveItemCtrl1 = new PresentationLayer.ItemPassiveCtrl();
-            this.szimbólumokFelviteleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.típusokMeghatározásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,8 @@ namespace PresentationLayer
             this.itemsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newItemToolStripMenuItem,
             this.helységToolStripMenuItem1,
-            this.faliCsatlakozóToolStripMenuItem});
+            this.faliCsatlakozóToolStripMenuItem,
+            this.típusokMeghatározásaToolStripMenuItem});
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
             this.itemsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.itemsToolStripMenuItem.Text = "Szerkeszt";
@@ -84,7 +86,7 @@ namespace PresentationLayer
             this.aktívToolStripMenuItem,
             this.passzívToolStripMenuItem});
             this.newItemToolStripMenuItem.Name = "newItemToolStripMenuItem";
-            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.newItemToolStripMenuItem.Text = "Eszköz";
             // 
             // aktívToolStripMenuItem
@@ -104,14 +106,14 @@ namespace PresentationLayer
             // helységToolStripMenuItem1
             // 
             this.helységToolStripMenuItem1.Name = "helységToolStripMenuItem1";
-            this.helységToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.helységToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
             this.helységToolStripMenuItem1.Text = "Helység";
             this.helységToolStripMenuItem1.Click += new System.EventHandler(this.HelyisegToolStripMenuItem1_Click);
             // 
             // faliCsatlakozóToolStripMenuItem
             // 
             this.faliCsatlakozóToolStripMenuItem.Name = "faliCsatlakozóToolStripMenuItem";
-            this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.faliCsatlakozóToolStripMenuItem.Text = "Fali csatlakozó";
             this.faliCsatlakozóToolStripMenuItem.Click += new System.EventHandler(this.FaliCsatlakozoToolStripMenuItem_Click_1);
             // 
@@ -128,19 +130,19 @@ namespace PresentationLayer
             // eszközToolStripMenuItem
             // 
             this.eszközToolStripMenuItem.Name = "eszközToolStripMenuItem";
-            this.eszközToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eszközToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.eszközToolStripMenuItem.Text = "Eszköz";
             // 
             // faliCsatlakzóToolStripMenuItem
             // 
             this.faliCsatlakzóToolStripMenuItem.Name = "faliCsatlakzóToolStripMenuItem";
-            this.faliCsatlakzóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.faliCsatlakzóToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.faliCsatlakzóToolStripMenuItem.Text = "Fali csatlakzó";
             // 
             // helyésgToolStripMenuItem
             // 
             this.helyésgToolStripMenuItem.Name = "helyésgToolStripMenuItem";
-            this.helyésgToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helyésgToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.helyésgToolStripMenuItem.Text = "Helyésg";
             // 
             // beállításokToolStripMenuItem
@@ -158,6 +160,12 @@ namespace PresentationLayer
             this.felhasználóiFelületToolStripMenuItem.Name = "felhasználóiFelületToolStripMenuItem";
             this.felhasználóiFelületToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.felhasználóiFelületToolStripMenuItem.Text = "Felhasználói felület";
+            // 
+            // szimbólumokFelviteleToolStripMenuItem
+            // 
+            this.szimbólumokFelviteleToolStripMenuItem.Name = "szimbólumokFelviteleToolStripMenuItem";
+            this.szimbólumokFelviteleToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.szimbólumokFelviteleToolStripMenuItem.Text = "Szimbólumok felvitele";
             // 
             // szerverToolStripMenuItem
             // 
@@ -213,11 +221,12 @@ namespace PresentationLayer
             this.passiveItemCtrl1.Size = new System.Drawing.Size(903, 544);
             this.passiveItemCtrl1.TabIndex = 5;
             // 
-            // szimbólumokFelviteleToolStripMenuItem
+            // típusokMeghatározásaToolStripMenuItem
             // 
-            this.szimbólumokFelviteleToolStripMenuItem.Name = "szimbólumokFelviteleToolStripMenuItem";
-            this.szimbólumokFelviteleToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.szimbólumokFelviteleToolStripMenuItem.Text = "Szimbólumok felvitele";
+            this.típusokMeghatározásaToolStripMenuItem.Name = "típusokMeghatározásaToolStripMenuItem";
+            this.típusokMeghatározásaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.típusokMeghatározásaToolStripMenuItem.Text = "Típusok meghatározása";
+            this.típusokMeghatározásaToolStripMenuItem.Click += new System.EventHandler(this.típusokMeghatározásaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -267,6 +276,7 @@ namespace PresentationLayer
         private System.Windows.Forms.ToolStripMenuItem szerverToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem súgóToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem szimbólumokFelviteleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem típusokMeghatározásaToolStripMenuItem;
     }
 }
 
