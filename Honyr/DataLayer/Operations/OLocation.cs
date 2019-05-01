@@ -73,7 +73,6 @@ namespace DataLayer.Operations
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
-
             while (dataReader.Read())
             {
                 retList.Add(dataReader["id"] + "");
@@ -88,7 +87,6 @@ namespace DataLayer.Operations
             conn.CloseConnection();
 
             return retList;
-
         }
 
         public int GetididByLocationid(string locationid)
@@ -108,7 +106,6 @@ namespace DataLayer.Operations
             conn.CloseConnection();
 
             return id;
-
         }
 
         public string GetLocationidByID(int id)
@@ -131,10 +128,7 @@ namespace DataLayer.Operations
             conn.CloseConnection();
 
             return retString;
-
         }
-            
-
     }
 }
 

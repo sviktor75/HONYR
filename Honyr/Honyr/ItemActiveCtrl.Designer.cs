@@ -60,7 +60,7 @@
             this.btnKeres = new System.Windows.Forms.Button();
             this.btnModosit = new System.Windows.Forms.Button();
             this.btnTorol = new System.Windows.Forms.Button();
-            this.brnPortTorol = new System.Windows.Forms.Button();
+            this.btnPortTorol = new System.Windows.Forms.Button();
             this.picSymbol = new System.Windows.Forms.PictureBox();
             this.txtIndex = new System.Windows.Forms.TextBox();
             this.lblKeresAzonositoSzerint = new System.Windows.Forms.Label();
@@ -232,6 +232,7 @@
             this.btnPortHozzaad.TabIndex = 15;
             this.btnPortHozzaad.Text = "Port hozzáadása";
             this.btnPortHozzaad.UseVisualStyleBackColor = true;
+            this.btnPortHozzaad.Click += new System.EventHandler(this.btnPortHozzaad_Click);
             // 
             // label4
             // 
@@ -362,14 +363,14 @@
             this.btnTorol.UseVisualStyleBackColor = true;
             this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
             // 
-            // brnPortTorol
+            // btnPortTorol
             // 
-            this.brnPortTorol.Location = new System.Drawing.Point(759, 426);
-            this.brnPortTorol.Name = "brnPortTorol";
-            this.brnPortTorol.Size = new System.Drawing.Size(96, 27);
-            this.brnPortTorol.TabIndex = 15;
-            this.brnPortTorol.Text = "Port törlése";
-            this.brnPortTorol.UseVisualStyleBackColor = true;
+            this.btnPortTorol.Location = new System.Drawing.Point(759, 426);
+            this.btnPortTorol.Name = "btnPortTorol";
+            this.btnPortTorol.Size = new System.Drawing.Size(96, 27);
+            this.btnPortTorol.TabIndex = 15;
+            this.btnPortTorol.Text = "Port törlése";
+            this.btnPortTorol.UseVisualStyleBackColor = true;
             // 
             // picSymbol
             // 
@@ -441,7 +442,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboParent);
             this.Controls.Add(this.ItemActiveLbl);
-            this.Controls.Add(this.brnPortTorol);
+            this.Controls.Add(this.btnPortTorol);
             this.Controls.Add(this.btnPortHozzaad);
             this.Controls.Add(this.btnUj);
             this.Controls.Add(this.btnKeres);
@@ -508,7 +509,7 @@
         private System.Windows.Forms.Button btnKeres;
         private System.Windows.Forms.Button btnModosit;
         private System.Windows.Forms.Button btnTorol;
-        private System.Windows.Forms.Button brnPortTorol;
+        private System.Windows.Forms.Button btnPortTorol;
         private System.Windows.Forms.PictureBox picSymbol;
         private System.Windows.Forms.TextBox txtIndex;
         private System.Windows.Forms.Label lblKeresAzonositoSzerint;

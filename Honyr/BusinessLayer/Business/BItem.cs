@@ -9,29 +9,32 @@ namespace BusinessLayer.Business
 {
     public class BItem
     {
-        OItem itemActive = new OItem();
+        OItem item = new OItem();
 
 
         public int AddItem(string deviceID, string deviceName, long locationID, int symbolId, string description, bool active)
         {
-            return itemActive.AddItem(deviceID,deviceName,locationID,symbolId,description,active);
-
+            return item.AddItem(deviceID,deviceName,locationID,symbolId,description,active);
         }
 
         public int ModItem(long id, string deviceID, string deviceName, long locationID, int symbolID, string description)
         {
-            return itemActive.ModItem(id, deviceID, deviceName, locationID, symbolID, description);
+            return item.ModItem(id, deviceID, deviceName, locationID, symbolID, description);
         }
 
         public int DelItem(long id)
         {
-            return itemActive.DelItem(id);
+            return item.DelItem(id);
         }
 
+        public List<string> GetItemById(long id, bool active)
+        {
+            return item.GetItemByID(id, active);
+        }
 
         public List<String> GetItemByName(string name, bool active)
         {
-            return itemActive.GetItemByName(name, active);
+            return item.GetItemByName(name, active);
         }
     }
 }

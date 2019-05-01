@@ -34,9 +34,7 @@ namespace DataLayer.Operations
 
         public int DelItem(long id)
         {
-            
             string query = "delete from item where id='" + id + "';";
-
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             int effectedRows = cmd.ExecuteNonQuery();

@@ -56,6 +56,8 @@ namespace PresentationLayer
             txtPortKonfig.Enabled = false;
             comboPortTipus.Enabled = false;
 
+            btnPortHozzaad.Enabled = false;
+            btnPortTorol.Enabled = false;
 
             vissza = true;
 
@@ -85,6 +87,9 @@ namespace PresentationLayer
             txtPortKonfig.Enabled = false;
             comboPortTipus.Enabled = false;
 
+            btnPortHozzaad.Enabled = false;
+            btnPortTorol.Enabled = false;
+
             this.Controls.ClearControls<ComboBox>();
             this.Controls.ClearControls<PictureBox>();
 
@@ -110,11 +115,11 @@ namespace PresentationLayer
 
                 if (effectedRows >= 0)
                 {
-                    MessageBox.Show("Eszköz sikeresen hozzáadva.");
+                    MessageBox.Show("Eszköz sikeresen hozzáadva.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Az eszközt nem sikerült létrehozni.");
+                    MessageBox.Show("Az eszközt nem sikerült létrehozni.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 uj = false;
@@ -126,11 +131,11 @@ namespace PresentationLayer
 
                 if (effectedRows >= 0)
                 {
-                    MessageBox.Show("Eszköz sikeresen módosítva.");
+                    MessageBox.Show("Eszköz sikeresen módosítva.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Az eszközt nem sikerült Módosítani.");
+                    MessageBox.Show("Az eszközt nem sikerült Módosítani.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 modosit = false;
@@ -143,101 +148,136 @@ namespace PresentationLayer
 
         private void btnUj_Click(object sender, EventArgs e)
         {
-            resetForm();
+            if (symbol.GetSymbols().Count > 0)
+            {
+                if (location.GetLocations().Count > 0)
+                {
+                    resetForm();
 
-            btnUj.Enabled = false;
-            btnMentes.Enabled = true;
-            btnKeres.Enabled = false;
-            btnModosit.Enabled = false;
-            btnTorol.Enabled = false;
-            btnMegse.Enabled = true;
+                    btnUj.Enabled = false;
+                    btnMentes.Enabled = true;
+                    btnKeres.Enabled = false;
+                    btnModosit.Enabled = false;
+                    btnTorol.Enabled = false;
+                    btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = true;
-            txtMegenevezes.Enabled = true;
-            comboParent.Enabled = true;
-            txtIP.Enabled = true;
-            txtMAC.Enabled = true;
-            comboSymbol.Enabled = true;
-            txtDescription.Enabled = true;
+                    txtAzonosito.Enabled = true;
+                    txtMegenevezes.Enabled = true;
+                    comboParent.Enabled = true;
+                    txtIP.Enabled = true;
+                    txtMAC.Enabled = true;
+                    comboSymbol.Enabled = true;
+                    txtDescription.Enabled = true;
 
-            listPort.Enabled = true;
-            txtPortAzonosito.Enabled = true;
-            txtPortMegnevezes.Enabled = true;
-            txtPortKonfig.Enabled = true;
-            comboPortTipus.Enabled = true;
+                    listPort.Enabled = true;
+                    txtPortAzonosito.Enabled = true;
+                    txtPortMegnevezes.Enabled = true;
+                    txtPortKonfig.Enabled = true;
+                    comboPortTipus.Enabled = true;
 
-            comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols();
-            kepBetoltes();
+                    btnPortHozzaad.Enabled = true;
+                    btnPortTorol.Enabled = true;
 
-            kereses(false);
+                    comboParent.DataSource = location.GetLocations();
+                    comboSymbol.DataSource = symbol.GetSymbols();
+                    kepBetoltes();
 
-            vissza = false;
-            uj = true;
+                    kereses(false);
+
+                    vissza = false;
+                    uj = true;
+                }
+                else
+                {
+                    MessageBox.Show("A helyiségek tábla üres, előbb oda kell adatot feltölteni!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("A szimbólum tábla üres, előbb oda kell adatot feltölteni!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnKeres_Click(object sender, EventArgs e)
         {
-            btnUj.Enabled = false;
-            btnMentes.Enabled = false;
-            btnKeres.Enabled = true;
-            btnModosit.Enabled = true;
-            btnTorol.Enabled = true;
-            btnMegse.Enabled = true;
+            if (item.GetItemById(1, true).Count > 0)
+            {
+                btnUj.Enabled = false;
+                btnMentes.Enabled = false;
+                btnKeres.Enabled = true;
+                btnModosit.Enabled = true;
+                btnTorol.Enabled = true;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = false;
-            txtMegenevezes.Enabled = false;
-            comboParent.Enabled = false;
-            txtIP.Enabled = false;
-            txtMAC.Enabled = false;
-            comboSymbol.Enabled = false;
-            txtDescription.Enabled = false;
+                txtAzonosito.Enabled = false;
+                txtMegenevezes.Enabled = false;
+                comboParent.Enabled = false;
+                txtIP.Enabled = false;
+                txtMAC.Enabled = false;
+                comboSymbol.Enabled = false;
+                txtDescription.Enabled = false;
 
-            listPort.Enabled = true;
-            txtPortAzonosito.Enabled = false;
-            txtPortMegnevezes.Enabled = false;
-            txtPortKonfig.Enabled = false;
-            comboPortTipus.Enabled = false;
+                listPort.Enabled = true;
+                txtPortAzonosito.Enabled = false;
+                txtPortMegnevezes.Enabled = false;
+                txtPortKonfig.Enabled = false;
+                comboPortTipus.Enabled = false;
 
-            vissza = false;
+                btnPortHozzaad.Enabled = false;
+                btnPortTorol.Enabled = false;
 
-            kereses(true);
-            
+                vissza = false;
+
+                kereses(true);
+            }
+            else
+            {
+                MessageBox.Show("Üres az aktív eszközök tábla, nincs mit keresni benne!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnModosit_Click(object sender, EventArgs e)
         {
-            btnUj.Enabled = false;
-            btnMentes.Enabled = true;
-            btnKeres.Enabled = false;
-            btnModosit.Enabled = false;
-            btnTorol.Enabled = false;
-            btnMegse.Enabled = true;
+            if (txtIndex.Text != "")
+            {
+                btnUj.Enabled = false;
+                btnMentes.Enabled = true;
+                btnKeres.Enabled = false;
+                btnModosit.Enabled = false;
+                btnTorol.Enabled = false;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = true;
-            txtMegenevezes.Enabled = true;
-            comboParent.Enabled = true;
-            txtIP.Enabled = true;
-            txtMAC.Enabled = true;
-            comboSymbol.Enabled = true;
-            txtDescription.Enabled = true;
+                txtAzonosito.Enabled = true;
+                txtMegenevezes.Enabled = true;
+                comboParent.Enabled = true;
+                txtIP.Enabled = true;
+                txtMAC.Enabled = true;
+                comboSymbol.Enabled = true;
+                txtDescription.Enabled = true;
 
-            listPort.Enabled = true;
-            txtPortAzonosito.Enabled = true;
-            txtPortMegnevezes.Enabled = true;
-            txtPortKonfig.Enabled = true;
-            comboPortTipus.Enabled = true;
+                listPort.Enabled = true;
+                txtPortAzonosito.Enabled = true;
+                txtPortMegnevezes.Enabled = true;
+                txtPortKonfig.Enabled = true;
+                comboPortTipus.Enabled = true;
 
-            comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols();
+                comboParent.DataSource = location.GetLocations();
+                comboSymbol.DataSource = symbol.GetSymbols();
 
-            vissza = false;
+                btnPortHozzaad.Enabled = true;
+                btnPortTorol.Enabled = true;
 
-            kereses(false);
+                vissza = false;
 
-            modosit = true;
+                kereses(false);
+
+                modosit = true;
+            }
+            else
+            {
+                MessageBox.Show("Nincs adat, amit módosítani lehet!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
 
         private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
@@ -257,7 +297,6 @@ namespace PresentationLayer
                 picSymbol.Image = Image.FromStream(ms);   
             
                 txtDescription.Text = sor[5].ToString();
-
             }
             catch (Exception)
             {
@@ -268,19 +307,26 @@ namespace PresentationLayer
 
         private void btnTorol_Click(object sender, EventArgs e)
         {
-            int effectedRows = item.DelItem(long.Parse(txtIndex.Text));
-
-            if (effectedRows >= 0)
+            if (txtIndex.Text != "")
             {
-                MessageBox.Show("Lokáció sikeresen törölve.");
+                int effectedRows = item.DelItem(long.Parse(txtIndex.Text));
+
+                if (effectedRows >= 0)
+                {
+                    MessageBox.Show("Lokáció sikeresen törölve.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("A lokácót nem sikerült törölni.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                this.Controls.ClearControls();
+                btnMegse.PerformClick();
             }
             else
             {
-                MessageBox.Show("A lokácót nem sikerült törölni.");
+                MessageBox.Show("Nincs adat, amit törölni lehet!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            this.Controls.ClearControls();
-            btnMegse.PerformClick();
         }
 
         private void kepBetoltes()
@@ -317,14 +363,13 @@ namespace PresentationLayer
 
         private void portokListazasa()
         {
-
-            foreach (string port in port.GetPortsByItemId(long.Parse(txtIndex.Text), true) )
+            if (txtIndex.Text != "") // ha az adatbázisban nincs item, akkor ne adjon hibát a port megjelenítés
             {
-                listPort.Items.Add(port);
-                
+                foreach (string port in port.GetPortsByItemId(long.Parse(txtIndex.Text), true))
+                {
+                    listPort.Items.Add(port);
+                }
             }
-
-
         }
         //   -------------------  VALAMI NEM KEREK :-)  ---------------------
 
@@ -346,5 +391,9 @@ namespace PresentationLayer
 
         }
 
+        private void btnPortHozzaad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

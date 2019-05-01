@@ -72,7 +72,6 @@ namespace DataLayer.Operations
 
         public int DelPortPassive(long id)
         {
-
             string query = "delete from portpassive where id='" + id + "';";
 
             conn.OpenConnection();
@@ -89,13 +88,10 @@ namespace DataLayer.Operations
             if (active)
             {
                 query = "select portnumber from portactive where itemid=" + itemid + ";";
-
-
             }
             else
             {
                 query = "select portnumber from portpassive where itemid=" + itemid + ";";
-
             }
             List<string> retList = new List<string>();
 
@@ -115,9 +111,7 @@ namespace DataLayer.Operations
 
         public List<string> GetPortDetailsByPortNumber(long itemid, int portnumber)
         {
-
             string query = "select * from portactive where itemid=" + itemid + " AND portnumber=" + portnumber +";";
-            
             
             List<string> retList = new List<string>();
 
@@ -131,7 +125,6 @@ namespace DataLayer.Operations
                 retList.Add(dataReader["portphysicaltype"] + "");
                 retList.Add(dataReader["portname"] + "");
                 retList.Add(dataReader["portconfig"] + "");
-               
             }
             dataReader.Close();
             conn.CloseConnection();
