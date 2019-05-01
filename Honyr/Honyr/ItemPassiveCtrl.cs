@@ -158,7 +158,7 @@ namespace PresentationLayer
             kereses(false);
 
             comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols();
+            comboSymbol.DataSource = symbol.GetSymbols(4);
             kepBetoltes();
 
 
@@ -210,7 +210,7 @@ namespace PresentationLayer
             comboPortTipus.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols();
+            comboSymbol.DataSource = symbol.GetSymbols(4);
 
             vissza = false;
 

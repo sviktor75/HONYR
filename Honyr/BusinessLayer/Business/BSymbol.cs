@@ -11,9 +11,9 @@ namespace BusinessLayer.Business
     {
         OSymbol symbolOP = new OSymbol();
         
-        public List<String> GetSymbols()
+        public List<String> GetSymbols(int symboltypeid)
         {
-            return symbolOP.GetSymbols();
+            return symbolOP.GetSymbols(symboltypeid);
         }
         
         public List<object> GetSymbolById(int id)

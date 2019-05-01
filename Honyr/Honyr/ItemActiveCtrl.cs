@@ -148,7 +148,7 @@ namespace PresentationLayer
 
         private void btnUj_Click(object sender, EventArgs e)
         {
-            if (symbol.GetSymbols().Count > 0)
+            if (symbol.GetSymbols(4).Count > 0)
             {
                 if (location.GetLocations().Count > 0)
                 {
@@ -179,7 +179,7 @@ namespace PresentationLayer
                     btnPortTorol.Enabled = true;
 
                     comboParent.DataSource = location.GetLocations();
-                    comboSymbol.DataSource = symbol.GetSymbols();
+                    comboSymbol.DataSource = symbol.GetSymbols(4);
                     kepBetoltes();
 
                     kereses(false);
@@ -262,7 +262,7 @@ namespace PresentationLayer
                 comboPortTipus.Enabled = true;
 
                 comboParent.DataSource = location.GetLocations();
-                comboSymbol.DataSource = symbol.GetSymbols();
+                comboSymbol.DataSource = symbol.GetSymbols(4);
 
                 btnPortHozzaad.Enabled = true;
                 btnPortTorol.Enabled = true;

@@ -144,7 +144,7 @@ namespace PresentationLayer
             txtDescription.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols();
+            comboSymbol.DataSource = symbol.GetSymbols(1);
             kepBetoltes();
 
 
@@ -190,7 +190,7 @@ namespace PresentationLayer
             txtDescription.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols();
+            comboSymbol.DataSource = symbol.GetSymbols(1);
 
             vissza = false;
 

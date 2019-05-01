@@ -14,9 +14,9 @@ namespace DataLayer.Operations
 
         OInitDataConnection conn = new OInitDataConnection();
 
-        public List<String> GetSymbols()
+        public List<String> GetSymbols(int symboltypeid)
         {
-            string query = "select name from symbol;";
+            string query = "select name from symbol where symboltypeid like '" + symboltypeid + "';";
 
             List<string> retList = new List<string>();
 

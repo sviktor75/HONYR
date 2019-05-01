@@ -20,7 +20,6 @@ namespace DataLayer.Operations
             return effectedRows;
         }
 
-
         public int ModItem(long id, string deviceID, string deviceName, long locationID, int symbolID, string description)
         {
             string query = "update item set deviceid='" + deviceID + "', devicename='" + deviceName + "', locationid='" + locationID + "', symbolid='" + symbolID + "', description='" + description + "' where id='" + id + "';";
@@ -41,7 +40,6 @@ namespace DataLayer.Operations
             conn.CloseConnection();
             return effectedRows;
         }
-
 
         public List<String> GetItemByName(string name, bool active)
         {
@@ -114,6 +112,5 @@ namespace DataLayer.Operations
             conn.CloseConnection();
             return retList;
         }
-
     }
 }
