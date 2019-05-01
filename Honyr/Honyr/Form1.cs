@@ -37,6 +37,8 @@ namespace PresentationLayer
             mountWall1.SendToBack();
             addLocation1.SendToBack();
             itemActiveCtrl1.SendToBack();
+            typeDeclareCtrl11.SendToBack();
+            
 
             mountWall1.reset();
             addLocation1.resetForm();
@@ -51,6 +53,7 @@ namespace PresentationLayer
             mountWall1.SendToBack();
             addLocation1.SendToBack();
             passiveItemCtrl1.SendToBack();
+            typeDeclareCtrl11.SendToBack();
 
             mountWall1.reset();
             addLocation1.resetForm();
@@ -66,6 +69,7 @@ namespace PresentationLayer
             mountWall1.SendToBack();
             passiveItemCtrl1.SendToBack();
             itemActiveCtrl1.SendToBack();
+            typeDeclareCtrl11.SendToBack();
 
             mountWall1.reset();
             addLocation1.resetForm();
@@ -80,6 +84,7 @@ namespace PresentationLayer
             addLocation1.SendToBack();
             passiveItemCtrl1.SendToBack();
             itemActiveCtrl1.SendToBack();
+            typeDeclareCtrl11.SendToBack();
 
             mountWall1.reset();
             addLocation1.resetForm();
@@ -89,7 +94,15 @@ namespace PresentationLayer
 
         private void típusokMeghatározásaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            typeDeclareCtrl11.BringToFront();
+
+            mountWall1.SendToBack();
+            addLocation1.SendToBack();
+            passiveItemCtrl1.SendToBack();
+            itemActiveCtrl1.SendToBack();
+
+            //reset formok ide kellenek
+
         }
     }
 }

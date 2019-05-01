@@ -58,11 +58,11 @@
     <Compile Include="ItemActiveCtrl.Designer.cs">
       <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TypeCreatorCtrl.cs">
+    <Compile Include="typeDeclareCtrl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TypeCreatorCtrl.Designer.cs">
-      <DependentUpon>TypeCreatorCtrl.cs</DependentUpon>
+    <Compile Include="typeDeclareCtrl1.Designer.cs">
+      <DependentUpon>typeDeclareCtrl1.cs</DependentUpon>
     </Compile>
     <Compile Include="WallMount.cs">
       <SubType>UserControl</SubType>
@@ -92,9 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemActiveCtrl.resx">
       <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TypeCreatorCtrl.resx">
-      <DependentUpon>TypeCreatorCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WallMount.resx">
       <DependentUpon>WallMount.cs</DependentUpon>

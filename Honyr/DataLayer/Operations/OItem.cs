@@ -47,14 +47,13 @@ namespace DataLayer.Operations
 
         public List<String> GetItemByName(string name, bool active)
         {
-            string query = "select * from item where devicename like '" + name + "' and active=" + active + ";";
+            string query = "select * from item where devicename like '" + name + "' and active=" + active + " order by devicename limit 1;";
 
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             MySqlDataReader dataReader = cmd.ExecuteReader();
-
 
             while (dataReader.Read())
             {
@@ -68,7 +67,6 @@ namespace DataLayer.Operations
             dataReader.Close();
             conn.CloseConnection();
             return retList;
-
         }
 
         public List<String> GetItemByID(long id, bool active)
@@ -81,7 +79,6 @@ namespace DataLayer.Operations
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
-
             while (dataReader.Read())
             {
                 retList.Add(dataReader["id"] + "");
@@ -94,14 +91,11 @@ namespace DataLayer.Operations
             dataReader.Close();
             conn.CloseConnection();
             return retList;
-
         }
 
         public List<String> GetItemByDeviceID(string deviceID, bool active)
         {
-
-            string query = "select * from item where deviceid=" + deviceID + " and active=" + active + ";";
-
+            string query = "select * from item where deviceid like '" + deviceID + "' and active=" + active + " order by deviceid limit 1;";
 
             List<string> retList = new List<string>();
 
@@ -109,19 +103,11 @@ namespace DataLayer.Operations
             MySqlCommand cmd = new MySqlCommand(query, conn.conn);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
-
             while (dataReader.Read())
             {
                 retList.Add(dataReader["id"] + "");
-
-                
                 retList.Add(dataReader["deviceid"] + "");
                 retList.Add(dataReader["devicename"] + "");
-                
-
-                retList.Add(dataReader["deviceid"] + "");
-                retList.Add(dataReader["devicename"] + "");
-
                 retList.Add(dataReader["locationid"] + "");
                 retList.Add(dataReader["symbolid"] + "");
                 retList.Add(dataReader["description"] + "");
@@ -129,7 +115,6 @@ namespace DataLayer.Operations
             dataReader.Close();
             conn.CloseConnection();
             return retList;
-
         }
 
     }

@@ -410,9 +410,9 @@
             this.lblKeresesNevSzerint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKeresesNevSzerint.Location = new System.Drawing.Point(48, 439);
             this.lblKeresesNevSzerint.Name = "lblKeresesNevSzerint";
-            this.lblKeresesNevSzerint.Size = new System.Drawing.Size(82, 18);
+            this.lblKeresesNevSzerint.Size = new System.Drawing.Size(140, 18);
             this.lblKeresesNevSzerint.TabIndex = 72;
-            this.lblKeresesNevSzerint.Text = "Név szerint";
+            this.lblKeresesNevSzerint.Text = "Megnevezés szerint";
             // 
             // txtKeresNev
             // 

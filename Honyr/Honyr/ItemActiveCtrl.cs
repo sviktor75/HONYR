@@ -241,7 +241,7 @@ namespace PresentationLayer
 
         private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = item.GetItemByName(txtKeresNev.Text.ToString() + "%",activeItem);
+            List<string> sor = item.GetItemByName(txtKeresNev.Text.ToString() + "%", true);
         
             try
             {
