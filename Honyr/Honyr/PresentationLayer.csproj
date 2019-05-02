@@ -93,6 +93,9 @@
     <EmbeddedResource Include="ItemActiveCtrl.resx">
       <DependentUpon>ItemActiveCtrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="typeDeclareCtrl1.resx">
+      <DependentUpon>typeDeclareCtrl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WallMount.resx">
       <DependentUpon>WallMount.cs</DependentUpon>
     </EmbeddedResource>

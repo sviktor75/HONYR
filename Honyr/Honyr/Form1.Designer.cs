@@ -87,7 +87,7 @@ namespace PresentationLayer
             this.aktívToolStripMenuItem,
             this.passzívToolStripMenuItem});
             this.newItemToolStripMenuItem.Name = "newItemToolStripMenuItem";
-            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newItemToolStripMenuItem.Text = "Eszköz";
             // 
             // aktívToolStripMenuItem
@@ -107,22 +107,22 @@ namespace PresentationLayer
             // helységToolStripMenuItem1
             // 
             this.helységToolStripMenuItem1.Name = "helységToolStripMenuItem1";
-            this.helységToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
+            this.helységToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.helységToolStripMenuItem1.Text = "Helység";
             this.helységToolStripMenuItem1.Click += new System.EventHandler(this.HelyisegToolStripMenuItem1_Click);
             // 
             // faliCsatlakozóToolStripMenuItem
             // 
             this.faliCsatlakozóToolStripMenuItem.Name = "faliCsatlakozóToolStripMenuItem";
-            this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.faliCsatlakozóToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.faliCsatlakozóToolStripMenuItem.Text = "Fali csatlakozó";
             this.faliCsatlakozóToolStripMenuItem.Click += new System.EventHandler(this.FaliCsatlakozoToolStripMenuItem_Click_1);
             // 
             // típusokMeghatározásaToolStripMenuItem
             // 
             this.típusokMeghatározásaToolStripMenuItem.Name = "típusokMeghatározásaToolStripMenuItem";
-            this.típusokMeghatározásaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.típusokMeghatározásaToolStripMenuItem.Text = "Típusok meghatározása";
+            this.típusokMeghatározásaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.típusokMeghatározásaToolStripMenuItem.Text = "Típusok kezelése";
             this.típusokMeghatározásaToolStripMenuItem.Click += new System.EventHandler(this.típusokMeghatározásaToolStripMenuItem_Click);
             // 
             // keresésToolStripMenuItem

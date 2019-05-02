@@ -11,7 +11,6 @@ namespace DataLayer.Operations
 {
     public class OSymbol
     {
-
         OInitDataConnection conn = new OInitDataConnection();
 
         public List<String> GetSymbols(int symboltypeid)

@@ -54,3 +54,4 @@ C:\projekt\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.exe
 C:\projekt\HONYR\Honyr\Honyr\obj\Debug\Honyr.pdb
 C:\projekt\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.Properties.Resources.resources
+C:\projekt\HONYR\Honyr\Honyr\obj\Debug\PresentationLayer.typeDeclareCtrl1.resources

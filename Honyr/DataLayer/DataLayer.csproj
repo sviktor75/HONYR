@@ -673,6 +673,7 @@
     <Compile Include="Operations\OLocation.cs" />
     <Compile Include="Operations\OPort.cs" />
     <Compile Include="Operations\OSymbol.cs" />
+    <Compile Include="Operations\OTypes.cs" />
     <Compile Include="Operations\OWallConnector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
