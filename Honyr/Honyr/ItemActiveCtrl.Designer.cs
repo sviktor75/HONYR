@@ -39,8 +39,6 @@
             this.locationNameLbl = new System.Windows.Forms.Label();
             this.locationIdLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIP = new System.Windows.Forms.TextBox();
-            this.txtMAC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.listPort = new System.Windows.Forms.ListBox();
@@ -67,32 +65,37 @@
             this.txtKeresAzonosito = new System.Windows.Forms.TextBox();
             this.lblKeresesNevSzerint = new System.Windows.Forms.Label();
             this.txtKeresNev = new System.Windows.Forms.TextBox();
+            this.txtMAC = new System.Windows.Forms.MaskedTextBox();
+            this.txtIP = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
             // comboParent
             // 
             this.comboParent.FormattingEnabled = true;
-            this.comboParent.Location = new System.Drawing.Point(207, 159);
+            this.comboParent.Location = new System.Drawing.Point(310, 245);
+            this.comboParent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboParent.Name = "comboParent";
-            this.comboParent.Size = new System.Drawing.Size(169, 21);
+            this.comboParent.Size = new System.Drawing.Size(252, 28);
             this.comboParent.TabIndex = 20;
             // 
             // ItemActiveLbl
             // 
             this.ItemActiveLbl.AutoSize = true;
             this.ItemActiveLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemActiveLbl.Location = new System.Drawing.Point(362, 37);
+            this.ItemActiveLbl.Location = new System.Drawing.Point(543, 57);
+            this.ItemActiveLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ItemActiveLbl.Name = "ItemActiveLbl";
-            this.ItemActiveLbl.Size = new System.Drawing.Size(194, 37);
+            this.ItemActiveLbl.Size = new System.Drawing.Size(290, 55);
             this.ItemActiveLbl.TabIndex = 17;
             this.ItemActiveLbl.Text = "Aktív eszköz";
             // 
             // btnMentes
             // 
-            this.btnMentes.Location = new System.Drawing.Point(242, 488);
+            this.btnMentes.Location = new System.Drawing.Point(363, 751);
+            this.btnMentes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMentes.Name = "btnMentes";
-            this.btnMentes.Size = new System.Drawing.Size(97, 27);
+            this.btnMentes.Size = new System.Drawing.Size(146, 42);
             this.btnMentes.TabIndex = 15;
             this.btnMentes.Text = "Mentés";
             this.btnMentes.UseVisualStyleBackColor = true;
@@ -100,9 +103,10 @@
             // 
             // btnMegse
             // 
-            this.btnMegse.Location = new System.Drawing.Point(670, 488);
+            this.btnMegse.Location = new System.Drawing.Point(1005, 751);
+            this.btnMegse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMegse.Name = "btnMegse";
-            this.btnMegse.Size = new System.Drawing.Size(97, 27);
+            this.btnMegse.Size = new System.Drawing.Size(146, 42);
             this.btnMegse.TabIndex = 16;
             this.btnMegse.Text = "Mégse";
             this.btnMegse.UseVisualStyleBackColor = true;
@@ -110,25 +114,28 @@
             // 
             // txtMegenevezes
             // 
-            this.txtMegenevezes.Location = new System.Drawing.Point(203, 127);
+            this.txtMegenevezes.Location = new System.Drawing.Point(304, 195);
+            this.txtMegenevezes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMegenevezes.Name = "txtMegenevezes";
-            this.txtMegenevezes.Size = new System.Drawing.Size(220, 20);
+            this.txtMegenevezes.Size = new System.Drawing.Size(328, 26);
             this.txtMegenevezes.TabIndex = 13;
             // 
             // txtAzonosito
             // 
-            this.txtAzonosito.Location = new System.Drawing.Point(203, 100);
+            this.txtAzonosito.Location = new System.Drawing.Point(304, 154);
+            this.txtAzonosito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAzonosito.Name = "txtAzonosito";
-            this.txtAzonosito.Size = new System.Drawing.Size(220, 20);
+            this.txtAzonosito.Size = new System.Drawing.Size(328, 26);
             this.txtAzonosito.TabIndex = 14;
             // 
             // locationDescriptionLbl
             // 
             this.locationDescriptionLbl.AutoSize = true;
             this.locationDescriptionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationDescriptionLbl.Location = new System.Drawing.Point(20, 202);
+            this.locationDescriptionLbl.Location = new System.Drawing.Point(30, 311);
+            this.locationDescriptionLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationDescriptionLbl.Name = "locationDescriptionLbl";
-            this.locationDescriptionLbl.Size = new System.Drawing.Size(154, 18);
+            this.locationDescriptionLbl.Size = new System.Drawing.Size(254, 29);
             this.locationDescriptionLbl.TabIndex = 7;
             this.locationDescriptionLbl.Text = "Elhelyezkedés leírása:";
             // 
@@ -136,9 +143,10 @@
             // 
             this.locationParentLbl.AutoSize = true;
             this.locationParentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationParentLbl.Location = new System.Drawing.Point(20, 160);
+            this.locationParentLbl.Location = new System.Drawing.Point(30, 246);
+            this.locationParentLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationParentLbl.Name = "locationParentLbl";
-            this.locationParentLbl.Size = new System.Drawing.Size(188, 18);
+            this.locationParentLbl.Size = new System.Drawing.Size(307, 29);
             this.locationParentLbl.TabIndex = 9;
             this.locationParentLbl.Text = "Épület/helység azonosítója:";
             // 
@@ -146,9 +154,10 @@
             // 
             this.locationNameLbl.AutoSize = true;
             this.locationNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationNameLbl.Location = new System.Drawing.Point(20, 130);
+            this.locationNameLbl.Location = new System.Drawing.Point(30, 200);
+            this.locationNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationNameLbl.Name = "locationNameLbl";
-            this.locationNameLbl.Size = new System.Drawing.Size(96, 18);
+            this.locationNameLbl.Size = new System.Drawing.Size(156, 29);
             this.locationNameLbl.TabIndex = 11;
             this.locationNameLbl.Text = "Megnevezés:";
             // 
@@ -156,9 +165,10 @@
             // 
             this.locationIdLbl.AutoSize = true;
             this.locationIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationIdLbl.Location = new System.Drawing.Point(20, 103);
+            this.locationIdLbl.Location = new System.Drawing.Point(30, 158);
+            this.locationIdLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationIdLbl.Name = "locationIdLbl";
-            this.locationIdLbl.Size = new System.Drawing.Size(79, 18);
+            this.locationIdLbl.Size = new System.Drawing.Size(124, 29);
             this.locationIdLbl.TabIndex = 12;
             this.locationIdLbl.Text = "Azonosító:";
             // 
@@ -166,34 +176,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(615, 155);
+            this.label1.Location = new System.Drawing.Point(910, 238);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "IP cím:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtIP
-            // 
-            this.txtIP.Location = new System.Drawing.Point(712, 156);
-            this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(168, 20);
-            this.txtIP.TabIndex = 14;
-            // 
-            // txtMAC
-            // 
-            this.txtMAC.Location = new System.Drawing.Point(712, 186);
-            this.txtMAC.Name = "txtMAC";
-            this.txtMAC.Size = new System.Drawing.Size(168, 20);
-            this.txtMAC.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(614, 185);
+            this.label2.Location = new System.Drawing.Point(910, 285);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 18);
+            this.label2.Size = new System.Drawing.Size(115, 29);
             this.label2.TabIndex = 22;
             this.label2.Text = "MAC cím:";
             // 
@@ -201,34 +199,39 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(457, 102);
+            this.label3.Location = new System.Drawing.Point(686, 157);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.Size = new System.Drawing.Size(83, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "Portok";
             // 
             // listPort
             // 
             this.listPort.FormattingEnabled = true;
-            this.listPort.Location = new System.Drawing.Point(539, 100);
+            this.listPort.ItemHeight = 20;
+            this.listPort.Location = new System.Drawing.Point(808, 154);
+            this.listPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listPort.Name = "listPort";
-            this.listPort.Size = new System.Drawing.Size(54, 355);
+            this.listPort.Size = new System.Drawing.Size(79, 544);
             this.listPort.TabIndex = 24;
             this.listPort.SelectedIndexChanged += new System.EventHandler(this.listPort_SelectedIndexChanged);
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(189, 205);
+            this.txtDescription.Location = new System.Drawing.Point(284, 315);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(277, 96);
+            this.txtDescription.Size = new System.Drawing.Size(414, 146);
             this.txtDescription.TabIndex = 25;
             this.txtDescription.Text = "";
             // 
             // btnPortHozzaad
             // 
-            this.btnPortHozzaad.Location = new System.Drawing.Point(657, 426);
+            this.btnPortHozzaad.Location = new System.Drawing.Point(986, 655);
+            this.btnPortHozzaad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPortHozzaad.Name = "btnPortHozzaad";
-            this.btnPortHozzaad.Size = new System.Drawing.Size(96, 27);
+            this.btnPortHozzaad.Size = new System.Drawing.Size(144, 42);
             this.btnPortHozzaad.TabIndex = 15;
             this.btnPortHozzaad.Text = "Port hozzáadása";
             this.btnPortHozzaad.UseVisualStyleBackColor = true;
@@ -238,9 +241,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(615, 100);
+            this.label4.Location = new System.Drawing.Point(910, 150);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 18);
+            this.label4.Size = new System.Drawing.Size(124, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Azonosító:";
             // 
@@ -248,9 +252,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(614, 127);
+            this.label5.Location = new System.Drawing.Point(910, 188);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 18);
+            this.label5.Size = new System.Drawing.Size(156, 29);
             this.label5.TabIndex = 8;
             this.label5.Text = "Megnevezés:";
             // 
@@ -258,9 +263,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(614, 225);
+            this.label6.Location = new System.Drawing.Point(910, 346);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 18);
+            this.label6.Size = new System.Drawing.Size(154, 29);
             this.label6.TabIndex = 8;
             this.label6.Text = "Konfiguráció:";
             // 
@@ -268,9 +274,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(614, 375);
+            this.label7.Location = new System.Drawing.Point(910, 577);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 18);
+            this.label7.Size = new System.Drawing.Size(80, 29);
             this.label7.TabIndex = 8;
             this.label7.Text = "Típus:";
             // 
@@ -278,56 +285,63 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 318);
+            this.label8.Location = new System.Drawing.Point(44, 489);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 18);
+            this.label8.Size = new System.Drawing.Size(92, 29);
             this.label8.TabIndex = 8;
             this.label8.Text = "Rajzjel:";
             // 
             // comboSymbol
             // 
             this.comboSymbol.FormattingEnabled = true;
-            this.comboSymbol.Location = new System.Drawing.Point(189, 318);
+            this.comboSymbol.Location = new System.Drawing.Point(284, 489);
+            this.comboSymbol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboSymbol.Name = "comboSymbol";
-            this.comboSymbol.Size = new System.Drawing.Size(169, 21);
+            this.comboSymbol.Size = new System.Drawing.Size(252, 28);
             this.comboSymbol.TabIndex = 26;
             this.comboSymbol.SelectionChangeCommitted += new System.EventHandler(this.comboSymbol_SelectionChangeCommitted);
             // 
             // txtPortAzonosito
             // 
-            this.txtPortAzonosito.Location = new System.Drawing.Point(711, 97);
+            this.txtPortAzonosito.Location = new System.Drawing.Point(1064, 154);
+            this.txtPortAzonosito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPortAzonosito.Name = "txtPortAzonosito";
-            this.txtPortAzonosito.Size = new System.Drawing.Size(169, 20);
+            this.txtPortAzonosito.Size = new System.Drawing.Size(252, 26);
             this.txtPortAzonosito.TabIndex = 14;
             // 
             // txtPortMegnevezes
             // 
-            this.txtPortMegnevezes.Location = new System.Drawing.Point(711, 124);
+            this.txtPortMegnevezes.Location = new System.Drawing.Point(1064, 191);
+            this.txtPortMegnevezes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPortMegnevezes.Name = "txtPortMegnevezes";
-            this.txtPortMegnevezes.Size = new System.Drawing.Size(169, 20);
+            this.txtPortMegnevezes.Size = new System.Drawing.Size(252, 26);
             this.txtPortMegnevezes.TabIndex = 13;
             // 
             // txtPortKonfig
             // 
-            this.txtPortKonfig.Location = new System.Drawing.Point(712, 224);
+            this.txtPortKonfig.Location = new System.Drawing.Point(1066, 345);
+            this.txtPortKonfig.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPortKonfig.Name = "txtPortKonfig";
-            this.txtPortKonfig.Size = new System.Drawing.Size(168, 145);
+            this.txtPortKonfig.Size = new System.Drawing.Size(250, 221);
             this.txtPortKonfig.TabIndex = 27;
             this.txtPortKonfig.Text = "";
             // 
             // comboPortTipus
             // 
             this.comboPortTipus.FormattingEnabled = true;
-            this.comboPortTipus.Location = new System.Drawing.Point(711, 375);
+            this.comboPortTipus.Location = new System.Drawing.Point(1064, 577);
+            this.comboPortTipus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboPortTipus.Name = "comboPortTipus";
-            this.comboPortTipus.Size = new System.Drawing.Size(169, 21);
+            this.comboPortTipus.Size = new System.Drawing.Size(252, 28);
             this.comboPortTipus.TabIndex = 28;
             // 
             // btnUj
             // 
-            this.btnUj.Location = new System.Drawing.Point(135, 488);
+            this.btnUj.Location = new System.Drawing.Point(202, 751);
+            this.btnUj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUj.Name = "btnUj";
-            this.btnUj.Size = new System.Drawing.Size(97, 27);
+            this.btnUj.Size = new System.Drawing.Size(146, 42);
             this.btnUj.TabIndex = 15;
             this.btnUj.Text = "Új";
             this.btnUj.UseVisualStyleBackColor = true;
@@ -335,9 +349,10 @@
             // 
             // btnKeres
             // 
-            this.btnKeres.Location = new System.Drawing.Point(349, 488);
+            this.btnKeres.Location = new System.Drawing.Point(524, 751);
+            this.btnKeres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKeres.Name = "btnKeres";
-            this.btnKeres.Size = new System.Drawing.Size(97, 27);
+            this.btnKeres.Size = new System.Drawing.Size(146, 42);
             this.btnKeres.TabIndex = 15;
             this.btnKeres.Text = "Keresés";
             this.btnKeres.UseVisualStyleBackColor = true;
@@ -345,9 +360,10 @@
             // 
             // btnModosit
             // 
-            this.btnModosit.Location = new System.Drawing.Point(456, 488);
+            this.btnModosit.Location = new System.Drawing.Point(684, 751);
+            this.btnModosit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModosit.Name = "btnModosit";
-            this.btnModosit.Size = new System.Drawing.Size(97, 27);
+            this.btnModosit.Size = new System.Drawing.Size(146, 42);
             this.btnModosit.TabIndex = 16;
             this.btnModosit.Text = "Módosít";
             this.btnModosit.UseVisualStyleBackColor = true;
@@ -355,9 +371,10 @@
             // 
             // btnTorol
             // 
-            this.btnTorol.Location = new System.Drawing.Point(563, 488);
+            this.btnTorol.Location = new System.Drawing.Point(844, 751);
+            this.btnTorol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTorol.Name = "btnTorol";
-            this.btnTorol.Size = new System.Drawing.Size(97, 27);
+            this.btnTorol.Size = new System.Drawing.Size(146, 42);
             this.btnTorol.TabIndex = 16;
             this.btnTorol.Text = "Töröl";
             this.btnTorol.UseVisualStyleBackColor = true;
@@ -365,26 +382,29 @@
             // 
             // btnPortTorol
             // 
-            this.btnPortTorol.Location = new System.Drawing.Point(759, 426);
+            this.btnPortTorol.Location = new System.Drawing.Point(1138, 655);
+            this.btnPortTorol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPortTorol.Name = "btnPortTorol";
-            this.btnPortTorol.Size = new System.Drawing.Size(96, 27);
+            this.btnPortTorol.Size = new System.Drawing.Size(144, 42);
             this.btnPortTorol.TabIndex = 15;
             this.btnPortTorol.Text = "Port törlése";
             this.btnPortTorol.UseVisualStyleBackColor = true;
             // 
             // picSymbol
             // 
-            this.picSymbol.Location = new System.Drawing.Point(369, 318);
+            this.picSymbol.Location = new System.Drawing.Point(554, 489);
+            this.picSymbol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picSymbol.Name = "picSymbol";
-            this.picSymbol.Size = new System.Drawing.Size(131, 74);
+            this.picSymbol.Size = new System.Drawing.Size(196, 114);
             this.picSymbol.TabIndex = 30;
             this.picSymbol.TabStop = false;
             // 
             // txtIndex
             // 
-            this.txtIndex.Location = new System.Drawing.Point(189, 51);
+            this.txtIndex.Location = new System.Drawing.Point(284, 78);
+            this.txtIndex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIndex.Name = "txtIndex";
-            this.txtIndex.Size = new System.Drawing.Size(119, 20);
+            this.txtIndex.Size = new System.Drawing.Size(176, 26);
             this.txtIndex.TabIndex = 31;
             this.txtIndex.Visible = false;
             // 
@@ -392,41 +412,63 @@
             // 
             this.lblKeresAzonositoSzerint.AutoSize = true;
             this.lblKeresAzonositoSzerint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKeresAzonositoSzerint.Location = new System.Drawing.Point(48, 413);
+            this.lblKeresAzonositoSzerint.Location = new System.Drawing.Point(72, 635);
+            this.lblKeresAzonositoSzerint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKeresAzonositoSzerint.Name = "lblKeresAzonositoSzerint";
-            this.lblKeresAzonositoSzerint.Size = new System.Drawing.Size(123, 18);
+            this.lblKeresAzonositoSzerint.Size = new System.Drawing.Size(194, 29);
             this.lblKeresAzonositoSzerint.TabIndex = 74;
             this.lblKeresAzonositoSzerint.Text = "Azonosító szerint";
             // 
             // txtKeresAzonosito
             // 
-            this.txtKeresAzonosito.Location = new System.Drawing.Point(189, 411);
+            this.txtKeresAzonosito.Location = new System.Drawing.Point(284, 632);
+            this.txtKeresAzonosito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKeresAzonosito.Name = "txtKeresAzonosito";
-            this.txtKeresAzonosito.Size = new System.Drawing.Size(328, 20);
+            this.txtKeresAzonosito.Size = new System.Drawing.Size(490, 26);
             this.txtKeresAzonosito.TabIndex = 73;
             // 
             // lblKeresesNevSzerint
             // 
             this.lblKeresesNevSzerint.AutoSize = true;
             this.lblKeresesNevSzerint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKeresesNevSzerint.Location = new System.Drawing.Point(48, 439);
+            this.lblKeresesNevSzerint.Location = new System.Drawing.Point(72, 675);
+            this.lblKeresesNevSzerint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKeresesNevSzerint.Name = "lblKeresesNevSzerint";
-            this.lblKeresesNevSzerint.Size = new System.Drawing.Size(140, 18);
+            this.lblKeresesNevSzerint.Size = new System.Drawing.Size(226, 29);
             this.lblKeresesNevSzerint.TabIndex = 72;
             this.lblKeresesNevSzerint.Text = "Megnevezés szerint";
             // 
             // txtKeresNev
             // 
-            this.txtKeresNev.Location = new System.Drawing.Point(189, 437);
+            this.txtKeresNev.Location = new System.Drawing.Point(284, 672);
+            this.txtKeresNev.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKeresNev.Name = "txtKeresNev";
-            this.txtKeresNev.Size = new System.Drawing.Size(328, 20);
+            this.txtKeresNev.Size = new System.Drawing.Size(490, 26);
             this.txtKeresNev.TabIndex = 71;
             this.txtKeresNev.TextChanged += new System.EventHandler(this.txtKeresNev_TextChanged);
             // 
+            // txtMAC
+            // 
+            this.txtMAC.Location = new System.Drawing.Point(1066, 289);
+            this.txtMAC.Mask = "&&-&&-&&-&&-&&-&&";
+            this.txtMAC.Name = "txtMAC";
+            this.txtMAC.Size = new System.Drawing.Size(250, 26);
+            this.txtMAC.TabIndex = 75;
+            // 
+            // txtIP
+            // 
+            this.txtIP.Location = new System.Drawing.Point(1064, 241);
+            this.txtIP.Mask = "990.990.990.990";
+            this.txtIP.Name = "txtIP";
+            this.txtIP.Size = new System.Drawing.Size(250, 26);
+            this.txtIP.TabIndex = 75;
+            // 
             // ItemActiveCtrl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtIP);
+            this.Controls.Add(this.txtMAC);
             this.Controls.Add(this.lblKeresAzonositoSzerint);
             this.Controls.Add(this.txtKeresAzonosito);
             this.Controls.Add(this.lblKeresesNevSzerint);
@@ -438,7 +480,6 @@
             this.Controls.Add(this.comboSymbol);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.listPort);
-            this.Controls.Add(this.txtMAC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboParent);
             this.Controls.Add(this.ItemActiveLbl);
@@ -452,7 +493,6 @@
             this.Controls.Add(this.btnMegse);
             this.Controls.Add(this.txtPortMegnevezes);
             this.Controls.Add(this.txtMegenevezes);
-            this.Controls.Add(this.txtIP);
             this.Controls.Add(this.txtPortAzonosito);
             this.Controls.Add(this.txtAzonosito);
             this.Controls.Add(this.locationDescriptionLbl);
@@ -466,8 +506,9 @@
             this.Controls.Add(this.locationParentLbl);
             this.Controls.Add(this.locationNameLbl);
             this.Controls.Add(this.locationIdLbl);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ItemActiveCtrl";
-            this.Size = new System.Drawing.Size(903, 544);
+            this.Size = new System.Drawing.Size(1354, 837);
             this.Load += new System.EventHandler(this.ItemActiveCtrl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).EndInit();
             this.ResumeLayout(false);
@@ -488,8 +529,6 @@
         private System.Windows.Forms.Label locationNameLbl;
         private System.Windows.Forms.Label locationIdLbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIP;
-        private System.Windows.Forms.TextBox txtMAC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listPort;
@@ -516,5 +555,7 @@
         private System.Windows.Forms.TextBox txtKeresAzonosito;
         private System.Windows.Forms.Label lblKeresesNevSzerint;
         private System.Windows.Forms.TextBox txtKeresNev;
+        private System.Windows.Forms.MaskedTextBox txtMAC;
+        private System.Windows.Forms.MaskedTextBox txtIP;
     }
 }

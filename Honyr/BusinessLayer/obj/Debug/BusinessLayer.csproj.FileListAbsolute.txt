@@ -43,3 +43,5 @@ C:\Users\peter\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLaye
 C:\Users\peter\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\peter\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\peter\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\Google.Protobuf.dll
+C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\BouncyCastle.Crypto.dll
