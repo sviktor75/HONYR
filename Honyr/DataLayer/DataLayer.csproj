@@ -668,6 +668,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operations\ODecrypt.cs" />
     <Compile Include="Operations\OInitDataConnection.cs" />
     <Compile Include="Operations\OItem.cs" />
     <Compile Include="Operations\OLocation.cs" />

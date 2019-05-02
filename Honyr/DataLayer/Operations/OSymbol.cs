@@ -20,7 +20,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
@@ -43,7 +43,7 @@ namespace DataLayer.Operations
             List<object> retList = new List<object>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             /*MySqlDataAdapter da = new MySqlDataAdapter(cmd);

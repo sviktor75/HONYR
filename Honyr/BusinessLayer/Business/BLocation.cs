@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer.Operations;
+using System.IO;
 
 
 namespace BusinessLayer.Business
 {
     public class BLocation
     {
+
         OLocation location = new OLocation();    
 
         public int AddLocation(string locationId, string name, int locationTypeId, long parentId, int symbolId, string description)

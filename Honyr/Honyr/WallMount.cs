@@ -22,7 +22,7 @@ namespace PresentationLayer
         bool uj = false;
         bool modosit = false;
 
-        public void reset() { this.Controls.ClearControls(); }
+        public void resetForm() { this.Controls.ClearControls(); }
 
         public WallMount()
         {

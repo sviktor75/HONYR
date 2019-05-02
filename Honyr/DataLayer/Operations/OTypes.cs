@@ -49,7 +49,7 @@ namespace DataLayer.Operations
                     break;
             }
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -93,7 +93,7 @@ namespace DataLayer.Operations
                     break;
             }
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;

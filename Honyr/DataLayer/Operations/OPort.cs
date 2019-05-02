@@ -16,7 +16,7 @@ namespace DataLayer.Operations
             string query = "INSERT INTO portactive (itemid, portnumber, portid, portname, portconfig, portphysicaltype )" + " VALUES" + " ('" + itemId + "', '" + portnumber + "', '" + portID + "', '" + portName + "', '" + portConfig + "', '" + portPhysicalType + "');";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -27,7 +27,7 @@ namespace DataLayer.Operations
             string query = "INSERT INTO portpassive (itemid, portnumber, portid, portphysicaltype)" + " VALUES" + " ( '" + itemId + "', '" + portnumber + "', '" + portID + "', '" + portPhysicalType + "');";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -39,7 +39,7 @@ namespace DataLayer.Operations
             string query = "update portactive set itemid='" + itemId + "', portnumber='" + portnumber + "', portid='" + portID + "', portname='" + portName + "', portconfig='" + portConfig + "', portphysicaltype='" + portPhysicalType + "',  where id='" + id + "';";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -51,7 +51,7 @@ namespace DataLayer.Operations
             string query = "update portpassive set itemid='" + itemId + "', portnumber='" + portnumber + "', portid='" + portID + "', portphysicaltype='" + portPhysicalType + "'  where id='" + id + "';";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -64,7 +64,7 @@ namespace DataLayer.Operations
             string query = "delete from portactive where id='" + id + "';";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -75,7 +75,7 @@ namespace DataLayer.Operations
             string query = "delete from portpassive where id='" + id + "';";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -96,7 +96,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
@@ -116,7 +116,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
@@ -140,7 +140,7 @@ namespace DataLayer.Operations
         //    List<string> retList = new List<string>();
 
         //    conn.OpenConnection();
-        //    MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+        //    MySqlCommand cmd = new MySqlCommand(query, conn.connection);
         //    MySqlDataReader dataReader = cmd.ExecuteReader();
 
 

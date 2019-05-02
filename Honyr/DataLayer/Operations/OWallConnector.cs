@@ -16,7 +16,7 @@ namespace DataLayer.Operations
             string query = "INSERT INTO wallconnector (connectorid, name, type, property, locationid, symbolid, description)" + " VALUES" + " ('" + connectorId + "','" + name + "', '" + connectorType + "', '" + connectorProperty + "', '" + locationId + "', '" + symbolId + "', '" + description + "');";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -28,7 +28,7 @@ namespace DataLayer.Operations
             string query = "update wallconnector set connectorId='" + connectorID + "', name='" + name + "', type='" + connectorType + "', property='" + connectorProperty + "', locationid='" + locationId + "', symbolid='" + symbolId + "', description='" + description + "' where id='" + id + "';";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -39,7 +39,7 @@ namespace DataLayer.Operations
             string query = "delete from wallconnector where id='" + id + "';";
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -73,7 +73,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
 

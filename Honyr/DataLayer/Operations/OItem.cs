@@ -14,7 +14,7 @@ namespace DataLayer.Operations
             string query = "INSERT INTO item (deviceid, devicename, locationId, symbolid, description, active)" + " VALUES" + " ('"+ deviceID + "', '" + deviceName + "','" + locationID + "','" + symbolID + "','" + description + "'," + active + ");";
             MessageBox.Show(query);
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -25,7 +25,7 @@ namespace DataLayer.Operations
             string query = "update item set deviceid='" + deviceID + "', devicename='" + deviceName + "', locationid='" + locationID + "', symbolid='" + symbolID + "', description='" + description + "' where id='" + id + "';";
             MessageBox.Show(query);
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -35,7 +35,7 @@ namespace DataLayer.Operations
         {
             string query = "delete from item where id='" + id + "';";
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             int effectedRows = cmd.ExecuteNonQuery();
             conn.CloseConnection();
             return effectedRows;
@@ -48,7 +48,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
@@ -72,7 +72,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
@@ -96,7 +96,7 @@ namespace DataLayer.Operations
             List<string> retList = new List<string>();
 
             conn.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, conn.conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())

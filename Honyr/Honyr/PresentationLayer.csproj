@@ -38,8 +38,15 @@
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
-    <Compile Include="CommonControls.cs" />
-    <Compile Include="FormClear.cs" />
+    <Compile Include="DBConnectionSettings\DBConnectionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBConnectionSettings\DBConnectionSettings.Designer.cs">
+      <DependentUpon>DBConnectionSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CommonControls.cs" />
+    <Compile Include="Helpers\Encryption.cs" />
+    <Compile Include="Helpers\FormClear.cs" />
     <Compile Include="LocationCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     <Compile Include="default.Designer.cs">
       <DependentUpon>default.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DBConnectionSettings\DBConnectionSettings.resx">
+      <DependentUpon>DBConnectionSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocationCtrl.resx">
       <DependentUpon>LocationCtrl.cs</DependentUpon>
     </EmbeddedResource>
