@@ -22,7 +22,7 @@ namespace PresentationLayer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dbNotSetted();
         }
 
         private void portToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,6 +128,7 @@ namespace PresentationLayer
             if (!File.Exists(DBServerConfigFile))
             {
                 MessageBox.Show("Az adatbázis szerver még nem lett beállítva.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connectionSettings.ShowDialog();
             }
         }
     }
