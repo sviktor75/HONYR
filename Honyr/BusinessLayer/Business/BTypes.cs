@@ -16,9 +16,24 @@ namespace BusinessLayer.Business
             return typesOP.AddType(type, name);
         }
 
-        public int ModType(string type, string name)
+        public int ModType(string type, int id, string name)
         {
-            return typesOP.ModType(type, name);
+            return typesOP.ModType(type, id, name);
+        }
+
+        public int DelType(string type, int id)
+        {
+            return typesOP.DelType(type, id);
+        }
+
+        public List<String> GetTypeByName(string type, string name)
+        {
+            return typesOP.GetTypeByName(type, name);
+        }
+
+        public List<String> GetTypeById(string type, int id)
+        {
+            return typesOP.GetTypeById(type, id);
         }
 
     }

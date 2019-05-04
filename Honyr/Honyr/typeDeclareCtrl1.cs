@@ -18,7 +18,7 @@ namespace PresentationLayer
 
         public void resetForm() { this.Controls.ClearControls(); }
 
-        bool vissza = false;
+        bool vissza = true;
         bool uj = false;
         bool modosit = false;
 
@@ -49,6 +49,8 @@ namespace PresentationLayer
             comboGeneral.Enabled = true;
 
             txtTipus.Visible = false;
+
+            kereses(false);
         }
 
         private void btnUj_Click(object sender, EventArgs e)
@@ -69,6 +71,7 @@ namespace PresentationLayer
 
             vissza = false;
             uj = true;
+
         }
 
         private void btnMegse_Click(object sender, EventArgs e)
@@ -86,13 +89,15 @@ namespace PresentationLayer
 
             if (vissza)
             {
-                SendToBack();
                 //resetForm();
+                SendToBack();
             }
 
             vissza = true;
             uj = false;
             modosit = false;
+
+            kereses(false);
         }
 
         private void btnMentes_Click(object sender, EventArgs e)
@@ -102,7 +107,7 @@ namespace PresentationLayer
                 int effectedRows = -1;
                 if (uj)
                 {
-                    switch (comboGeneral.SelectedValue)
+                    switch (comboGeneral.Text)
                     {
                         case "helyiség":
                             effectedRows = types.AddType("helyiség", txtTipus.Text);
@@ -150,38 +155,38 @@ namespace PresentationLayer
 
                 if (modosit)
                 {
-                    switch (comboGeneral.SelectedValue)
+                    switch (comboGeneral.Text)
                     {
                         case "helyiség":
-                            effectedRows = types.ModType("helyiség", txtTipus.Text);
+                            effectedRows = types.ModType("helyiség", int.Parse(txtIndex.Text), txtTipus.Text);
                             break;
 
                         case "szimbólum":
-                            effectedRows = types.ModType("szimbólum", txtTipus.Text);
+                            effectedRows = types.ModType("szimbólum", int.Parse(txtIndex.Text), txtTipus.Text);
                             break;
 
                         case "fali csatlakozó":
-                            effectedRows = types.ModType("fali csatlakozó", txtTipus.Text);
+                            effectedRows = types.ModType("fali csatlakozó", int.Parse(txtIndex.Text), txtTipus.Text);
                             break;
                         /*
                                         case "aktív eszköz":
-                                            effectedRows = types.ModType("aktív eszköz",txtTipus.Text);
+                                            effectedRows = types.ModType("aktív eszköz", int.Parse(txtIndex.Text), txtTipus.Text);
                                             break;
 
                                         case "passzív eszköz":
-                                            effectedRows = types.ModType("passzív eszköz",txtTipus.Text);
+                                            effectedRows = types.ModType("passzív eszköz", int.Parse(txtIndex.Text), txtTipus.Text);
                                             break;
 
                                         case "aktív port":
-                                            effectedRows = types.ModType("aktív port",txtTipus.Text);
+                                            effectedRows = types.ModType("aktív port", int.Parse(txtIndex.Text), txtTipus.Text);
                                             break;
 
                                         case "passzív port":
-                                            effectedRows = types.ModType("passzív port",txtTipus.Text);
+                                            effectedRows = types.ModType("passzív port", int.Parse(txtIndex.Text), txtTipus.Text);
                                             break;
                         */
                         case "port":
-                            effectedRows = types.ModType("port", txtTipus.Text);
+                            effectedRows = types.ModType("port", int.Parse(txtIndex.Text), txtTipus.Text);
                             break;
                     }
 
@@ -221,21 +226,122 @@ namespace PresentationLayer
             comboGeneral.Enabled = false;
             txtTipus.Visible = true;
             txtTipus.Enabled = false;
+
+            kereses(true);
         }
 
         private void btnModosit_Click(object sender, EventArgs e)
         {
+            btnUj.Enabled = false;
+            btnMentes.Enabled = true;
+            btnKeres.Enabled = false;
+            btnModosit.Enabled = false;
+            btnTorol.Enabled = false;
+            btnMegse.Enabled = true;
+
             vissza = false;
             modosit = true;
 
             txtTipus.Enabled = true;
             comboGeneral.Enabled = false;
+
+            kereses(false);
         }
 
         private void btnTorol_Click(object sender, EventArgs e)
         {
+            if (txtTipus.Text != "")
+            {
+                int effectedRows = -1;
+                switch (comboGeneral.Text)
+                {
+                    case "helyiség":
+                        effectedRows = types.DelType("helyiség", int.Parse(txtIndex.Text));
+                        break;
+
+                    case "szimbólum":
+                        effectedRows = types.DelType("szimbólum", int.Parse(txtIndex.Text));
+                        break;
+
+                    case "fali csatlakozó":
+                        effectedRows = types.DelType("fali csatlakozó", int.Parse(txtIndex.Text));
+                        break;
+                    /*
+                                    case "aktív eszköz":
+                                        effectedRows = types.DelType("aktív eszköz", int.Parse(txtIndex.Text));
+                                        break;
+
+                                    case "passzív eszköz":
+                                        effectedRows = types.DelType("passzív eszköz", int.Parse(txtIndex.Text));
+                                        break;
+
+                                    case "aktív port":
+                                        effectedRows = types.DelType("aktív port", int.Parse(txtIndex.Text));
+                                        break;
+
+                                    case "passzív port":
+                                        effectedRows = types.DelType("passzív port", int.Parse(txtIndex.Text));
+                                        break;
+                    */
+                    case "port":
+                        effectedRows = types.DelType("port", int.Parse(txtIndex.Text));
+                        break;
+                }
+
+                if (effectedRows >= 0)
+                {
+                    MessageBox.Show("Típus sikeresen törölve.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("A típust nem sikerült törölni!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("A típus neve nem lehet üres!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             //this.Controls.ClearControls();
             btnMegse.PerformClick();
         }
+
+        private void txtKeresNev_TextChanged(object sender, EventArgs e)
+        {
+            if (types.GetTypeById(comboGeneral.Text, 1).Count > 0)
+            {
+                List<string> sor = types.GetTypeByName(comboGeneral.Text.ToString(), txtKeresNev.Text.ToString() + "%");
+
+                try
+                {
+                    txtIndex.Text = sor[0].ToString();
+                    txtTipus.Text = sor[1].ToString();
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Üres a(z) " + comboGeneral.Text + " tábla, nincs mit keresni benne!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void kereses(bool active)
+        {
+            if (active)
+            {
+                lblKeresesNevSzerint.Visible = true;
+                txtKeresNev.Visible = true;
+                txtKeresNev.Focus();
+            }
+            else
+            {
+                lblKeresesNevSzerint.Visible = false;
+                txtKeresNev.Visible = false;
+            }
+        }
+
     }
 }

@@ -38,6 +38,9 @@
             this.comboGeneral = new System.Windows.Forms.ComboBox();
             this.lblTipus = new System.Windows.Forms.Label();
             this.txtTipus = new System.Windows.Forms.TextBox();
+            this.txtKeresNev = new System.Windows.Forms.TextBox();
+            this.txtIndex = new System.Windows.Forms.TextBox();
+            this.lblKeresesNevSzerint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTipusDeklaralas
@@ -134,10 +137,39 @@
             this.txtTipus.Size = new System.Drawing.Size(215, 20);
             this.txtTipus.TabIndex = 27;
             // 
+            // txtKeresNev
+            // 
+            this.txtKeresNev.Location = new System.Drawing.Point(433, 403);
+            this.txtKeresNev.Name = "txtKeresNev";
+            this.txtKeresNev.Size = new System.Drawing.Size(215, 20);
+            this.txtKeresNev.TabIndex = 73;
+            this.txtKeresNev.Visible = false;
+            this.txtKeresNev.TextChanged += new System.EventHandler(this.txtKeresNev_TextChanged);
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(402, 113);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(119, 20);
+            this.txtIndex.TabIndex = 72;
+            this.txtIndex.Visible = false;
+            // 
+            // lblKeresesNevSzerint
+            // 
+            this.lblKeresesNevSzerint.AutoSize = true;
+            this.lblKeresesNevSzerint.Location = new System.Drawing.Point(339, 406);
+            this.lblKeresesNevSzerint.Name = "lblKeresesNevSzerint";
+            this.lblKeresesNevSzerint.Size = new System.Drawing.Size(51, 13);
+            this.lblKeresesNevSzerint.TabIndex = 74;
+            this.lblKeresesNevSzerint.Text = "Keresés :";
+            // 
             // typeDeclareCtrl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblKeresesNevSzerint);
+            this.Controls.Add(this.txtKeresNev);
+            this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.txtTipus);
             this.Controls.Add(this.lblTipus);
             this.Controls.Add(this.comboGeneral);
@@ -168,5 +200,8 @@
         private System.Windows.Forms.ComboBox comboGeneral;
         private System.Windows.Forms.Label lblTipus;
         private System.Windows.Forms.TextBox txtTipus;
+        private System.Windows.Forms.TextBox txtKeresNev;
+        private System.Windows.Forms.TextBox txtIndex;
+        private System.Windows.Forms.Label lblKeresesNevSzerint;
     }
 }

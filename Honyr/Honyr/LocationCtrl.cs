@@ -147,7 +147,6 @@ namespace PresentationLayer
             comboSymbol.DataSource = symbol.GetSymbols(1);
             kepBetoltes();
 
-
             vissza = false;
             uj = true;
         }
@@ -224,7 +223,6 @@ namespace PresentationLayer
             {
 
             }
-
         }
 
         private void btnTorol_Click(object sender, EventArgs e)
@@ -287,6 +285,11 @@ namespace PresentationLayer
         }
 
         private void lblKeresAzonositoSzerint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIndex_TextChanged(object sender, EventArgs e)
         {
 
         }
