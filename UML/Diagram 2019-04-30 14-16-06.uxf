@@ -1,0 +1,157 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>&lt;pace for dia0..nrItemIm notes</help_text><element><id>UMLClass</id><coordinates><x>430</x><y>470</y><w>180</w><h>270</h></coordinates><panel_attributes>&lt;Location&gt;
+--
+-Id: long
+-LocationId: string
+-Name: sting
+-LocationTypeId: int
+-ParentId: long
+-SymbolId: int
+-Description: string
+--
++AddLocation()
++ModLocation()
++DelLocation()
++GetLocations()
++GetLocationByName()
++GetLocationIdById()
++GetIdByLocationId()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>630</y><w>180</w><h>260</h></coordinates><panel_attributes>&lt;WallConnector&gt;
+--
+-Id: long
+-ConnectorId: string
+-Name: sting
+-Type: int
+-Property: string
+-LocationId: long
+-SymbolId: int
+-Description: string
+--
++AddConnector()
++ModConnector()
++DelConnector()
++GetConnectors()
++GetConnectorById()
++GetConnectorByConnectorId()
++GetConnectorByName</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>670</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>50</y><w>150</w><h>190</h></coordinates><panel_attributes>&lt;PortPassive&gt;
+--
+-Id: long
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-PortPhysicalType: int
+--
++AddPort()
++DelPort()
++ModPort()
++GetPortsByItemId()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>294</y><w>50</w><h>190</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>124</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>410</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;Symbol&gt;
+--
+-Id: int
+-Name: string
+-Image: image
+-SymbolType: int
+--
++GetSymbols()
++GetSymbolById()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>504</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>554</y><w>50</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>50</y><w>180</w><h>260</h></coordinates><panel_attributes>&lt;Item&gt;
+--
+-Id: long
+-DeviceId: string
+-DeviceName: string
+-LocationId: long
+-SymbolId: int
+-Description: string
+-Active: bool
+--
++AddItem()
++DelItem()
++ModItem()
++GetById()
++GetByDeviceId()
++GetByName()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>50</y><w>150</w><h>250</h></coordinates><panel_attributes>&lt;PortActive&gt;
+--
+-Id: long
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-IpAddress: sting
+-MacAddress: string
+-PortName: sting
+-PortConfig: string
+-PortPhysicalType: string
+--
++AddPort()
++DelPort()
++ModPort()
++GetPortsByItemId()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>304</y><w>240</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;10;10;60;210;60;210;100</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>124</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>470</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;LocationType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>474</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>50</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;PortPhysicalType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>114</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>410</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;SymbolType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>444</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>630</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;ConnectorType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>764</y><w>180</w><h>100</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;70;150;70;150;10</additional_attributes></element></diagram>

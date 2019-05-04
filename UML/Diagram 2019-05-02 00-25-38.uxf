@@ -1,0 +1,160 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>&lt;pace for dia0..nrItemIm notes</help_text><element><id>UMLClass</id><coordinates><x>450</x><y>530</y><w>180</w><h>270</h></coordinates><panel_attributes>&lt;Location&gt;
+--
+-Id: long
+-LocationId: string
+-Name: sting
+-LocationTypeId: int
+-ParentId: long
+-SymbolId: int
+-Description: string
+--
++AddLocation()
++ModLocation()
++DelLocation()
++GetLocations()
++GetLocationByName()
++GetLocationIdById()
++GetIdByLocationId()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>690</y><w>180</w><h>260</h></coordinates><panel_attributes>&lt;WallConnector&gt;
+--
+-Id: long
+-ConnectorId: string
+-Name: sting
+-Type: int
+-Property: string
+-LocationId: long
+-SymbolId: int
+-Description: string
+--
++AddConnector()
++ModConnector()
++DelConnector()
++GetConnectors()
++GetConnectorById()
++GetConnectorByConnectorId()
++GetConnectorByName</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>730</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>10</y><w>150</w><h>190</h></coordinates><panel_attributes>&lt;PortPassive&gt;
+--
+-Id: long
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-PortPhysicalType: int
+--
++AddPort()
++DelPort()
++ModPort()
++GetPortsByItemId()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>334</y><w>50</w><h>220</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>10;200;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>124</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>470</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;Symbol&gt;
+--
+-Id: int
+-Name: string
+-Image: image
+-SymbolType: int
+--
++GetSymbols()
++GetSymbolById()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>564</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>614</y><w>50</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>90</y><w>180</w><h>260</h></coordinates><panel_attributes>&lt;Item&gt;
+--
+-Id: long
+-DeviceId: string
+-DeviceName: string
+-LocationId: long
+-SymbolId: int
+-Description: string
+-Active: bool
+--
++AddItem()
++DelItem()
++ModItem()
++GetById()
++GetByDeviceId()
++GetByName()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>210</y><w>150</w><h>250</h></coordinates><panel_attributes>&lt;PortActive&gt;
+--
+-Id: long
+-ItemId: long
+-PortNumber: int
+-PortId: string
+-IpAddress: sting
+-MacAddress: string
+-PortName: sting
+-PortConfig: string
+-PortPhysicalType: int
+--
++AddPort()
++DelPort()
++ModPort()
++GetPortsByItemId()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>274</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>530</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;LocationType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>534</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>150</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;PortPhysicalType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>64</y><w>120</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;10;50;10;50;110;100;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>470</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;SymbolType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>504</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>690</y><w>150</w><h>150</h></coordinates><panel_attributes>&lt;ConnectorType&gt;
+--
+-Id: int
+-Name: string
+--
++GetTypes()
++GetTypeById()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>824</y><w>180</w><h>100</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;70;150;70;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>234</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;60;50;60;50;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>334</y><w>190</w><h>180</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes><additional_attributes>10;10;10;150;170;150</additional_attributes></element></diagram>
