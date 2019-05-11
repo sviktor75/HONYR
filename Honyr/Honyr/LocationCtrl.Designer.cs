@@ -244,6 +244,7 @@
             this.txtIndex.Size = new System.Drawing.Size(119, 20);
             this.txtIndex.TabIndex = 24;
             this.txtIndex.Visible = false;
+            this.txtIndex.TextChanged += new System.EventHandler(this.txtIndex_TextChanged);
             // 
             // picSymbol
             // 
