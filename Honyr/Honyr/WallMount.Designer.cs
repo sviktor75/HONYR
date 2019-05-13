@@ -55,6 +55,7 @@
             this.txtKeresAzonosito = new System.Windows.Forms.TextBox();
             this.lblKeresesNevSzerint = new System.Windows.Forms.Label();
             this.txtKeresNev = new System.Windows.Forms.TextBox();
+            this.btnMentesMint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,7 +256,7 @@
             // picSymbol
             // 
             this.picSymbol.Location = new System.Drawing.Point(555, 226);
-            this.picSymbol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picSymbol.Margin = new System.Windows.Forms.Padding(2);
             this.picSymbol.Name = "picSymbol";
             this.picSymbol.Size = new System.Drawing.Size(85, 70);
             this.picSymbol.TabIndex = 33;
@@ -304,10 +305,20 @@
             this.txtKeresNev.TabIndex = 75;
             this.txtKeresNev.TextChanged += new System.EventHandler(this.txtKeresNev_TextChanged);
             // 
+            // btnMentesMint
+            // 
+            this.btnMentesMint.Location = new System.Drawing.Point(242, 496);
+            this.btnMentesMint.Name = "btnMentesMint";
+            this.btnMentesMint.Size = new System.Drawing.Size(97, 27);
+            this.btnMentesMint.TabIndex = 79;
+            this.btnMentesMint.Text = "Mentés mint";
+            this.btnMentesMint.UseVisualStyleBackColor = true;
+            // 
             // WallMount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMentesMint);
             this.Controls.Add(this.lblKeresAzonositoSzerint);
             this.Controls.Add(this.txtKeresAzonosito);
             this.Controls.Add(this.lblKeresesNevSzerint);
@@ -373,5 +384,6 @@
         private System.Windows.Forms.TextBox txtKeresAzonosito;
         private System.Windows.Forms.Label lblKeresesNevSzerint;
         private System.Windows.Forms.TextBox txtKeresNev;
+        private System.Windows.Forms.Button btnMentesMint;
     }
 }

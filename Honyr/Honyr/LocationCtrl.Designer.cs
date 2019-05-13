@@ -53,6 +53,7 @@
             this.txtKeresAzonosito = new System.Windows.Forms.TextBox();
             this.lblKeresesNevSzerint = new System.Windows.Forms.Label();
             this.txtKeresNev = new System.Windows.Forms.TextBox();
+            this.btnMentesMint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,7 +180,7 @@
             // 
             // btnUj
             // 
-            this.btnUj.Location = new System.Drawing.Point(135, 446);
+            this.btnUj.Location = new System.Drawing.Point(135, 460);
             this.btnUj.Name = "btnUj";
             this.btnUj.Size = new System.Drawing.Size(97, 27);
             this.btnUj.TabIndex = 17;
@@ -189,7 +190,7 @@
             // 
             // btnKeres
             // 
-            this.btnKeres.Location = new System.Drawing.Point(349, 446);
+            this.btnKeres.Location = new System.Drawing.Point(349, 460);
             this.btnKeres.Name = "btnKeres";
             this.btnKeres.Size = new System.Drawing.Size(97, 27);
             this.btnKeres.TabIndex = 18;
@@ -199,7 +200,7 @@
             // 
             // btnMentes
             // 
-            this.btnMentes.Location = new System.Drawing.Point(242, 446);
+            this.btnMentes.Location = new System.Drawing.Point(242, 460);
             this.btnMentes.Name = "btnMentes";
             this.btnMentes.Size = new System.Drawing.Size(97, 27);
             this.btnMentes.TabIndex = 19;
@@ -209,7 +210,7 @@
             // 
             // btnTorol
             // 
-            this.btnTorol.Location = new System.Drawing.Point(563, 446);
+            this.btnTorol.Location = new System.Drawing.Point(563, 460);
             this.btnTorol.Name = "btnTorol";
             this.btnTorol.Size = new System.Drawing.Size(97, 27);
             this.btnTorol.TabIndex = 20;
@@ -219,7 +220,7 @@
             // 
             // btnModosit
             // 
-            this.btnModosit.Location = new System.Drawing.Point(456, 446);
+            this.btnModosit.Location = new System.Drawing.Point(456, 460);
             this.btnModosit.Name = "btnModosit";
             this.btnModosit.Size = new System.Drawing.Size(97, 27);
             this.btnModosit.TabIndex = 21;
@@ -229,7 +230,7 @@
             // 
             // btnMegse
             // 
-            this.btnMegse.Location = new System.Drawing.Point(670, 446);
+            this.btnMegse.Location = new System.Drawing.Point(670, 460);
             this.btnMegse.Name = "btnMegse";
             this.btnMegse.Size = new System.Drawing.Size(97, 27);
             this.btnMegse.TabIndex = 22;
@@ -293,10 +294,20 @@
             this.txtKeresNev.TabIndex = 71;
             this.txtKeresNev.TextChanged += new System.EventHandler(this.txtKeresNev_TextChanged);
             // 
+            // btnMentesMint
+            // 
+            this.btnMentesMint.Location = new System.Drawing.Point(242, 493);
+            this.btnMentesMint.Name = "btnMentesMint";
+            this.btnMentesMint.Size = new System.Drawing.Size(97, 27);
+            this.btnMentesMint.TabIndex = 76;
+            this.btnMentesMint.Text = "Mentés mint";
+            this.btnMentesMint.UseVisualStyleBackColor = true;
+            // 
             // addLocationCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMentesMint);
             this.Controls.Add(this.lblKeresAzonositoSzerint);
             this.Controls.Add(this.txtKeresAzonosito);
             this.Controls.Add(this.lblKeresesNevSzerint);
@@ -358,5 +369,6 @@
         private System.Windows.Forms.TextBox txtKeresAzonosito;
         private System.Windows.Forms.Label lblKeresesNevSzerint;
         private System.Windows.Forms.TextBox txtKeresNev;
+        private System.Windows.Forms.Button btnMentesMint;
     }
 }

@@ -41,6 +41,7 @@
             this.txtKeresNev = new System.Windows.Forms.TextBox();
             this.txtIndex = new System.Windows.Forms.TextBox();
             this.lblKeresesNevSzerint = new System.Windows.Forms.Label();
+            this.btnMentesMint = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTipusDeklaralas
@@ -163,10 +164,20 @@
             this.lblKeresesNevSzerint.TabIndex = 74;
             this.lblKeresesNevSzerint.Text = "Keresés :";
             // 
+            // btnMentesMint
+            // 
+            this.btnMentesMint.Location = new System.Drawing.Point(230, 514);
+            this.btnMentesMint.Name = "btnMentesMint";
+            this.btnMentesMint.Size = new System.Drawing.Size(97, 27);
+            this.btnMentesMint.TabIndex = 75;
+            this.btnMentesMint.Text = "Mentés mint";
+            this.btnMentesMint.UseVisualStyleBackColor = true;
+            // 
             // typeDeclareCtrl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMentesMint);
             this.Controls.Add(this.lblKeresesNevSzerint);
             this.Controls.Add(this.txtKeresNev);
             this.Controls.Add(this.txtIndex);
@@ -203,5 +214,6 @@
         private System.Windows.Forms.TextBox txtKeresNev;
         private System.Windows.Forms.TextBox txtIndex;
         private System.Windows.Forms.Label lblKeresesNevSzerint;
+        private System.Windows.Forms.Button btnMentesMint;
     }
 }

@@ -59,6 +59,7 @@
             this.lblKeresesNevSzerint = new System.Windows.Forms.Label();
             this.lblKeresAzonositoSzerint = new System.Windows.Forms.Label();
             this.txtKeresAzonosito = new System.Windows.Forms.TextBox();
+            this.btnMentesMint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picSymbol)).BeginInit();
             this.SuspendLayout();
             // 
@@ -216,7 +217,7 @@
             // 
             // btnUj
             // 
-            this.btnUj.Location = new System.Drawing.Point(135, 485);
+            this.btnUj.Location = new System.Drawing.Point(135, 481);
             this.btnUj.Name = "btnUj";
             this.btnUj.Size = new System.Drawing.Size(97, 27);
             this.btnUj.TabIndex = 57;
@@ -226,7 +227,7 @@
             // 
             // btnKeres
             // 
-            this.btnKeres.Location = new System.Drawing.Point(349, 485);
+            this.btnKeres.Location = new System.Drawing.Point(349, 481);
             this.btnKeres.Name = "btnKeres";
             this.btnKeres.Size = new System.Drawing.Size(97, 27);
             this.btnKeres.TabIndex = 58;
@@ -236,7 +237,7 @@
             // 
             // btnMentes
             // 
-            this.btnMentes.Location = new System.Drawing.Point(242, 485);
+            this.btnMentes.Location = new System.Drawing.Point(242, 481);
             this.btnMentes.Name = "btnMentes";
             this.btnMentes.Size = new System.Drawing.Size(97, 27);
             this.btnMentes.TabIndex = 59;
@@ -246,7 +247,7 @@
             // 
             // btnTorol
             // 
-            this.btnTorol.Location = new System.Drawing.Point(563, 485);
+            this.btnTorol.Location = new System.Drawing.Point(563, 481);
             this.btnTorol.Name = "btnTorol";
             this.btnTorol.Size = new System.Drawing.Size(97, 27);
             this.btnTorol.TabIndex = 60;
@@ -256,7 +257,7 @@
             // 
             // btnModosit
             // 
-            this.btnModosit.Location = new System.Drawing.Point(456, 485);
+            this.btnModosit.Location = new System.Drawing.Point(456, 481);
             this.btnModosit.Name = "btnModosit";
             this.btnModosit.Size = new System.Drawing.Size(97, 27);
             this.btnModosit.TabIndex = 61;
@@ -266,7 +267,7 @@
             // 
             // btnMegse
             // 
-            this.btnMegse.Location = new System.Drawing.Point(670, 485);
+            this.btnMegse.Location = new System.Drawing.Point(670, 481);
             this.btnMegse.Name = "btnMegse";
             this.btnMegse.Size = new System.Drawing.Size(97, 27);
             this.btnMegse.TabIndex = 62;
@@ -344,10 +345,20 @@
             this.txtKeresAzonosito.TabIndex = 69;
             this.txtKeresAzonosito.TextChanged += new System.EventHandler(this.txtKeresAzonosito_TextChanged);
             // 
+            // btnMentesMint
+            // 
+            this.btnMentesMint.Location = new System.Drawing.Point(242, 514);
+            this.btnMentesMint.Name = "btnMentesMint";
+            this.btnMentesMint.Size = new System.Drawing.Size(97, 27);
+            this.btnMentesMint.TabIndex = 76;
+            this.btnMentesMint.Text = "Mentés mint";
+            this.btnMentesMint.UseVisualStyleBackColor = true;
+            // 
             // ItemPassiveCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnMentesMint);
             this.Controls.Add(this.lblKeresAzonositoSzerint);
             this.Controls.Add(this.txtKeresAzonosito);
             this.Controls.Add(this.lblKeresesNevSzerint);
@@ -421,5 +432,6 @@
         private System.Windows.Forms.Label lblKeresesNevSzerint;
         private System.Windows.Forms.Label lblKeresAzonositoSzerint;
         private System.Windows.Forms.TextBox txtKeresAzonosito;
+        private System.Windows.Forms.Button btnMentesMint;
     }
 }
