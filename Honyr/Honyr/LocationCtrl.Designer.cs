@@ -148,6 +148,7 @@
             this.comboSymbol.Name = "comboSymbol";
             this.comboSymbol.Size = new System.Drawing.Size(169, 21);
             this.comboSymbol.TabIndex = 4;
+            this.comboSymbol.SelectedIndexChanged += new System.EventHandler(this.comboSymbol_SelectedIndexChanged);
             this.comboSymbol.SelectionChangeCommitted += new System.EventHandler(this.comboSymbol_SelectionChangeCommitted);
             // 
             // comboParent

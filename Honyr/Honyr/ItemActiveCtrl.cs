@@ -37,6 +37,7 @@ namespace PresentationLayer
 
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -68,6 +69,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -111,7 +113,7 @@ namespace PresentationLayer
         {
             if (uj)
             {
-                int effectedRows = item.AddItem(txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text, activeItem);
+                int effectedRows = item.AddItem(txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text, activeItem);
 
                 if (effectedRows >= 0)
                 {
@@ -127,7 +129,7 @@ namespace PresentationLayer
 
             if (modosit)
             {
-                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -156,6 +158,7 @@ namespace PresentationLayer
 
                     btnUj.Enabled = false;
                     btnMentes.Enabled = true;
+                    btnMentesMint.Enabled = false;
                     btnKeres.Enabled = false;
                     btnModosit.Enabled = false;
                     btnTorol.Enabled = false;
@@ -179,7 +182,11 @@ namespace PresentationLayer
                     btnPortTorol.Enabled = true;
 
                     comboParent.DataSource = location.GetLocations();
-                    comboSymbol.DataSource = symbol.GetSymbols(4);
+
+                    comboSymbol.DataSource = symbol.GetSymbolsByType(4);
+                    comboSymbol.DisplayMember = "name";
+                    comboSymbol.ValueMember = "id";
+
                     kepBetoltes();
 
                     kereses(false);
@@ -204,6 +211,7 @@ namespace PresentationLayer
             {
                 btnUj.Enabled = false;
                 btnMentes.Enabled = false;
+                btnMentesMint.Enabled = false;
                 btnKeres.Enabled = true;
                 btnModosit.Enabled = true;
                 btnTorol.Enabled = true;
@@ -242,6 +250,7 @@ namespace PresentationLayer
             {
                 btnUj.Enabled = false;
                 btnMentes.Enabled = true;
+                btnMentesMint.Enabled = true;
                 btnKeres.Enabled = false;
                 btnModosit.Enabled = false;
                 btnTorol.Enabled = false;
@@ -262,7 +271,11 @@ namespace PresentationLayer
                 comboPortTipus.Enabled = true;
 
                 comboParent.DataSource = location.GetLocations();
-                comboSymbol.DataSource = symbol.GetSymbols(4);
+
+                comboSymbol.DataSource = symbol.GetSymbolsByType(4);
+                comboSymbol.DisplayMember = "name";
+                comboSymbol.ValueMember = "id";
+
 
                 btnPortHozzaad.Enabled = true;
                 btnPortTorol.Enabled = true;
@@ -331,7 +344,7 @@ namespace PresentationLayer
 
         private void kepBetoltes()
         {
-            List<object> kep = symbol.GetSymbolById(comboSymbol.SelectedIndex + 1);
+            List<object> kep = symbol.GetSymbolById(int.Parse(comboSymbol.SelectedValue.ToString()));
             comboSymbol.Text = kep[0].ToString();
             MemoryStream ms = new MemoryStream((byte[])kep[1]);
             picSymbol.Image = Image.FromStream(ms);
@@ -392,6 +405,11 @@ namespace PresentationLayer
         }
 
         private void btnPortHozzaad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
         {
 
         }

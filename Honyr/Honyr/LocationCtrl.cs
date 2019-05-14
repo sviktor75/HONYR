@@ -17,6 +17,7 @@ namespace PresentationLayer
     {
         BLocation location = new BLocation();
         BSymbol symbol = new BSymbol();
+        BCommonBase cbase = new BCommonBase();
 
         bool vissza = false;
         bool uj = false;
@@ -34,6 +35,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -68,6 +70,7 @@ namespace PresentationLayer
 
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -90,7 +93,7 @@ namespace PresentationLayer
             if (uj)
             {
 
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -106,7 +109,7 @@ namespace PresentationLayer
 
             if (modosit)
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), comboSymbol.SelectedIndex + 1, txtDescription.Text);
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -131,6 +134,7 @@ namespace PresentationLayer
 
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = false;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -144,7 +148,13 @@ namespace PresentationLayer
             txtDescription.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols(1);
+
+            comboSymbol.DataSource = symbol.GetSymbolsByType(1);
+            comboSymbol.DisplayMember = "name";
+            comboSymbol.ValueMember = "id";
+
+            //MessageBox.Show(comboSymbol.SelectedValue.ToString());
+
             kepBetoltes();
 
             vissza = false;
@@ -155,6 +165,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = false;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = true;
             btnTorol.Enabled = true;
@@ -176,6 +187,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
+            btnMentesMint.Enabled = true;
             btnKeres.Enabled = false;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -189,7 +201,11 @@ namespace PresentationLayer
             txtDescription.Enabled = true;
 
             comboParent.DataSource = location.GetLocations();
-            comboSymbol.DataSource = symbol.GetSymbols(1);
+
+            comboSymbol.DataSource = symbol.GetSymbolsByType(1);
+            comboSymbol.DisplayMember = "name";
+            comboSymbol.ValueMember = "id";
+
 
             vissza = false;
 
@@ -212,11 +228,11 @@ namespace PresentationLayer
                 comboParent.Text = location.GetLocationidByID( int.Parse(sor[4])).ToString();
 
                 int.TryParse(sor[5], out int sid);
-
                 List<object> kep = symbol.GetSymbolById(sid);
                 comboSymbol.Text = kep[0].ToString();
                 MemoryStream ms = new MemoryStream((byte[])kep[1]);
                 picSymbol.Image = Image.FromStream(ms);
+
                 txtDescription.Text = sor[6].ToString();
             }
             catch (Exception)
@@ -244,7 +260,7 @@ namespace PresentationLayer
 
         private void kepBetoltes()
         {
-        List<object> kep = symbol.GetSymbolById(comboSymbol.SelectedIndex + 1);
+        List<object> kep = symbol.GetSymbolById(int.Parse(comboSymbol.SelectedValue.ToString()));
         comboSymbol.Text = kep[0].ToString();
         MemoryStream ms = new MemoryStream((byte[])kep[1]);
         picSymbol.Image = Image.FromStream(ms);
@@ -276,7 +292,28 @@ namespace PresentationLayer
 
         private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
         {
+            List<string> sor = cbase.BaseSearch("location", "locationid", txtKeresAzonosito.Text.ToString() + "%");
 
+            try
+            {
+                txtIndex.Text = sor[0].ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboTipus.Text = sor[3].ToString();
+                comboParent.Text = location.GetLocationidByID(int.Parse(sor[4])).ToString();
+
+                int.TryParse(sor[5], out int sid);
+                List<object> kep = symbol.GetSymbolById(sid);
+                comboSymbol.Text = kep[0].ToString();
+                MemoryStream ms = new MemoryStream((byte[])kep[1]);
+                picSymbol.Image = Image.FromStream(ms);
+
+                txtDescription.Text = sor[6].ToString();
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void lblKeresesNevSzerint_Click(object sender, EventArgs e)
@@ -290,6 +327,11 @@ namespace PresentationLayer
         }
 
         private void txtIndex_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboSymbol_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

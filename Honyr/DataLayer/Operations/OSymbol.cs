@@ -34,6 +34,22 @@ namespace DataLayer.Operations
         }
 
 
+        public DataTable GetSymbolsByType(int symboltypeid)
+        {
+            string query = "select name, id from symbol where symboltypeid like '" + symboltypeid + "';";
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            
+            conn.CloseConnection();
+
+            return dt;
+        }
+
 
         public List <object> GetSymbolById(int id)
         {

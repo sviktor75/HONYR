@@ -286,6 +286,7 @@
             this.txtKeresAzonosito.Name = "txtKeresAzonosito";
             this.txtKeresAzonosito.Size = new System.Drawing.Size(328, 20);
             this.txtKeresAzonosito.TabIndex = 77;
+            this.txtKeresAzonosito.TextChanged += new System.EventHandler(this.txtKeresAzonosito_TextChanged);
             // 
             // lblKeresesNevSzerint
             // 

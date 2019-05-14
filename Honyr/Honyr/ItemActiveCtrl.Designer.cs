@@ -391,6 +391,7 @@
             this.txtKeresAzonosito.Name = "txtKeresAzonosito";
             this.txtKeresAzonosito.Size = new System.Drawing.Size(328, 20);
             this.txtKeresAzonosito.TabIndex = 73;
+            this.txtKeresAzonosito.TextChanged += new System.EventHandler(this.txtKeresAzonosito_TextChanged);
             // 
             // lblKeresesNevSzerint
             // 
@@ -413,7 +414,7 @@
             // txtMAC
             // 
             this.txtMAC.Location = new System.Drawing.Point(711, 188);
-            this.txtMAC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMAC.Margin = new System.Windows.Forms.Padding(2);
             this.txtMAC.Mask = "&&-&&-&&-&&-&&-&&";
             this.txtMAC.Name = "txtMAC";
             this.txtMAC.Size = new System.Drawing.Size(168, 20);
@@ -422,7 +423,7 @@
             // txtIP
             // 
             this.txtIP.Location = new System.Drawing.Point(709, 157);
-            this.txtIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIP.Margin = new System.Windows.Forms.Padding(2);
             this.txtIP.Mask = "990.990.990.990";
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(168, 20);

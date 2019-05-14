@@ -41,6 +41,7 @@ namespace PresentationLayer
 
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -61,6 +62,7 @@ namespace PresentationLayer
 
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = false;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -78,6 +80,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = true;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
@@ -216,6 +219,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = false;
             btnMentes.Enabled = false;
+            btnMentesMint.Enabled = false;
             btnKeres.Enabled = true;
             btnModosit.Enabled = true;
             btnTorol.Enabled = true;
@@ -234,6 +238,7 @@ namespace PresentationLayer
         {
             btnUj.Enabled = false;
             btnMentes.Enabled = true;
+            btnMentesMint.Enabled = true;
             btnKeres.Enabled = false;
             btnModosit.Enabled = false;
             btnTorol.Enabled = false;
