@@ -113,7 +113,7 @@ namespace PresentationLayer
         {
             if (uj)
             {
-                int effectedRows = item.AddItem(txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text, activeItem);
+                int effectedRows = item.AddItem(txtAzonosito.Text, txtMegenevezes.Text, location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text, activeItem);
 
                 if (effectedRows >= 0)
                 {
@@ -129,7 +129,7 @@ namespace PresentationLayer
 
             if (modosit)
             {
-                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                int effectedRows = item.ModItem(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -301,7 +301,7 @@ namespace PresentationLayer
                 txtIndex.Text = sor[0].ToString();
                 txtAzonosito.Text = sor[1].ToString();
                 txtMegenevezes.Text = sor[2].ToString();
-                comboParent.Text = location.GetLocationidByID( int.Parse(sor[3])).ToString();
+                comboParent.Text = location.GetLocationidById( int.Parse(sor[3])).ToString();
             
                 int.TryParse(sor[4], out int sid);
                 List<object> kep = symbol.GetSymbolById(sid);

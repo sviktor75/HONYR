@@ -17,6 +17,7 @@ namespace PresentationLayer
         BSymbol symbol = new BSymbol();
         BWallConnector wc = new BWallConnector();
         BLocation location = new BLocation();
+        BCommonBase cbase = new BCommonBase();
 
         bool vissza = false;
         bool uj = false;
@@ -97,7 +98,7 @@ namespace PresentationLayer
             if (uj)
             {
                 int parent = int.Parse(comboParent.Text);
-                int effectedRows = wc.AddConnector(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                int effectedRows = wc.AddConnector(txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -113,7 +114,7 @@ namespace PresentationLayer
 
             if (modosit)
             {
-                int effectedRows = wc.ModConnector(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                int effectedRows = wc.ModConnector(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, comboTipus.Text, txtKialakitas.Text, location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -224,7 +225,7 @@ namespace PresentationLayer
 
         private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = wc.GetConnectorByName(txtKeresNev.Text.ToString() + "%");
+            List<string> sor = cbase.BaseSearch("wallconnecotr", "name", txtKeresNev.Text.ToString() + "%");
 
             try
             {
@@ -233,7 +234,7 @@ namespace PresentationLayer
                 txtMegenevezes.Text = sor[2].ToString();
                 comboTipus.Text = sor[3].ToString();
                 txtKialakitas.Text = sor[4].ToString();
-                comboParent.Text = location.GetLocationidByID(int.Parse(sor[5])).ToString();
+                comboParent.Text = location.GetLocationidById(int.Parse(sor[5])).ToString();
 
                 int.TryParse(sor[6], out int sid);
 
@@ -249,6 +250,35 @@ namespace PresentationLayer
             }
 
         }
+
+
+        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
+        {
+            List<string> sor = cbase.BaseSearch("wallconnecotr", "connectorid", txtAzonosito.Text.ToString() + "%");
+
+            try
+            {
+                txtIndex.Text = sor[0].ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboTipus.Text = sor[3].ToString();
+                txtKialakitas.Text = sor[4].ToString();
+                comboParent.Text = location.GetLocationidById(int.Parse(sor[5])).ToString();
+
+                int.TryParse(sor[6], out int sid);
+
+                List<object> kep = symbol.GetSymbolById(sid);
+                comboSymbol.Text = kep[0].ToString();
+                MemoryStream ms = new MemoryStream((byte[])kep[1]);
+                picSymbol.Image = Image.FromStream(ms);
+                txtDescription.Text = sor[7].ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
 
         private void btnTorol_Click(object sender, EventArgs e)
         {
@@ -299,10 +329,6 @@ namespace PresentationLayer
             }
         }
 
-        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

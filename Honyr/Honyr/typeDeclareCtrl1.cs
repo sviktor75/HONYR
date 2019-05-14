@@ -234,6 +234,7 @@ namespace PresentationLayer
             kereses(true);
         }
 
+
         private void btnModosit_Click(object sender, EventArgs e)
         {
             btnUj.Enabled = false;

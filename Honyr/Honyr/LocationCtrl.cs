@@ -93,7 +93,7 @@ namespace PresentationLayer
             if (uj)
             {
 
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -109,7 +109,7 @@ namespace PresentationLayer
 
             if (modosit)
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetididByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -161,27 +161,36 @@ namespace PresentationLayer
             uj = true;
         }
 
+
         private void btnKeres_Click(object sender, EventArgs e)
         {
-            btnUj.Enabled = false;
-            btnMentes.Enabled = false;
-            btnMentesMint.Enabled = false;
-            btnKeres.Enabled = true;
-            btnModosit.Enabled = true;
-            btnTorol.Enabled = true;
-            btnMegse.Enabled = true;
+            if (cbase.BaseSearch("location", "id", "1").Count > 0)
+            {
+                btnUj.Enabled = false;
+                btnMentes.Enabled = false;
+                btnMentesMint.Enabled = false;
+                btnKeres.Enabled = true;
+                btnModosit.Enabled = true;
+                btnTorol.Enabled = true;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = false;
-            txtMegenevezes.Enabled = false;
-            comboTipus.Enabled = false; 
-            comboParent.Enabled = false; 
-            comboSymbol.Enabled = false;
-            txtDescription.Enabled = false;
+                txtAzonosito.Enabled = false;
+                txtMegenevezes.Enabled = false;
+                comboTipus.Enabled = false;
+                comboParent.Enabled = false;
+                comboSymbol.Enabled = false;
+                txtDescription.Enabled = false;
 
-            vissza = false;
+                vissza = false;
 
-            kereses(true);
+                kereses(true);
+            }
+            else
+            {
+                MessageBox.Show("Üres az helyiségek tábla, nincs mit keresni benne!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void btnModosit_Click(object sender, EventArgs e)
         {
@@ -217,7 +226,7 @@ namespace PresentationLayer
 
         private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = location.GetLocationByName(txtKeresNev.Text.ToString() + "%");
+            List<string> sor = cbase.BaseSearch("location", "name", txtKeresNev.Text.ToString() + "%");
 
             try
             {
@@ -225,7 +234,7 @@ namespace PresentationLayer
                 txtAzonosito.Text = sor[1].ToString();
                 txtMegenevezes.Text = sor[2].ToString();
                 comboTipus.Text = sor[3].ToString();
-                comboParent.Text = location.GetLocationidByID( int.Parse(sor[4])).ToString();
+                comboParent.Text = location.GetLocationidById( int.Parse(sor[4])).ToString();
 
                 int.TryParse(sor[5], out int sid);
                 List<object> kep = symbol.GetSymbolById(sid);
@@ -240,6 +249,35 @@ namespace PresentationLayer
 
             }
         }
+
+
+        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
+        {
+            List<string> sor = cbase.BaseSearch("location", "locationid", txtKeresAzonosito.Text.ToString() + "%");
+
+            try
+            {
+                txtIndex.Text = sor[0].ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboTipus.Text = sor[3].ToString();
+                comboParent.Text = location.GetLocationidById(int.Parse(sor[4])).ToString();
+
+                int.TryParse(sor[5], out int sid);
+                List<object> kep = symbol.GetSymbolById(sid);
+                comboSymbol.Text = kep[0].ToString();
+                MemoryStream ms = new MemoryStream((byte[])kep[1]);
+                picSymbol.Image = Image.FromStream(ms);
+
+                txtDescription.Text = sor[6].ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+
 
         private void btnTorol_Click(object sender, EventArgs e)
         {
@@ -290,31 +328,6 @@ namespace PresentationLayer
             }
         }
 
-        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
-        {
-            List<string> sor = cbase.BaseSearch("location", "locationid", txtKeresAzonosito.Text.ToString() + "%");
-
-            try
-            {
-                txtIndex.Text = sor[0].ToString();
-                txtAzonosito.Text = sor[1].ToString();
-                txtMegenevezes.Text = sor[2].ToString();
-                comboTipus.Text = sor[3].ToString();
-                comboParent.Text = location.GetLocationidByID(int.Parse(sor[4])).ToString();
-
-                int.TryParse(sor[5], out int sid);
-                List<object> kep = symbol.GetSymbolById(sid);
-                comboSymbol.Text = kep[0].ToString();
-                MemoryStream ms = new MemoryStream((byte[])kep[1]);
-                picSymbol.Image = Image.FromStream(ms);
-
-                txtDescription.Text = sor[6].ToString();
-            }
-            catch (Exception)
-            {
-
-            }
-        }
 
         private void lblKeresesNevSzerint_Click(object sender, EventArgs e)
         {

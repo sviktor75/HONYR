@@ -19,6 +19,8 @@ namespace PresentationLayer
         BItem item = new BItem();
         BSymbol symbol = new BSymbol();
         BLocation location = new BLocation();
+        BCommonBase cbase = new BCommonBase();
+
         private bool activeItem = false;
 
         bool vissza = false;
@@ -175,28 +177,36 @@ namespace PresentationLayer
 
         private void btnKeres_Click(object sender, EventArgs e)
         {
-            btnUj.Enabled = false;
-            btnMentes.Enabled = false;
-            btnMentesMint.Enabled = false;
-            btnKeres.Enabled = true;
-            btnModosit.Enabled = true;
-            btnTorol.Enabled = true;
-            btnMegse.Enabled = true;
+            if (item.GetItemById(1, false).Count > 0)
+            {
+                btnUj.Enabled = false;
+                btnMentes.Enabled = false;
+                btnMentesMint.Enabled = false;
+                btnKeres.Enabled = true;
+                btnModosit.Enabled = true;
+                btnTorol.Enabled = true;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = false;
-            txtMegenevezes.Enabled = false;
-            comboParent.Enabled = false;
-            comboSymbol.Enabled = false;
-            txtDescription.Enabled = false;
+                txtAzonosito.Enabled = false;
+                txtMegenevezes.Enabled = false;
+                comboParent.Enabled = false;
+                comboSymbol.Enabled = false;
+                txtDescription.Enabled = false;
 
-            listPort.Enabled = false;
-            txtPortAzonosito.Enabled = false;
-            comboPortTipus.Enabled = false;
+                listPort.Enabled = false;
+                txtPortAzonosito.Enabled = false;
+                comboPortTipus.Enabled = false;
 
-            vissza = false;
+                vissza = false;
 
-            kereses(true);
+                kereses(true);
+            }
+            else
+            {
+                MessageBox.Show("Üres az passzív eszközök tábla, nincs mit keresni benne!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void btnModosit_Click(object sender, EventArgs e)
         {

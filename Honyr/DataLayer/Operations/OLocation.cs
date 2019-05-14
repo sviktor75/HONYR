@@ -89,7 +89,7 @@ namespace DataLayer.Operations
             return retList;
         }
 
-        public int GetididByLocationid(string locationid)
+        public int GetIdByLocationid(string locationid)
         {
             string query = "select id from location where locationid = '" + locationid + "';";
 
@@ -108,7 +108,7 @@ namespace DataLayer.Operations
             return id;
         }
 
-        public string GetLocationidByID(int id)
+        public string GetLocationidById(int id)
         {
             string query = "select locationid from location where id=" + id + ";";
 

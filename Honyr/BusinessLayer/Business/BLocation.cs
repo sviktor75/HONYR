@@ -40,14 +40,14 @@ namespace BusinessLayer.Business
             return location.GetLocationByName(name);
         }
 
-        public int GetididByLocationid(string locationid)
+        public int GetIdByLocationid(string locationid)
         {
-            return location.GetididByLocationid(locationid);
+            return location.GetIdByLocationid(locationid);
         }
 
-        public string GetLocationidByID(int id)
+        public string GetLocationidById(int id)
         {
-            return location.GetLocationidByID(id);
+            return location.GetLocationidById(id);
         }
     }
 }
