@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataLayer.Operations;
 using System.IO;
+using System.Data;
 
 
 namespace BusinessLayer.Business
@@ -25,15 +26,23 @@ namespace BusinessLayer.Business
             return location.ModLocation(id, locationId, name, locationTypeId, parentId, symbolId, description);
         }
 
+
         public int DelLocation(long id)
         {
             return location.DelLocation(id);
         }
 
+
         public List<String> GetLocations()
         {
             return location.GetLocations();
         }
+
+        public DataTable GetLocationsTable()
+        {
+            return location.GetLocationsTable();
+        }
+
 
         public List<String> GetLocationByName(string name)
         {

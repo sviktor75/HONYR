@@ -178,6 +178,7 @@
             this.comboTipus.Name = "comboTipus";
             this.comboTipus.Size = new System.Drawing.Size(169, 21);
             this.comboTipus.TabIndex = 5;
+            this.comboTipus.SelectedIndexChanged += new System.EventHandler(this.comboTipus_SelectedIndexChanged);
             // 
             // btnUj
             // 

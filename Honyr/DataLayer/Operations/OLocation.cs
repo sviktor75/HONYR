@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace DataLayer.Operations
 {
@@ -60,6 +61,23 @@ namespace DataLayer.Operations
             conn.CloseConnection();
 
             return retList;
+        }
+
+
+        public DataTable GetLocationsTable()
+        {
+            string query = "select name, id from locationtype;";
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            conn.CloseConnection();
+
+            return dt;
         }
 
 

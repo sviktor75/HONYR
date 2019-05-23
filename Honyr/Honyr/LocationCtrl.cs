@@ -92,8 +92,8 @@ namespace PresentationLayer
         {
             if (uj)
             {
-
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                MessageBox.Show(txtAzonosito.Text + txtMegenevezes.Text + comboTipus.SelectedValue + comboParent.SelectedValue + comboSymbol.SelectedValue, txtDescription.Text.ToString());
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, (int)comboTipus.SelectedValue, (long)comboParent.SelectedValue, (int)comboSymbol.SelectedValue, txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -147,7 +147,13 @@ namespace PresentationLayer
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
 
-            comboParent.DataSource = location.GetLocations();
+            comboTipus.DataSource = location.GetLocationsTable();
+            comboTipus.DisplayMember = "name";
+            comboTipus.ValueMember = "id";
+
+            comboParent.DataSource = location.GetLocationsTable();
+            comboParent.DisplayMember = "name";
+            comboParent.ValueMember = "id";
 
             comboSymbol.DataSource = symbol.GetSymbolsByType(1);
             comboSymbol.DisplayMember = "name";
@@ -209,12 +215,18 @@ namespace PresentationLayer
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
 
-            comboParent.DataSource = location.GetLocations();
+            comboTipus.DataSource = location.GetLocationsTable();
+            comboTipus.DisplayMember = "name";
+            comboTipus.ValueMember = "id";
+
+            comboParent.DataSource = location.GetLocationsTable();
+            comboParent.DisplayMember = "name";
+            comboParent.ValueMember = "id";
+
 
             comboSymbol.DataSource = symbol.GetSymbolsByType(1);
             comboSymbol.DisplayMember = "name";
             comboSymbol.ValueMember = "id";
-
 
             vissza = false;
 
@@ -345,6 +357,11 @@ namespace PresentationLayer
         }
 
         private void comboSymbol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboTipus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

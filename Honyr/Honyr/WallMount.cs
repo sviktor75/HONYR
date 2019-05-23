@@ -135,60 +135,75 @@ namespace PresentationLayer
 
         private void btnUj_Click(object sender, EventArgs e)
         {
-            this.Controls.ClearControls();
+            if (cbase.BaseSearch("wallconnector", "id", "1").Count > 0)
+            {
+                this.Controls.ClearControls();
 
-            btnUj.Enabled = false;
-            btnMentes.Enabled = true;
-            btnMentesMint.Enabled = false;
-            btnKeres.Enabled = false;
-            btnModosit.Enabled = false;
-            btnTorol.Enabled = false;
-            btnMegse.Enabled = true;
+                btnUj.Enabled = false;
+                btnMentes.Enabled = true;
+                btnMentesMint.Enabled = false;
+                btnKeres.Enabled = false;
+                btnModosit.Enabled = false;
+                btnTorol.Enabled = false;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = true;
-            txtMegenevezes.Enabled = true;
-            comboTipus.Enabled = true;
-            txtKialakitas.Enabled = true;
-            comboParent.Enabled = true;
-            comboSymbol.Enabled = true;
-            txtDescription.Enabled = true;
+                txtAzonosito.Enabled = true;
+                txtMegenevezes.Enabled = true;
+                comboTipus.Enabled = true;
+                txtKialakitas.Enabled = true;
+                comboParent.Enabled = true;
+                comboSymbol.Enabled = true;
+                txtDescription.Enabled = true;
 
-            comboParent.DataSource = wc.GetConnector();
+                comboParent.DataSource = wc.GetConnector();
 
-            comboSymbol.DataSource = symbol.GetSymbolsByType(3);
-            comboSymbol.DisplayMember = "name";
-            comboSymbol.ValueMember = "id";
+                comboSymbol.DataSource = symbol.GetSymbolsByType(3);
+                comboSymbol.DisplayMember = "name";
+                comboSymbol.ValueMember = "id";
 
 
-            //
-            kepBetoltes();
+                //
+                kepBetoltes();
 
-            vissza = false;
-            uj = true;
+                vissza = false;
+                uj = true;
+            }
+            else
+            {
+                MessageBox.Show("Nincs megjeleníthető szimbólum! Előbb azt kell feltölteni!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnKeres_Click(object sender, EventArgs e)
         {
-            btnUj.Enabled = false;
-            btnMentes.Enabled = false;
-            btnMentesMint.Enabled = false;
-            btnKeres.Enabled = true;
-            btnModosit.Enabled = true;
-            btnTorol.Enabled = true;
-            btnMegse.Enabled = true;
+            if (cbase.BaseSearch("wallconnector", "id", "1").Count > 0)
+            {
+                btnUj.Enabled = false;
+                btnMentes.Enabled = false;
+                btnMentesMint.Enabled = false;
+                btnKeres.Enabled = true;
+                btnModosit.Enabled = true;
+                btnTorol.Enabled = true;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = false;
-            txtMegenevezes.Enabled = false;
-            comboTipus.Enabled = false; 
-            txtKialakitas.Enabled = false;
-            comboParent.Enabled = false;
-            comboSymbol.Enabled = false;
-            txtDescription.Enabled = false;
+                txtAzonosito.Enabled = false;
+                txtMegenevezes.Enabled = false;
+                comboTipus.Enabled = false;
+                txtKialakitas.Enabled = false;
+                comboParent.Enabled = false;
+                comboSymbol.Enabled = false;
+                txtDescription.Enabled = false;
 
-            vissza = false;
+                vissza = false;
 
-            kereses(true);
+                kereses(true);
+            }
+            else
+            {
+                MessageBox.Show("Üres az fali csatlakozó tábla! Előbb azt kell feltölteni!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void btnModosit_Click(object sender, EventArgs e)
         {
@@ -299,6 +314,7 @@ namespace PresentationLayer
 
         private void kepBetoltes()
         {
+
             List<object> kep = symbol.GetSymbolById(int.Parse(comboSymbol.SelectedValue.ToString()));
             comboSymbol.Text = kep[0].ToString();
             MemoryStream ms = new MemoryStream((byte[])kep[1]);
