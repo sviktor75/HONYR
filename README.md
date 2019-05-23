@@ -1,4 +1,4 @@
-# HONYR - Hálózat nyílvántartó tendszer
+# HONYR - Hálózat nyílvántartó rendszer
 
 
 ## Github
