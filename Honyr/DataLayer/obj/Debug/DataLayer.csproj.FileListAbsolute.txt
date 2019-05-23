@@ -330,7 +330,6 @@ C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\System.Xml.Serialization.dll
 C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\System.Xml.XDocument.dll
 C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\System.Xml.XmlSerializer.dll
 C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\WindowsBase.dll
-C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\MySql.Data.xml
 C:\projekt\HONYR\Honyr\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
 C:\projekt\HONYR\Honyr\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
 C:\projekt\HONYR\Honyr\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
@@ -663,5 +662,3 @@ C:\Users\peter\Documents\GitHub\HONYR\Honyr\DataLayer\obj\Debug\DataLayer.dll
 C:\Users\peter\Documents\GitHub\HONYR\Honyr\DataLayer\obj\Debug\DataLayer.pdb
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\DataLayer\bin\Debug\Google.Protobuf.dll
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\DataLayer\bin\Debug\BouncyCastle.Crypto.dll
-C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\Google.Protobuf.dll
-C:\projekt\HONYR\Honyr\DataLayer\bin\Debug\BouncyCastle.Crypto.dll

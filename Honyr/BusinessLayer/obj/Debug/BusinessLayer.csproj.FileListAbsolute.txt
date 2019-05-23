@@ -3,7 +3,6 @@ C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\BusinessLayer.pdb
 C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\DataLayer.dll
 C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\MySql.Data.dll
 C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\DataLayer.pdb
-C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\MySql.Data.xml
 C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
 C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\projekt\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
@@ -45,5 +44,3 @@ C:\Users\peter\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLaye
 C:\Users\peter\Documents\GitHub\HONYR\Honyr\BusinessLayer\obj\Debug\BusinessLayer.pdb
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\Google.Protobuf.dll
 C:\Users\Alex\Documents\GitHub\HONYR\Honyr\BusinessLayer\bin\Debug\BouncyCastle.Crypto.dll
-C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\Google.Protobuf.dll
-C:\projekt\HONYR\Honyr\BusinessLayer\bin\Debug\BouncyCastle.Crypto.dll
