@@ -92,8 +92,7 @@ namespace PresentationLayer
         {
             if (uj)
             {
-                MessageBox.Show(txtAzonosito.Text + txtMegenevezes.Text + comboTipus.SelectedValue + comboParent.SelectedValue + comboSymbol.SelectedValue, txtDescription.Text.ToString());
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, (int)comboTipus.SelectedValue, (long)comboParent.SelectedValue, (int)comboSymbol.SelectedValue, txtDescription.Text);
+                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, Convert.ToInt32(comboTipus.SelectedValue), Convert.ToInt64(comboParent.SelectedValue), Convert.ToInt32(comboSymbol.SelectedValue), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
@@ -109,7 +108,7 @@ namespace PresentationLayer
 
             if (modosit)
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, int.Parse(comboTipus.Text), location.GetIdByLocationid(comboParent.Text), int.Parse(comboSymbol.SelectedValue.ToString()), txtDescription.Text);
+                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, Convert.ToInt32(comboTipus.SelectedValue), Convert.ToInt64(comboParent.SelectedValue), Convert.ToInt32(comboSymbol.SelectedValue), txtDescription.Text);
 
                 if (effectedRows >= 0)
                 {
