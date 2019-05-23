@@ -89,9 +89,9 @@ namespace DataLayer.Operations
             return retList;
         }
 
-        public List<String> GetItemByDeviceID(string deviceID, bool active)
+        public List<String> GetItemByDeviceId(string deviceId, bool active)
         {
-            string query = "select * from item where deviceid like '" + deviceID + "' and active=" + active + " order by deviceid limit 1;";
+            string query = "select * from item where deviceid like '" + deviceId + "' and active=" + active + " order by deviceid limit 1;";
 
             List<string> retList = new List<string>();
 

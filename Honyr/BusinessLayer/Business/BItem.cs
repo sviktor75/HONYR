@@ -17,24 +17,34 @@ namespace BusinessLayer.Business
             return item.AddItem(deviceID,deviceName,locationID,symbolId,description,active);
         }
 
+
         public int ModItem(long id, string deviceID, string deviceName, long locationID, int symbolID, string description)
         {
             return item.ModItem(id, deviceID, deviceName, locationID, symbolID, description);
         }
+
 
         public int DelItem(long id)
         {
             return item.DelItem(id);
         }
 
+
         public List<string> GetItemById(long id, bool active)
         {
             return item.GetItemByID(id, active);
         }
 
+        
         public List<String> GetItemByName(string name, bool active)
         {
             return item.GetItemByName(name, active);
+        }
+
+
+        public List<String> GetItemByDeviceId(string deviceId, bool active)
+        {
+            return item.GetItemByDeviceId(deviceId, active);
         }
     }
 }

@@ -270,6 +270,35 @@ namespace PresentationLayer
 
         }
 
+
+        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
+        {
+            List<string> sor = item.GetItemByDeviceId(txtKeresAzonosito.Text.ToString() + "%", activeItem);
+
+            try
+            {
+                txtIndex.Text = sor[0].ToString();
+                txtAzonosito.Text = sor[1].ToString();
+                txtMegenevezes.Text = sor[2].ToString();
+                comboParent.Text = sor[3].ToString();
+
+                int.TryParse(sor[4], out int sid);
+
+                List<object> kep = symbol.GetSymbolById(sid);
+                comboSymbol.Text = kep[0].ToString();
+                MemoryStream ms = new MemoryStream((byte[])kep[1]);
+                picSymbol.Image = Image.FromStream(ms);
+
+                txtDescription.Text = sor[5].ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+
+
         private void btnTorol_Click(object sender, EventArgs e)
         {
             int effectedRows = item.DelItem(long.Parse(txtIndex.Text));
@@ -317,11 +346,6 @@ namespace PresentationLayer
                 txtKeresAzonosito.Visible = false;
                 txtKeresNev.Visible = false;
             }
-        }
-
-        private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
