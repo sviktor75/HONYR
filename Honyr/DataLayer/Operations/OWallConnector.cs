@@ -94,5 +94,35 @@ namespace DataLayer.Operations
             return retList;
 
         }
+
+        public List<String> GetConnectorByConnecotid(string connectorid)
+        {
+            string query = "select * from wallconnector where connectorid like '" + connectorid + "' order by name limit 1;";
+
+            List<string> retList = new List<string>();
+
+            conn.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, conn.connection);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+
+            while (dataReader.Read())
+            {
+                retList.Add(dataReader["id"] + "");
+                retList.Add(dataReader["connectorid"] + "");
+                retList.Add(dataReader["name"] + "");
+                retList.Add(dataReader["type"] + "");
+                retList.Add(dataReader["property"] + "");
+                retList.Add(dataReader["locationid"] + "");
+                retList.Add(dataReader["symbolid"] + "");
+                retList.Add(dataReader["description"] + "");
+            }
+            dataReader.Close();
+            conn.CloseConnection();
+
+            return retList;
+
+        }
+
     }
 }

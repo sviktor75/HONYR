@@ -103,41 +103,48 @@ namespace PresentationLayer
 
         private void btnMentes_Click(object sender, EventArgs e)
         {
-            if (uj)
+            if ((txtAzonosito.Text != "") || (txtMegenevezes.Text != ""))
             {
-                int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, Convert.ToInt32(comboTipus.SelectedValue), Convert.ToInt64(comboParent.SelectedValue), Convert.ToInt32(comboSymbol.SelectedValue), txtDescription.Text);
-
-                if (effectedRows >= 0)
+                if (uj)
                 {
-                    MessageBox.Show("Lokáció sikeresen hozzáadva.");
-                }
-                else
-                {
-                    MessageBox.Show("A lokácót nem sikerült létrehozni.");
+                    int effectedRows = location.AddLocation(txtAzonosito.Text, txtMegenevezes.Text, Convert.ToInt32(comboTipus.SelectedValue), Convert.ToInt64(comboParent.SelectedValue), Convert.ToInt32(comboSymbol.SelectedValue), txtDescription.Text);
+
+                    if (effectedRows >= 0)
+                    {
+                        MessageBox.Show("Lokáció sikeresen hozzáadva.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("A lokácót nem sikerült létrehozni.");
+                    }
+
+                    uj = false;
                 }
 
-                uj = false;
+                if (modosit)
+                {
+                    int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, Convert.ToInt32(comboTipus.SelectedValue), Convert.ToInt64(comboParent.SelectedValue), Convert.ToInt32(comboSymbol.SelectedValue), txtDescription.Text);
+
+                    if (effectedRows >= 0)
+                    {
+                        MessageBox.Show("Lokáció sikeresen módosítva.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("A lokácót nem sikerült Módosítani.");
+                    }
+
+                    modosit = false;
+                }
+
+                vissza = false;
+                this.Controls.ClearControls();
+                btnMegse.PerformClick();
             }
-
-            if (modosit)
+            else
             {
-                int effectedRows = location.ModLocation(long.Parse(txtIndex.Text), txtAzonosito.Text, txtMegenevezes.Text, Convert.ToInt32(comboTipus.SelectedValue), Convert.ToInt64(comboParent.SelectedValue), Convert.ToInt32(comboSymbol.SelectedValue), txtDescription.Text);
-
-                if (effectedRows >= 0)
-                {
-                    MessageBox.Show("Lokáció sikeresen módosítva.");
-                }
-                else
-                {
-                    MessageBox.Show("A lokácót nem sikerült Módosítani.");
-                }
-
-                modosit = false;
+                MessageBox.Show("A megnevezést és azonosító mezők  nem lehetnek üresek!");
             }
-
-            vissza = false;
-            this.Controls.ClearControls();
-            btnMegse.PerformClick();
         }
 
         private void btnUj_Click(object sender, EventArgs e)
@@ -158,7 +165,7 @@ namespace PresentationLayer
             comboParent.Enabled = true;
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
-            /*
+            
             comboTipus.DataSource = location.GetLocationsTable();
             comboTipus.DisplayMember = "name";
             comboTipus.ValueMember = "id";
@@ -170,7 +177,7 @@ namespace PresentationLayer
             comboSymbol.DataSource = symbol.GetSymbolsByType(1);
             comboSymbol.DisplayMember = "name";
             comboSymbol.ValueMember = "id";
-            */
+            
             //MessageBox.Show(comboSymbol.SelectedValue.ToString());
 
             kepBetoltes();
@@ -228,20 +235,31 @@ namespace PresentationLayer
                 comboParent.Enabled = true;
                 comboSymbol.Enabled = true;
                 txtDescription.Enabled = true;
-                /*
-                comboTipus.DataSource = location.GetLocationsTable();
-                comboTipus.DisplayMember = "name";
-                comboTipus.ValueMember = "id";
 
-                comboParent.DataSource = location.GetLocationsTable();
-                comboParent.DisplayMember = "name";
-                comboParent.ValueMember = "id";
+                int ptipus, pparent;
 
+                if (comboTipus.Text != "")
+                {
+                    ptipus = Convert.ToInt32(comboTipus.SelectedValue);
+                    comboTipus.DataSource = location.GetLocationsTable();
+                    comboTipus.DisplayMember = "name";
+                    comboTipus.ValueMember = "id";
+                    comboTipus.SelectedValue = ptipus;
+                }
+
+                if (comboParent.Text != "")
+                {
+                    pparent = Convert.ToInt32(comboParent.SelectedValue);
+                    comboParent.DataSource = location.GetLocationsTable();
+                    comboParent.DisplayMember = "name";
+                    comboParent.ValueMember = "id";
+                    comboParent.SelectedValue = pparent;
+                }
 
                 comboSymbol.DataSource = symbol.GetSymbolsByType(1);
                 comboSymbol.DisplayMember = "name";
                 comboSymbol.ValueMember = "id";
-                */
+                
                 vissza = false;
 
                 kereses(false);

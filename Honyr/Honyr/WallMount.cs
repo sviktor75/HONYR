@@ -240,7 +240,7 @@ namespace PresentationLayer
 
         private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = cbase.BaseSearch("wallconnecotr", "name", txtKeresNev.Text.ToString() + "%");
+            List<string> sor = wc.GetConnectorByName(txtAzonosito.Text.ToString() + "%");
 
             try
             {
@@ -269,7 +269,7 @@ namespace PresentationLayer
 
         private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = cbase.BaseSearch("wallconnecotr", "connectorid", txtAzonosito.Text.ToString() + "%");
+            List<string> sor = wc.GetConnectorByConnecotid(txtAzonosito.Text.ToString() + "%");
 
             try
             {
