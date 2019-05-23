@@ -8,7 +8,13 @@
 * Letöltés és használati útmutató: https://desktop.github.com/
 
 
-## Futtatás / Munka
+## Adatbázis
+MySQL adatbázis van használva.
+A program használathoz szükséges megadni a következőket:
+ - hostnév
+ - port
+ - felhasználónév
+ - jelszó
 
 
 ## Design és menü
