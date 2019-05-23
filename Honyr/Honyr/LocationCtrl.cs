@@ -18,6 +18,7 @@ namespace PresentationLayer
         BLocation location = new BLocation();
         BSymbol symbol = new BSymbol();
         BCommonBase cbase = new BCommonBase();
+        BTypes ttype = new BTypes();
 
         bool vissza = false;
         bool uj = false;
@@ -83,6 +84,18 @@ namespace PresentationLayer
             comboSymbol.Enabled = false;
             txtDescription.Enabled = false;
 
+            comboTipus.DataSource = location.GetLocationsTable();
+            comboTipus.DisplayMember = "name";
+            comboTipus.ValueMember = "id";
+
+            comboParent.DataSource = location.GetLocationsTable();
+            comboParent.DisplayMember = "name";
+            comboParent.ValueMember = "id";
+
+            comboSymbol.DataSource = symbol.GetSymbolsByType(1);
+            comboSymbol.DisplayMember = "name";
+            comboSymbol.ValueMember = "id";
+
             vissza = true;
 
             kereses(false);
@@ -145,7 +158,7 @@ namespace PresentationLayer
             comboParent.Enabled = true;
             comboSymbol.Enabled = true;
             txtDescription.Enabled = true;
-
+            /*
             comboTipus.DataSource = location.GetLocationsTable();
             comboTipus.DisplayMember = "name";
             comboTipus.ValueMember = "id";
@@ -157,7 +170,7 @@ namespace PresentationLayer
             comboSymbol.DataSource = symbol.GetSymbolsByType(1);
             comboSymbol.DisplayMember = "name";
             comboSymbol.ValueMember = "id";
-
+            */
             //MessageBox.Show(comboSymbol.SelectedValue.ToString());
 
             kepBetoltes();
@@ -199,53 +212,68 @@ namespace PresentationLayer
 
         private void btnModosit_Click(object sender, EventArgs e)
         {
-            btnUj.Enabled = false;
-            btnMentes.Enabled = true;
-            btnMentesMint.Enabled = true;
-            btnKeres.Enabled = false;
-            btnModosit.Enabled = false;
-            btnTorol.Enabled = false;
-            btnMegse.Enabled = true;
+            if (txtAzonosito.Text != "")
+            {
+                btnUj.Enabled = false;
+                btnMentes.Enabled = true;
+                btnMentesMint.Enabled = true;
+                btnKeres.Enabled = false;
+                btnModosit.Enabled = false;
+                btnTorol.Enabled = false;
+                btnMegse.Enabled = true;
 
-            txtAzonosito.Enabled = true;
-            txtMegenevezes.Enabled = true;
-            comboTipus.Enabled = true;
-            comboParent.Enabled = true;
-            comboSymbol.Enabled = true;
-            txtDescription.Enabled = true;
+                txtAzonosito.Enabled = true;
+                txtMegenevezes.Enabled = true;
+                comboTipus.Enabled = true;
+                comboParent.Enabled = true;
+                comboSymbol.Enabled = true;
+                txtDescription.Enabled = true;
+                /*
+                comboTipus.DataSource = location.GetLocationsTable();
+                comboTipus.DisplayMember = "name";
+                comboTipus.ValueMember = "id";
 
-            comboTipus.DataSource = location.GetLocationsTable();
-            comboTipus.DisplayMember = "name";
-            comboTipus.ValueMember = "id";
-
-            comboParent.DataSource = location.GetLocationsTable();
-            comboParent.DisplayMember = "name";
-            comboParent.ValueMember = "id";
+                comboParent.DataSource = location.GetLocationsTable();
+                comboParent.DisplayMember = "name";
+                comboParent.ValueMember = "id";
 
 
-            comboSymbol.DataSource = symbol.GetSymbolsByType(1);
-            comboSymbol.DisplayMember = "name";
-            comboSymbol.ValueMember = "id";
+                comboSymbol.DataSource = symbol.GetSymbolsByType(1);
+                comboSymbol.DisplayMember = "name";
+                comboSymbol.ValueMember = "id";
+                */
+                vissza = false;
 
-            vissza = false;
+                kereses(false);
 
-            kereses(false);
-
-            modosit = true;
+                modosit = true;
+            }
+            else
+            {
+                MessageBox.Show("Nincs adat, amit módosítani lehet!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
         private void txtKeresNev_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = cbase.BaseSearch("location", "name", txtKeresNev.Text.ToString() + "%");
+            List<string> sor = location.GetLocationByName(txtKeresNev.Text.ToString() + "%");
 
             try
             {
                 txtIndex.Text = sor[0].ToString();
                 txtAzonosito.Text = sor[1].ToString();
                 txtMegenevezes.Text = sor[2].ToString();
-                comboTipus.Text = sor[3].ToString();
-                comboParent.Text = location.GetLocationidById( int.Parse(sor[4])).ToString();
+                /*
+                comboTipus.DataSource = location.GetLocationsTable();
+                comboTipus.DisplayMember = "name";
+                comboTipus.ValueMember = "id";*/
+                comboTipus.SelectedValue = sor[3];
+                /*
+                comboParent.DataSource = location.GetLocationsTable();
+                comboParent.DisplayMember = "name";
+                comboParent.ValueMember = "id";*/
+                comboParent.SelectedValue = sor[4];
 
                 int.TryParse(sor[5], out int sid);
                 List<object> kep = symbol.GetSymbolById(sid);
@@ -264,15 +292,23 @@ namespace PresentationLayer
 
         private void txtKeresAzonosito_TextChanged(object sender, EventArgs e)
         {
-            List<string> sor = cbase.BaseSearch("location", "locationid", txtKeresAzonosito.Text.ToString() + "%");
+            List<string> sor = location.GetLocationByName(txtKeresAzonosito.Text.ToString() + "%");
 
             try
             {
                 txtIndex.Text = sor[0].ToString();
                 txtAzonosito.Text = sor[1].ToString();
                 txtMegenevezes.Text = sor[2].ToString();
-                comboTipus.Text = sor[3].ToString();
-                comboParent.Text = location.GetLocationidById(int.Parse(sor[4])).ToString();
+
+               /* comboTipus.DataSource = location.GetLocationsTable();
+                comboTipus.DisplayMember = "name";
+                comboTipus.ValueMember = "id";*/
+                comboTipus.SelectedValue = sor[3];
+
+               /* comboParent.DataSource = location.GetLocationsTable();
+                comboParent.DisplayMember = "name";
+                comboParent.ValueMember = "id";*/
+                comboParent.SelectedValue = sor[4];
 
                 int.TryParse(sor[5], out int sid);
                 List<object> kep = symbol.GetSymbolById(sid);
@@ -292,19 +328,26 @@ namespace PresentationLayer
 
         private void btnTorol_Click(object sender, EventArgs e)
         {
-            int effectedRows = location.DelLocation(long.Parse(txtIndex.Text));
-
-            if (effectedRows >= 0)
+            if (txtAzonosito.Text != "")
             {
-                MessageBox.Show("Lokáció sikeresen törölve.");
+                int effectedRows = location.DelLocation(long.Parse(txtIndex.Text));
+
+                if (effectedRows >= 0)
+                {
+                    MessageBox.Show("Lokáció sikeresen törölve.");
+                }
+                else
+                {
+                    MessageBox.Show("A lokácót nem sikerült törölni.");
+                }
+
+                resetForm();
+                btnMegse.PerformClick();
             }
             else
             {
-                MessageBox.Show("A lokácót nem sikerült törölni.");
+                MessageBox.Show("Nincs adat, amit törölni lehet!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            resetForm();
-            btnMegse.PerformClick();
         }
 
         private void kepBetoltes()
