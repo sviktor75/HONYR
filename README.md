@@ -9,7 +9,7 @@
 
 
 ## Adatbázis
-MySQL adatbázis van használva.
+MySQL adatbázis.
 A program használathoz szükséges megadni a következőket:
  - hostnév
  - port
