@@ -1,4 +1,4 @@
-# HONYR - Hálózat nyílvántartó rendszer
+# HONYR - Hálózati OBjektum Nyilvántartó Rendszer - NYilvántartó Modul
 
 
 ## Github
